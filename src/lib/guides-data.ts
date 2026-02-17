@@ -134,7 +134,26 @@ export const guides: StyleGuide[] = [
       { name: 'Levi\'s 501 Original', brand: 'Nordstrom', price: '$98', url: 'https://nordstrom.com', tag: 'Best Overall' },
       { name: 'AGOLDE 90s Pinch Waist', brand: 'ShopBop', price: '$198', url: 'https://shopbop.com', tag: 'Best Premium' },
       { name: 'Abercrombie Curve Love', brand: 'Abercrombie', price: '$90', url: 'https://abercrombie.com', tag: 'Best for Curves' },
+    ],{ name: 'Abercrombie Curve Love', brand: 'Abercrombie', price: '$90', url: 'https://abercrombie.com', tag: 'Best for Curves' },
     ],
+  },
+  {
+    slug: 'spring-workwear-capsule-2026',
+    title: 'Spring 2026 Workwear Capsule: 15 Pieces, 30 Outfits',
+    category: 'workwear',
+    description: 'Build a complete spring work wardrobe with just 15 versatile pieces.',
+    readTime: '12 min',
+    date: '2026-03-01',
+    tag: 'New',
+    emoji: '🌸',
+    affiliateProducts: [
+      { name: 'Linen Blazer', brand: 'Nordstrom', price: '$89', url: 'https://nordstrom.com', tag: 'Editor Pick' },
+      { name: 'Wide Leg Pants', brand: 'ASOS', price: '$52', url: 'https://asos.com' },
+      { name: 'Silk Blouse', brand: 'H&M', price: '$35', url: 'https://hm.com' },
+    ],
+  },
+];
+      
   },
 ];
 
