@@ -13,6 +13,9 @@ export default function Footer() {
               <span className="font-display font-bold text-gray-900">Style<span className="text-blush-500">Me</span>Daily</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">Your personal stylist, available 24/7. Expert guides for every woman, every occasion.</p>
+            <a href="mailto:yss007895@gmail.com" className="inline-block mt-3 text-sm text-blush-500 hover:text-blush-600 transition-colors">
+              ✉️ yss007895@gmail.com
+            </a>
           </div>
           <div>
             <h4 className="font-display font-semibold text-gray-900 text-sm mb-3">Explore</h4>
@@ -35,7 +38,7 @@ export default function Footer() {
             <div className="space-y-2">
               <Link href="/about" className="block text-sm text-gray-400 hover:text-blush-500 transition-colors">About</Link>
               <Link href="/privacy" className="block text-sm text-gray-400 hover:text-blush-500 transition-colors">Privacy Policy</Link>
-              <Link href="/contact" className="block text-sm text-gray-400 hover:text-blush-500 transition-colors">Contact</Link>
+              <a href="mailto:yss007895@gmail.com" className="block text-sm text-gray-400 hover:text-blush-500 transition-colors">Contact</a>
             </div>
           </div>
         </div>
