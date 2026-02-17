@@ -5,12 +5,12 @@ import GuidesClient from './GuidesClient';
 
 export const metadata: Metadata = {
   title: 'Style Guides — Outfit Ideas & Fashion Tips for Every Woman',
-  description: 'Browse 200+ expert styling guides with outfit ideas, capsule wardrobe tips, and fashion advice for work, dates, casual, and special occasions.',
+  description: 'Browse expert styling guides with outfit ideas, capsule wardrobe tips, and fashion advice for work, dates, casual, and special occasions.',
   keywords: ['style guides', 'outfit ideas', 'fashion tips', 'capsule wardrobe', 'what to wear', 'women fashion 2026'],
   alternates: { canonical: `${SITE_URL}/guides` },
   openGraph: {
     title: 'Style Guides — Outfit Ideas & Fashion Tips',
-    description: 'Browse 200+ expert styling guides with outfit ideas and fashion advice for every occasion.',
+    description: 'Browse expert styling guides with outfit ideas and fashion advice for every occasion.',
     url: `${SITE_URL}/guides`,
     siteName: SITE_NAME,
     type: 'website',

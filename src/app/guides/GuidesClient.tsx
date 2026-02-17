@@ -14,30 +14,32 @@ export default function GuidesClient() {
     <div className="pt-8">
       <div className="mb-8">
         <h1 className="section-title">Style Guides</h1>
-        <p className="text-gray-500 mt-1">200+ curated guides for every woman, every occasion</p>
+        <p className="text-gray-400 mt-1">{guides.length} curated guides for every occasion</p>
       </div>
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <input type="text" placeholder="Search guides..." value={search} onChange={e => setSearch(e.target.value)}
-          className="flex-1 bg-white border border-blush-200/60 rounded-xl px-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blush-400 focus:ring-2 focus:ring-blush-100" />
+          className="flex-1 bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-2 focus:ring-gray-100" />
       </div>
-      <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
+      <div className="flex gap-1 mb-8 overflow-x-auto pb-2 border-b border-gray-100">
         {categories.map(c => (
           <button key={c.slug} onClick={() => setCat(c.slug)}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all ${
-              cat === c.slug ? 'bg-gradient-to-r from-blush-500 to-purple-500 text-white shadow-md shadow-blush-200' : 'bg-white border border-blush-100/60 text-gray-500 hover:text-blush-600 hover:border-blush-200'
+            className={`px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors ${
+              cat === c.slug ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-400 hover:text-gray-600 border-b-2 border-transparent'
             }`}>
-            {c.icon} {c.name}
+            {c.name}
           </button>
         ))}
       </div>
-      <p className="text-sm text-gray-400 mb-4 font-mono">{filtered.length} guide{filtered.length !== 1 ? 's' : ''} found</p>
+      <p className="text-xs text-gray-400 mb-4">{filtered.length} guide{filtered.length !== 1 ? 's' : ''}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map(g => <GuideCard key={g.slug} guide={g} />)}
       </div>
       {filtered.length === 0 && (
         <div className="text-center py-20">
-          <div className="text-4xl mb-4">👗</div>
-          <p className="text-gray-400">No guides found. Try a different search or category.</p>
+          <p className="text-gray-400 mb-3">No guides found. Try a different search or category.</p>
+          <button onClick={() => { setCat('all'); setSearch(''); }} className="text-sm text-gray-500 hover:text-gray-900 font-medium">
+            Clear filters
+          </button>
         </div>
       )}
     </div>

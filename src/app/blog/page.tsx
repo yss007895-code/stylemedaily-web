@@ -17,7 +17,7 @@ const posts = [
     time: '8 min',
     cat: 'Style',
     image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&h=400&fit=crop',
-    link: '/guides/casual-outfits-look-expensive',
+    link: '/blog/quiet-luxury-guide',
   },
   {
     slug: 'spring-color-trends',
@@ -27,7 +27,7 @@ const posts = [
     time: '6 min',
     cat: 'Trends',
     image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
-    link: '/guides/spring-fashion-trends-2026',
+    link: '/blog/spring-color-trends',
   },
   {
     slug: 'capsule-wardrobe-mistakes',
@@ -37,7 +37,7 @@ const posts = [
     time: '7 min',
     cat: 'Guide',
     image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop',
-    link: '/guides/capsule-wardrobe-working-women-2026',
+    link: '/blog/capsule-wardrobe-mistakes',
   },
   {
     slug: 'nordstrom-vs-asos',
