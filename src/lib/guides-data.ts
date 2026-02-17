@@ -134,7 +134,6 @@ export const guides: StyleGuide[] = [
       { name: 'Levi\'s 501 Original', brand: 'Nordstrom', price: '$98', url: 'https://nordstrom.com', tag: 'Best Overall' },
       { name: 'AGOLDE 90s Pinch Waist', brand: 'ShopBop', price: '$198', url: 'https://shopbop.com', tag: 'Best Premium' },
       { name: 'Abercrombie Curve Love', brand: 'Abercrombie', price: '$90', url: 'https://abercrombie.com', tag: 'Best for Curves' },
-    ],{ name: 'Abercrombie Curve Love', brand: 'Abercrombie', price: '$90', url: 'https://abercrombie.com', tag: 'Best for Curves' },
     ],
   },
   {
@@ -151,9 +150,6 @@ export const guides: StyleGuide[] = [
       { name: 'Wide Leg Pants', brand: 'ASOS', price: '$52', url: 'https://asos.com' },
       { name: 'Silk Blouse', brand: 'H&M', price: '$35', url: 'https://hm.com' },
     ],
-  },
-];
-      
   },
 ];
 
