@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Privacy Policy' };
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'StyleMeDaily privacy policy — how we collect, use, and protect your data including cookies, analytics, and advertising.',
+};
 
 export default function PrivacyPage() {
   return (

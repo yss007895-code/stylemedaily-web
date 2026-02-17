@@ -1,45 +1,48 @@
-'use client';
-import { useState } from 'react';
-import { guides, categories } from '@/lib/guides-data';
-import GuideCard from '@/components/GuideCard';
+import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
+import { guides } from '@/lib/guides-data';
+import GuidesClient from './GuidesClient';
+
+export const metadata: Metadata = {
+  title: 'Style Guides — Outfit Ideas & Fashion Tips for Every Woman',
+  description: 'Browse 200+ expert styling guides with outfit ideas, capsule wardrobe tips, and fashion advice for work, dates, casual, and special occasions.',
+  keywords: ['style guides', 'outfit ideas', 'fashion tips', 'capsule wardrobe', 'what to wear', 'women fashion 2026'],
+  alternates: { canonical: `${SITE_URL}/guides` },
+  openGraph: {
+    title: 'Style Guides — Outfit Ideas & Fashion Tips',
+    description: 'Browse 200+ expert styling guides with outfit ideas and fashion advice for every occasion.',
+    url: `${SITE_URL}/guides`,
+    siteName: SITE_NAME,
+    type: 'website',
+  },
+};
 
 export default function GuidesPage() {
-  const [cat, setCat] = useState('all');
-  const [search, setSearch] = useState('');
-  const filtered = guides
-    .filter(g => cat === 'all' || g.category === cat)
-    .filter(g => !search || g.title.toLowerCase().includes(search.toLowerCase()) || g.description.toLowerCase().includes(search.toLowerCase()));
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'StyleMeDaily Style Guides',
+    description: 'Browse expert styling guides with outfit ideas and fashion advice.',
+    url: `${SITE_URL}/guides`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: guides.length,
+      itemListElement: guides.slice(0, 10).map((g, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE_URL}/guides/${g.slug}`,
+        name: g.title,
+      })),
+    },
+  };
 
   return (
-    <div className="pt-8">
-      <div className="mb-8">
-        <h1 className="section-title">Style Guides</h1>
-        <p className="text-gray-500 mt-1">200+ curated guides for every woman, every occasion</p>
-      </div>
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <input type="text" placeholder="Search guides..." value={search} onChange={e => setSearch(e.target.value)}
-          className="flex-1 bg-white border border-blush-200/60 rounded-xl px-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-blush-400 focus:ring-2 focus:ring-blush-100" />
-      </div>
-      <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
-        {categories.map(c => (
-          <button key={c.slug} onClick={() => setCat(c.slug)}
-            className={`px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all ${
-              cat === c.slug ? 'bg-gradient-to-r from-blush-500 to-purple-500 text-white shadow-md shadow-blush-200' : 'bg-white border border-blush-100/60 text-gray-500 hover:text-blush-600 hover:border-blush-200'
-            }`}>
-            {c.icon} {c.name}
-          </button>
-        ))}
-      </div>
-      <p className="text-sm text-gray-400 mb-4 font-mono">{filtered.length} guide{filtered.length !== 1 ? 's' : ''} found</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filtered.map(g => <GuideCard key={g.slug} guide={g} />)}
-      </div>
-      {filtered.length === 0 && (
-        <div className="text-center py-20">
-          <div className="text-4xl mb-4">👗</div>
-          <p className="text-gray-400">No guides found. Try a different search or category.</p>
-        </div>
-      )}
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <GuidesClient />
+    </>
   );
 }

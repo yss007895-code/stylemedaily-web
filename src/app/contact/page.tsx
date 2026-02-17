@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Contact Us' };
+export const metadata: Metadata = {
+  title: 'Contact Us — Partnerships & Inquiries',
+  description: 'Get in touch with the StyleMeDaily team for partnerships, sponsorships, or general inquiries. Email us or follow us on Pinterest and Instagram.',
+};
 
 export default function ContactPage() {
   return (

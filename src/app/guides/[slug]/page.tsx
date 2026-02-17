@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { guides, getGuideBySlug } from '@/lib/guides-data';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 import ShopTheLook from '@/components/ShopTheLook';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import type { Metadata } from 'next';
@@ -13,7 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const guide = getGuideBySlug(params.slug);
   if (!guide) return {};
   return {
-    title: `${guide.title} | StyleMeDaily`,
+    title: guide.title,
     description: guide.description,
     keywords: `${guide.category}, fashion guide, style tips, ${guide.title.toLowerCase()}, women fashion 2026, outfit ideas`,
     openGraph: {
@@ -23,7 +24,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       publishedTime: guide.date,
       authors: ['StyleMeDaily Team'],
       images: guide.image ? [{ url: guide.image, width: 1200, height: 630 }] : [],
-      siteName: 'StyleMeDaily',
+      siteName: SITE_NAME,
+      url: `${SITE_URL}/guides/${params.slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -32,7 +34,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       images: guide.image ? [guide.image] : [],
     },
     alternates: {
-      canonical: `https://yss007895-code.github.io/stylemedaily-web/guides/${params.slug}`,
+      canonical: `${SITE_URL}/guides/${params.slug}`,
     },
   };
 }
@@ -44,7 +46,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
   const related = guides.filter(g => g.category === guide.category && g.slug !== guide.slug).slice(0, 3);
   const moreGuides = guides.filter(g => g.category !== guide.category && g.slug !== guide.slug).slice(0, 3);
 
-  const jsonLd = {
+  const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: guide.title,
@@ -54,24 +56,39 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
     dateModified: guide.date,
     author: {
       '@type': 'Organization',
-      name: 'StyleMeDaily',
-      url: 'https://yss007895-code.github.io/stylemedaily-web',
+      name: SITE_NAME,
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'StyleMeDaily',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://yss007895-code.github.io/stylemedaily-web/favicon.ico',
-      },
+      name: SITE_NAME,
+      url: SITE_URL,
     },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/guides/${guide.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE_URL}/guides` },
+      { '@type': 'ListItem', position: 3, name: guide.title, item: `${SITE_URL}/guides/${guide.slug}` },
+    ],
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <article className="pt-8 max-w-3xl mx-auto">
@@ -220,13 +237,13 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
           <p className="font-display font-bold text-gray-900 text-sm mb-2">💖 Found this helpful?</p>
           <p className="text-xs text-gray-500 mb-3">Save this guide to Pinterest or share it with a friend who needs a wardrobe refresh!</p>
           <div className="flex justify-center gap-3">
-            <a href={`https://pinterest.com/pin/create/button/?url=https://yss007895-code.github.io/stylemedaily-web/guides/${guide.slug}&description=${encodeURIComponent(guide.title)}`}
+            <a href={`https://pinterest.com/pin/create/button/?url=${SITE_URL}/guides/${guide.slug}&description=${encodeURIComponent(guide.title)}`}
               target="_blank" rel="noopener noreferrer"
               className="bg-[#E60023] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-[#cc001f] transition-colors">
               📌 Save to Pinterest
             </a>
             <a
-              href={`https://yss007895-code.github.io/stylemedaily-web/guides/${guide.slug}`}
+              href={`${SITE_URL}/guides/${guide.slug}`}
               className="bg-gray-800 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-900 transition-colors inline-block"
             >
               🔗 Share Guide

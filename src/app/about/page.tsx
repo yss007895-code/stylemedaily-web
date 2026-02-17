@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'About StyleMeDaily' };
+export const metadata: Metadata = {
+  title: 'About StyleMeDaily — Our Mission & Team',
+  description: 'StyleMeDaily provides expert styling guides and personalized fashion advice for every woman. Learn about our mission, team, and affiliate disclosure.',
+};
 
 export default function AboutPage() {
   return (

@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# Host
+Host: https://stylemedaily.com
+
+# Sitemaps
+Sitemap: https://stylemedaily.com/sitemap.xml

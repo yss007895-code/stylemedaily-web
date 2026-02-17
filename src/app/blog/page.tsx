@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog — Fashion Tips, Trends & Style News',
-  description: 'The latest fashion tips, trend reports, and style advice for modern women.',
+  description: 'The latest fashion tips, trend reports, and style advice for modern women. Stay updated with seasonal trends, outfit ideas, and product reviews.',
+  keywords: ['fashion blog', 'style news', 'fashion trends 2026', 'outfit ideas', 'style tips'],
 };
 
 const posts = [
