@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { StyleGuide } from '@/lib/guides-data';
 
@@ -22,10 +23,12 @@ export default function GuideCard({ guide }: { guide: StyleGuide }) {
     <Link href={`/guides/${guide.slug}`} className="card-hover block group overflow-hidden rounded-xl">
       {guide.image ? (
         <div className="relative h-44 overflow-hidden">
-          <img
+          <Image
             src={guide.image}
             alt={guide.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-3 left-3">
             <span className={`badge border ${tagColors[guide.tag] || 'bg-gray-50 text-gray-500 border-gray-100'} backdrop-blur-sm bg-opacity-90`}>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
 export default function ShopTheLook({ products }: { products: AffiliateProduct[] }) {
@@ -23,10 +24,12 @@ export default function ShopTheLook({ products }: { products: AffiliateProduct[]
             )}
             {p.image ? (
               <div className="relative h-32 overflow-hidden bg-gray-50">
-                <img
+                <Image
                   src={p.image}
                   alt={p.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 {p.tag && i !== 0 && (
                   <span className="absolute top-2 left-2 badge-new text-[9px]">{p.tag}</span>

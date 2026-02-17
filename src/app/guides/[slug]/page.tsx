@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import { guides, getGuideBySlug } from '@/lib/guides-data';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
@@ -122,11 +123,14 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
 
         {/* Hero Image */}
         {guide.image && (
-          <div className="mb-8 rounded-2xl overflow-hidden">
-            <img
+          <div className="mb-8 rounded-2xl overflow-hidden relative h-64 sm:h-80">
+            <Image
               src={guide.image}
               alt={guide.title}
-              className="w-full h-64 sm:h-80 object-cover"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
             />
           </div>
         )}
@@ -259,7 +263,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
               {related.map(r => (
                 <Link key={r.slug} href={`/guides/${r.slug}`} className="card-hover p-4 flex items-center gap-4 group">
                   {r.image ? (
-                    <img src={r.image} alt={r.title} className="w-16 h-16 rounded-xl object-cover" />
+                    <Image src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
                   ) : (
                     <span className="text-2xl w-16 h-16 flex items-center justify-center">{r.emoji}</span>
                   )}
@@ -282,7 +286,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
               {moreGuides.map(r => (
                 <Link key={r.slug} href={`/guides/${r.slug}`} className="card-hover p-4 flex items-center gap-4 group">
                   {r.image ? (
-                    <img src={r.image} alt={r.title} className="w-16 h-16 rounded-xl object-cover" />
+                    <Image src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
                   ) : (
                     <span className="text-2xl w-16 h-16 flex items-center justify-center">{r.emoji}</span>
                   )}
