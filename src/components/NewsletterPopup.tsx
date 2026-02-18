@@ -43,7 +43,7 @@ export default function NewsletterPopup() {
         <h2 className="font-display text-xl font-bold text-gray-900 mb-2">Get the Weekly Style Edit</h2>
         <p className="text-sm text-gray-400 mb-5 leading-relaxed">
           Outfit ideas, trend reports, and curated Amazon finds — every Thursday.
-          <strong className="block text-gray-600 mt-1">Join 12,000+ readers.</strong>
+          <strong className="block text-gray-600 mt-1">Free, every Thursday.</strong>
         </p>
         <iframe
           src="https://yss007895.substack.com/embed"
