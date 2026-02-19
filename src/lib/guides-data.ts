@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'maximalist-vintage-revival-how-to-master-the-moreismore-trend',
+    title: 'Maximalist Vintage Revival: How to Master the More-Is-More Trend',
+    category: 'casual',
+    description: 'A complete guide to the maximalist vintage revival trend — how to mix eras, layer fearlessly, and build bold outfits with key vintage pieces.',
+    readTime: '10 min',
+    date: '2026-02-19',
+    tag: 'Hot',
+    emoji: '🌹',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'maximalist-vintage-revival-the-bold-trend-taking-over-2025',
     title: 'Maximalist Vintage Revival: The Bold Trend Taking Over 2025',
     category: 'casual',
