@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>StyleMeDaily</title>
+    <link>https://yss007895-code.github.io/stylemedaily-web/</link>
+    <description>Personal Style Guides for Every Woman</description>
+    <item>
+      <title>Dark Academia Fashion Guide</title>
+      <link>https://yss007895-code.github.io/stylemedaily-web/style-guides/20260219_dark_academia_fashion_your_ultimate_style_guide_to_nailing_the_tiktok_aesthetic.html</link>
+      <description>Your ultimate guide to nailing the Dark Academia aesthetic</description>
+      <enclosure url="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Clean Girl Aesthetic 2026</title>
+      <link>https://yss007895-code.github.io/stylemedaily-web/style-guides/20260219_clean_girl_aesthetic_2026_the_only_style_guide_you_need.html</link>
+      <description>The only style guide you need for Clean Girl Aesthetic</description>
+      <enclosure url="https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Coastal Grandmother Style</title>
+      <link>https://yss007895-code.github.io/stylemedaily-web/style-guides/20260219_coastal_grandmother_style_your_ultimate_guide_to_the_chicest_trend_on_tiktok.html</link>
+      <description>Your ultimate guide to the chicest trend on TikTok</description>
+      <enclosure url="https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
