@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'balletcore-essentials-how-to-master-this-viral-trend',
+    title: 'Balletcore Essentials: How to Master This Viral Trend',
+    category: 'casual',
+    description: 'Master balletcore essentials & outfit ideas with our viral style guide. Shop the perfect pieces & get styling tips now.',
+    readTime: '10 min',
+    date: '2026-02-19',
+    tag: 'Hot',
+    emoji: '🩰',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'gorpcore-for-women-3-styling-tips--outfit-ideas-that-own-tiktok',
     title: 'Gorpcore for Women: 3 Styling Tips & Outfit Ideas That Own TikTok',
     category: 'casual',
