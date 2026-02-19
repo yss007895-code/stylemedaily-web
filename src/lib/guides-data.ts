@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'indie-sleaze-is-back--heres-how-to-nail-it-in-2025',
+    title: 'Indie Sleaze Is Back — Here's How to Nail It in 2025',
+    category: 'casual',
+    description: 'A complete guide to the indie sleaze revival trend — key pieces, 3 outfit formulas, and styling tips for nailing the chaotic, effortless cool-girl aesthetic in 2025.',
+    readTime: '10 min',
+    date: '2026-02-19',
+    tag: 'Hot',
+    emoji: '🖤',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'soft-girl-aesthetic-101-your-dreamy-style-guide',
     title: 'Soft Girl Aesthetic 101: Your Dreamy Style Guide 🎀☁️',
     category: 'casual',
