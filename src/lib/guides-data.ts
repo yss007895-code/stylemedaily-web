@@ -1112,6 +1112,24 @@ export const guides: StyleGuide[] = [
       { name: 'Bright Orange Crossbody Bag', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4tEIRhl', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=200&fit=crop' },
     ],
   },
+  {
+    slug: 'winter-to-spring-transition-outfits-2026',
+    title: 'Winter to Spring Transition Outfits 2026: What to Wear When the Weather Can\'t Decide',
+    category: 'seasonal',
+    description: 'Master the tricky winter-to-spring transition with layering strategies, versatile pieces, and outfit formulas that work in unpredictable weather. Your complete styling guide.',
+    readTime: '11 min',
+    date: '2026-02-19',
+    tag: 'Hot',
+    emoji: '\u{1F338}',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop',
+    affiliateProducts: [
+      { name: 'Lightweight Trench Coat', brand: 'The Drop', price: '$65', url: 'https://amzn.to/4rfVnSQ', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
+      { name: 'Cotton-Cashmere Crewneck', brand: 'Amazon Essentials', price: '$32', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
+      { name: 'High-Waisted Wide-Leg Jeans', brand: 'Levi\'s', price: '$48', url: 'https://amzn.to/3ZCaw4S', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
+      { name: 'Quilted Vest', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Trending', image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=200&fit=crop' },
+      { name: 'Chelsea Ankle Boots', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {
