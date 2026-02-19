@@ -17,14 +17,14 @@ export interface AffiliateProduct {
   price: string;
   url: string;
   tag?: string;
-  image?: string;h
+  image?: string;
 }
 
 export const categories = [
   { slug: 'all', name: 'All Styles', icon: '✨' },
   { slug: 'workwear', name: 'Workwear', icon: '👔' },
   { slug: 'casual', name: 'Casual Chic', icon: '👗' },
-  { slug: 'date-night', name: 'Date Night', icon: '💃' },h
+  { slug: 'date-night', name: 'Date Night', icon: '💃' },
   { slug: 'seasonal', name: 'Seasonal', icon: '🌸' },
   { slug: 'body-type', name: 'Body Types', icon: '💖' },
   { slug: 'budget', name: 'On a Budget', icon: '💰' },
