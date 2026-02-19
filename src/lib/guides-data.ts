@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'office-siren-the-seductive-workwear-trend-you-need-to-try',
+    title: 'Office Siren: The Seductive Workwear Trend You Need to Try',
+    category: 'workwear',
+    description: 'A complete guide to the office siren trend — the seductive workwear aesthetic blending corporate polish with alluring confidence. Includes key pieces, 3 styled outfits, and budget tips.',
+    readTime: '10 min',
+    date: '2026-02-19',
+    tag: 'Hot',
+    emoji: '👓',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'indie-sleaze-is-back--heres-how-to-nail-it-in-2025',
     title: 'Indie Sleaze Is Back — Here's How to Nail It in 2025',
     category: 'casual',
