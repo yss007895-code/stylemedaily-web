@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'cottagecore-spring-outfits-that-are-taking-over-tiktok',
+    title: 'Cottagecore Spring Outfits That Are Taking Over TikTok',
+    category: 'Spring Fashion',
+    description: 'Master cottagecore spring outfits with these viral TikTok-approved styling tips. Get outfit ideas, learn how to wear florals, and shop essential pieces for the perfect dreamy aesthetic.',
+    readTime: '10 min',
+    date: '2026-02-19',
+    tag: 'cottagecore',
+    emoji: '🌸',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'clean-girl-aesthetic-2026-the-effortless-style-guide-everyones-obsessing-over',
     title: 'Clean Girl Aesthetic 2026: The Effortless Style Guide Everyone's Obsessing Over',
     category: 'casual',
