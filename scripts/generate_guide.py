@@ -244,6 +244,7 @@ def git_commit_and_push(slug: str, title: str):
         ["git", "commit", "-m", f"feat: auto-generate guide '{title}' [{slug}]"],
         check=True, cwd=ROOT,
     )
+    subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True, cwd=ROOT)
     subprocess.run(["git", "push", "origin", "main"], check=True, cwd=ROOT)
     print(f"✅ Committed and pushed: {slug}")
 
