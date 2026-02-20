@@ -33,6 +33,19 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'coastal-grandmother-style-guide-how-to-wear-the-tiktok-trend-that-lives-in-my-head-rentfree',
+    title: 'Coastal Grandmother Style Guide: How to Wear the TikTok Trend That Lives in My Head Rent-Free',
+    category: 'Style Guide',
+    description: 'Your ultimate coastal grandmother style guide with outfit ideas, styling tips, and shop-the-look essentials. Learn how to wear TikTok's chicest trend like a pro.',
+    readTime: '10 min',
+    date: '2026-02-20',
+    tag: 'coastal grandmother style',
+    emoji: '🐚',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+
+  {
     slug: 'refined-90s-minimalism-understated-luxury-curated-essentials',
     title: 'The Whisper of Luxury: Reclaiming Refined \'90s Minimalism for Today',
     category: 'casual',
