@@ -1148,6 +1148,24 @@ export const guides: StyleGuide[] = [
       { name: 'Stella McCartney Frayme Faux-Leather Bag', brand: 'Amazon', price: '$1100', url: 'https://amzn.to/4tH7kT9', tag: 'Luxury Splurge', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=200&fit=crop' },
     ],
   },
+  {
+    slug: 'how-to-style-palazzo-pants-women-2026',
+    title: 'How to Style Palazzo Pants for Women in 2026: The Ultimate Outfit Guide',
+    category: 'casual',
+    description: 'Learn how to style palazzo pants for every occasion in 2026. Outfit ideas, best brands, and tips to flatter every body type.',
+    readTime: '11 min',
+    date: '2026-02-21',
+    tag: 'Style Tips',
+    emoji: '👖',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&h=400&fit=crop',
+    affiliateProducts: [
+      { name: 'WAYF Wide-Leg Palazzo Pants in Black', brand: 'Amazon', price: '$68', url: 'https://amzn.to/4rVjOFg', tag: 'Best Overall', image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=200&fit=crop' },
+      { name: 'Abercrombie Sloane High-Rise Palazzo Trousers', brand: 'Amazon', price: '$90', url: 'https://amzn.to/3OhrhzW', tag: 'Editor\'s Pick', image: 'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=200&fit=crop' },
+      { name: 'Amazon Essentials Pleated Wide-Leg Palazzo Pant', brand: 'Amazon', price: '$29', url: 'https://amzn.to/40drBCf', tag: 'Budget Pick', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=200&fit=crop' },
+      { name: 'Reformation Cary High-Rise Linen Palazzo Pant', brand: 'Amazon', price: '$148', url: 'https://amzn.to/4tEIRhl', tag: 'Best Linen', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=200&h=200&fit=crop' },
+      { name: 'Quince Stretch Crepe Palazzo Pants', brand: 'Amazon', price: '$50', url: 'https://amzn.to/4rUPDhk', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=200&fit=crop' },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {
