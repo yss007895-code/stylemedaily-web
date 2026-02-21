@@ -43,3 +43,8 @@ node scripts/agent-generate.js --full
 - `src/lib/guides-content-new.ts` - 최신 콘텐츠
 - `src/lib/guides-content-batch12.ts` - 배치 12 콘텐츠
 - `scripts/` - 자동화 스크립트
+
+## 필수 규칙
+- 파일 수정 후 반드시 git add, git commit, git push까지 완료할 것
+- push 없이 작업 완료 보고 금지
+- 커밋 메시지 형식: "[TrendLoopUSA] 변경 내용 요약"
