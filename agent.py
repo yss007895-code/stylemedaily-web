@@ -21,11 +21,11 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Initialize Clients
-anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+anthropic_client = anthropic.AnthropicVertex(region="us-east5", project_id="fashion-money-maker")
 gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
-CLAUDE_MODEL = "claude-opus-4-6"
-GEMINI_MODEL = "gemini-2.5-pro"
+CLAUDE_MODEL = "claude-opus-4-6@20251101"
+GEMINI_MODEL = "gemini-3.1-pro"
 WEB_ROOT = os.path.join(HOME, "stylemedaily-web")
 GUIDES_DIR = os.path.join(WEB_ROOT, "style-guides")
 GUIDES_DATA_PATH = os.path.join(WEB_ROOT, r"src\lib\guides-data.ts")
