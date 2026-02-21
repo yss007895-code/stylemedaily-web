@@ -54,7 +54,7 @@ export const guides: StyleGuide[] = [
     date: '2026-02-20',
     tag: 'Editor Pick',
     emoji: '🤍',
-    image: '/images/guides/refined-90s-minimalism-understated-luxury-curated-essentials.jpg',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick' },
       { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20' },
