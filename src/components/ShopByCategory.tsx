@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import { shopCategories, getProductsByCategory } from '@/lib/guides-data';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
@@ -46,7 +46,7 @@ export default function ShopByCategory() {
           >
             {p.image ? (
               <div className="relative h-40 overflow-hidden bg-gray-50">
-                <Image
+                <SafeImage
                   src={p.image}
                   alt={p.name}
                   fill

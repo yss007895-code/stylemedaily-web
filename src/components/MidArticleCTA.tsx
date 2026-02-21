@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
 interface MidArticleCTAProps {
@@ -17,7 +17,7 @@ export default function MidArticleCTA({ products, variant = 'hero' }: MidArticle
         <div className="flex items-center gap-4">
           {p.image && (
             <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-white">
-              <Image src={p.image} alt={p.name} fill sizes="80px" className="object-cover" />
+              <SafeImage src={p.image} alt={p.name} fill sizes="80px" className="object-cover" />
             </div>
           )}
           <div className="flex-1 min-w-0">
@@ -56,7 +56,7 @@ export default function MidArticleCTA({ products, variant = 'hero' }: MidArticle
           >
             {p.image && (
               <div className="relative h-24 rounded-lg overflow-hidden mb-2 bg-gray-50">
-                <Image src={p.image} alt={p.name} fill sizes="200px" className="object-cover" />
+                <SafeImage src={p.image} alt={p.name} fill sizes="200px" className="object-cover" />
               </div>
             )}
             <p className="text-[11px] text-gray-400 uppercase tracking-wide">{p.brand}</p>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
 export default function ShopTheLook({ products }: { products: AffiliateProduct[] }) {
@@ -21,7 +21,7 @@ export default function ShopTheLook({ products }: { products: AffiliateProduct[]
             )}
             {p.image ? (
               <div className="relative h-36 overflow-hidden bg-gray-50">
-                <Image
+                <SafeImage
                   src={p.image}
                   alt={p.name}
                   fill

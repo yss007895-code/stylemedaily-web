@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
 interface ProductCardProps {
@@ -20,7 +20,7 @@ export default function ProductCard({ product, size = 'md', showFrom = false }: 
     >
       {p.image ? (
         <div className={`relative ${imageHeight} overflow-hidden bg-gray-50`}>
-          <Image
+          <SafeImage
             src={p.image}
             alt={p.name}
             fill

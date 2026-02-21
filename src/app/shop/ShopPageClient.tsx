@@ -1,6 +1,6 @@
 'use client';
 import { useState, useMemo } from 'react';
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
 type ProductWithSource = AffiliateProduct & { fromGuide: string; fromGuideSlug: string };
@@ -92,7 +92,7 @@ export default function ShopPageClient({ products, categories }: ShopPageClientP
           >
             {p.image ? (
               <div className="relative h-40 overflow-hidden bg-gray-50">
-                <Image
+                <SafeImage
                   src={p.image}
                   alt={p.name}
                   fill

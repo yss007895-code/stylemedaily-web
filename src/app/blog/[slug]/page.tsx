@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 import NewsletterCTA from '@/components/NewsletterCTA';
@@ -170,7 +170,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </header>
 
       <div className="mb-8 rounded-2xl overflow-hidden relative h-64 sm:h-80">
-        <Image src={post.image} alt={post.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
+        <SafeImage src={post.image} alt={post.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
       </div>
 
       <div className="prose-style">

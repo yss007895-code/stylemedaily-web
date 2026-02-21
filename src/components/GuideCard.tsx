@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import Link from 'next/link';
 import type { StyleGuide } from '@/lib/guides-data';
 
@@ -12,7 +12,7 @@ export default function GuideCard({ guide }: { guide: StyleGuide }) {
     <Link href={`/guides/${guide.slug}`} className="card-hover block group overflow-hidden rounded-xl">
       {guide.image ? (
         <div className="relative h-44 overflow-hidden">
-          <Image
+          <SafeImage
             src={guide.image}
             alt={guide.title}
             fill
@@ -48,7 +48,7 @@ export default function GuideCard({ guide }: { guide: StyleGuide }) {
               {guide.affiliateProducts.slice(0, 3).map((p, i) => (
                 p.image ? (
                   <div key={i} className="w-7 h-7 rounded-full border-2 border-white overflow-hidden relative">
-                    <Image src={p.image} alt={p.name} fill sizes="28px" className="object-cover" />
+                    <SafeImage src={p.image} alt={p.name} fill sizes="28px" className="object-cover" />
                   </div>
                 ) : (
                   <div key={i} className="w-7 h-7 rounded-full border-2 border-white bg-gray-100" />

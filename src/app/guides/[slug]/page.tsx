@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import Link from 'next/link';
 import { guides, getGuideBySlug } from '@/lib/guides-data';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
@@ -148,7 +148,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
         {/* Hero Image */}
         {guide.image && (
           <div className="mb-8 rounded-2xl overflow-hidden relative h-64 sm:h-80">
-            <Image src={guide.image} alt={guide.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
+            <SafeImage src={guide.image} alt={guide.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
           </div>
         )}
 
@@ -252,7 +252,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
               {related.map(r => (
                 <Link key={r.slug} href={`/guides/${r.slug}`} className="card-hover p-4 flex items-center gap-4 group">
                   {r.image ? (
-                    <Image src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
+                    <SafeImage src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
                   ) : (
                     <div className="w-16 h-16 rounded-xl bg-gray-100" />
                   )}
@@ -274,7 +274,7 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
               {moreGuides.map(r => (
                 <Link key={r.slug} href={`/guides/${r.slug}`} className="card-hover p-4 flex items-center gap-4 group">
                   {r.image ? (
-                    <Image src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
+                    <SafeImage src={r.image} alt={r.title} width={64} height={64} className="rounded-xl object-cover" />
                   ) : (
                     <div className="w-16 h-16 rounded-xl bg-gray-100" />
                   )}

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import SafeImage from '@/components/SafeImage';
 import type { Metadata } from 'next';
 import NewsletterCTA from '@/components/NewsletterCTA';
 
@@ -148,7 +148,7 @@ export default function BlogPage() {
         <div className="card-hover overflow-hidden rounded-xl">
           {featured.image && (
             <div className="relative h-64 sm:h-80 overflow-hidden">
-              <Image
+              <SafeImage
                 src={featured.image}
                 alt={featured.title}
                 fill
@@ -182,7 +182,7 @@ export default function BlogPage() {
           <Link key={p.slug} href={p.link} className="card-hover block group overflow-hidden rounded-xl">
             {p.image && (
               <div className="relative h-44 overflow-hidden">
-                <Image
+                <SafeImage
                   src={p.image}
                   alt={p.title}
                   fill
