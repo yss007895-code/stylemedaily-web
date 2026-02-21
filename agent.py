@@ -12,19 +12,34 @@ from dotenv import load_dotenv
 from datetime import datetime
 
 # Load environment variables
-load_dotenv(dotenv_path=r"C:\Users\yss00\.env")
+if sys.platform == "win32":
+    load_dotenv(dotenv_path=r"C:\Users\yss00\.env")
+else:
+    load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "agents", ".env"))
+    load_dotenv()  # also check local .env
 
 # Initialize Clients (Vertex AI - fashion-money-maker credits)
 gemini_client = genai.Client(vertexai=True, project="fashion-money-maker", location="us-central1")
 
 GEMINI_MODEL = "gemini-3.1-pro"
-WEB_ROOT = r"C:\Users\yss00\stylemedaily-web"
+IMAGE_MODEL = "gemini-3-pro-image"
+
+# Auto-detect environment (Windows local vs Linux VM)
+if sys.platform == "win32":
+    WEB_ROOT = r"C:\Users\yss00\stylemedaily-web"
+    PINS_FILE = r"C:\Users\yss00\pins.txt"
+    ERROR_LOG = r"C:\Users\yss00\error_log.txt"
+    TOPICS_FILE = r"C:\Users\yss00\generated_topics.txt"
+    BACKUP_ROOT = r"C:\Users\yss00\backups"
+else:
+    WEB_ROOT = os.path.dirname(os.path.abspath(__file__))
+    PINS_FILE = os.path.join(WEB_ROOT, "pins.txt")
+    ERROR_LOG = os.path.join(WEB_ROOT, "error_log.txt")
+    TOPICS_FILE = os.path.join(WEB_ROOT, "generated_topics.txt")
+    BACKUP_ROOT = os.path.join(WEB_ROOT, "backups")
+
 GUIDES_DIR = os.path.join(WEB_ROOT, "style-guides")
-GUIDES_DATA_PATH = os.path.join(WEB_ROOT, r"src\lib\guides-data.ts")
-PINS_FILE = r"C:\Users\yss00\pins.txt"
-ERROR_LOG = r"C:\Users\yss00\error_log.txt"
-TOPICS_FILE = r"C:\Users\yss00\generated_topics.txt"
-BACKUP_ROOT = r"C:\Users\yss00\backups"
+GUIDES_DATA_PATH = os.path.join(WEB_ROOT, "src", "lib", "guides-data.ts")
 
 # Twitter Credentials
 TWITTER_CONFIG = {
@@ -43,12 +58,10 @@ def perform_backup():
     try:
         os.makedirs(backup_dir, exist_ok=True)
         files_to_backup = [
-            r"C:\Users\yss00\agent.py",
-            r"C:\Users\yss00\.env",
-            r"C:\Users\yss00\generated_topics.txt",
-            r"C:\Users\yss00\pins.txt",
-            r"C:\Users\yss00\run_agent.bat",
-            GUIDES_DATA_PATH
+            os.path.join(WEB_ROOT, "agent.py"),
+            TOPICS_FILE,
+            PINS_FILE,
+            GUIDES_DATA_PATH,
         ]
         for file_path in files_to_backup:
             if os.path.exists(file_path):
@@ -121,6 +134,38 @@ def strip_markdown_fences(text):
     stripped = re.sub(r'^```[\w]*\n?', '', text.strip())
     stripped = re.sub(r'\n?```$', '', stripped.strip())
     return stripped.strip()
+
+def generate_blog_image(keyword, title):
+    """Generate a blog hero image using Gemini image model."""
+    print(f"Generating image for: {title} (Gemini {IMAGE_MODEL})")
+    try:
+        img_prompt = (
+            f"Create a stylish, high-quality fashion blog hero image for '{keyword}'. "
+            f"Title: '{title}'. Modern, clean aesthetic. No text overlay. "
+            f"Photorealistic fashion photography style, soft lighting, 16:9 aspect ratio."
+        )
+        response = gemini_client.models.generate_content(
+            model=IMAGE_MODEL,
+            contents=img_prompt,
+        )
+        # Save image if binary data returned
+        if response.candidates and response.candidates[0].content.parts:
+            for part in response.candidates[0].content.parts:
+                if hasattr(part, 'inline_data') and part.inline_data:
+                    img_dir = os.path.join(WEB_ROOT, "public", "images", "generated")
+                    os.makedirs(img_dir, exist_ok=True)
+                    slug = re.sub(r'[^a-z0-9]+', '-', keyword.lower()).strip('-')
+                    img_filename = f"{datetime.now().strftime('%Y%m%d')}_{slug}.png"
+                    img_path = os.path.join(img_dir, img_filename)
+                    with open(img_path, "wb") as f:
+                        f.write(part.inline_data.data)
+                    print(f"Image saved: {img_path}")
+                    return f"/images/generated/{img_filename}"
+        print("No image data in response, using fallback")
+    except Exception as e:
+        print(f"Image generation failed: {e}")
+    return "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop"
+
 
 def generate_targeted_blog(keyword):
     """Generates blog post and Pinterest content via Gemini (Vertex AI)."""
@@ -195,7 +240,7 @@ def update_site_registry(slug, data):
     date: '{datetime.now().strftime('%Y-%m-%d')}',
     tag: '{data['meta'].get('tag', 'New')}',
     emoji: '{data['meta'].get('emoji', '✨')}',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    image: '{data.get("image_url", "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop")}',
     affiliateProducts: [],
   }},
 """
@@ -243,6 +288,8 @@ def run_workflow():
     keyword = get_unused_keyword()
     data = generate_targeted_blog(keyword)
     slug = "".join([c for c in data['blog_title'] if c.isalnum() or c==' ']).rstrip().replace(' ', '-').lower()
+    # Generate hero image
+    data['image_url'] = generate_blog_image(keyword, data['blog_title'])
     save_and_push(data)
     mark_topic_as_used(keyword)
     post_to_twitter(data['blog_title'], slug)
