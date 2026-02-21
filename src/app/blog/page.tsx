@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import NewsletterCTA from '@/components/NewsletterCTA';
 
 export const metadata: Metadata = {
   title: 'Blog — Fashion Tips, Trends & Style News',
@@ -211,19 +212,7 @@ export default function BlogPage() {
       </div>
 
       {/* Newsletter CTA */}
-      <div className="mt-16 border border-gray-100 rounded-xl p-8 text-center bg-white">
-        <h3 className="font-display text-xl font-bold text-gray-900 mb-2">Stay in the Loop</h3>
-        <p className="text-gray-400 text-sm mb-6">New articles and style picks delivered every Thursday.</p>
-        <iframe
-          src="https://trendloopusa.substack.com/embed"
-          width="100%"
-          height="130"
-          style={{ border: '1px solid #EEE', background: 'white', borderRadius: '12px', maxWidth: '480px', display: 'block', margin: '0 auto' }}
-          frameBorder={0}
-          scrolling="no"
-        />
-        <p className="text-[11px] text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
-      </div>
+      <NewsletterCTA />
     </div>
   );
 }

@@ -56,11 +56,11 @@ export const guides: StyleGuide[] = [
     emoji: '🤍',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
-      { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop' },
-      { name: 'Oversized single-breasted blazer', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Oversized+single-breasted+blazer&tag=styleme-20', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
-      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
-      { name: 'Elongated column skirt', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Elongated+column+skirt&tag=styleme-20', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0uj90?w=200&h=200&fit=crop' },
+      { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
+      { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop' },
+      { name: 'Oversized single-breasted blazer', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Oversized+single-breasted+blazer&tag=styleme-20', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
+      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
+      { name: 'Elongated column skirt', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Elongated+column+skirt&tag=styleme-20', image: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=200&fit=crop' },
     ],
   },
 
@@ -145,7 +145,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Wrap Ballet Flats', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
-      { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&h=200&fit=crop' },
+      { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=200&h=200&fit=crop' },
       { name: 'Cropped Wrap Cardigan', brand: 'Amazon', price: '$26', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
     ],
   },
@@ -195,7 +195,7 @@ export const guides: StyleGuide[] = [
     emoji: '👓',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Fitted Pencil Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&h=200&fit=crop' },
+      { name: 'Fitted Pencil Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=200&h=200&fit=crop' },
       { name: 'Sheer Button-Down Blouse', brand: 'Amazon', price: '$24', url: 'https://amzn.to/3ZCaw4S', image: 'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=200&fit=crop' },
       { name: 'Pointed-Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4rVjOFg', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
     ],
@@ -213,7 +213,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Distressed Band Tee', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3Mro3JB', tag: 'Trending', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
-      { name: 'Faux Leather Mini Skirt', brand: 'Amazon', price: '$26', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&h=200&fit=crop' },
+      { name: 'Faux Leather Mini Skirt', brand: 'Amazon', price: '$26', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1551854838-212c50b4c184?w=200&h=200&fit=crop' },
       { name: 'Chunky Platform Boots', brand: 'Amazon', price: '$52', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop' },
     ],
   },
@@ -230,7 +230,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
-      { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=200&h=200&fit=crop' },
+      { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: 'https://images.unsplash.com/photo-1582142306909-195724d33ffc?w=200&h=200&fit=crop' },
       { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
     ],
   },
