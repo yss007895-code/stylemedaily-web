@@ -56,11 +56,11 @@ export const guides: StyleGuide[] = [
     emoji: '🤍',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick' },
-      { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20' },
-      { name: 'Oversized single-breasted blazer', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Oversized+single-breasted+blazer&tag=styleme-20' },
-      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20' },
-      { name: 'Elongated column skirt', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Elongated+column+skirt&tag=styleme-20' },
+      { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
+      { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop' },
+      { name: 'Oversized single-breasted blazer', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Oversized+single-breasted+blazer&tag=styleme-20', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
+      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20', image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=200&fit=crop' },
+      { name: 'Elongated column skirt', brand: 'Amazon', price: '$--', url: 'https://www.amazon.com/s?k=Elongated+column+skirt&tag=styleme-20', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0uj90?w=200&h=200&fit=crop' },
     ],
   },
 
