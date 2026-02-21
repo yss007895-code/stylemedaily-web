@@ -59,7 +59,7 @@ export const guides: StyleGuide[] = [
       { name: 'Slim-cut tailored trousers in wool crepe', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Slim-cut+tailored+trousers+in+wool+crepe&tag=styleme-20', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Bias-cut silk slip dress', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Bias-cut+silk+slip+dress&tag=styleme-20', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop' },
       { name: 'Oversized single-breasted blazer', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Oversized+single-breasted+blazer&tag=styleme-20', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
-      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cashmere crewneck sweater', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Cashmere+crewneck+sweater&tag=styleme-20', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Elongated column skirt', brand: 'Amazon', price: 'See Price', url: 'https://www.amazon.com/s?k=Elongated+column+skirt&tag=styleme-20', image: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=200&fit=crop' },
     ],
   },
@@ -146,7 +146,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Wrap Ballet Flats', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
       { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=200&h=200&fit=crop' },
-      { name: 'Cropped Wrap Cardigan', brand: 'Amazon', price: '$26', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cropped Wrap Cardigan', brand: 'Amazon', price: '$26', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
     ],
   },
 
@@ -178,7 +178,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎩',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Oversized Knit Cardigan', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Oversized Knit Cardigan', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Corduroy Wide-Leg Trousers', brand: 'Amazon', price: '$34', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Argyle Sweater Vest', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
     ],
@@ -229,7 +229,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎀',
     image: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: 'https://images.unsplash.com/photo-1582142306909-195724d33ffc?w=200&h=200&fit=crop' },
       { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
     ],
@@ -620,7 +620,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Lace Midi Skirt', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3OrVpsf', tag: 'Romantic Trend', image: 'https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=200&h=200&fit=crop' },
-      { name: 'Quarter Zip Knit', brand: 'Amazon', price: '$35', url: 'https://amzn.to/40drBCf', tag: 'Runway Pick', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Quarter Zip Knit', brand: 'Amazon', price: '$35', url: 'https://amzn.to/40drBCf', tag: 'Runway Pick', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Floral Midi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4rfX7eQ', tag: 'Spring Essential', image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=200&fit=crop' },
       { name: 'Oversized Sunglasses', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4tEIRhl', tag: 'Statement Piece', image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=200&h=200&fit=crop' },
       { name: 'Almond Toe Heels', brand: 'Amazon', price: '$45', url: 'https://amzn.to/4tEJV4X', tag: 'Elegant Pick', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
@@ -747,7 +747,7 @@ export const guides: StyleGuide[] = [
     emoji: '🍂',
     image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Chunky Knit Sweater', brand: 'Amazon', price: '$42', url: 'https://amzn.to/40drBCf', tag: 'Fall Essential', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Chunky Knit Sweater', brand: 'Amazon', price: '$42', url: 'https://amzn.to/40drBCf', tag: 'Fall Essential', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Faux Leather Trousers', brand: 'Amazon', price: '$48', url: 'https://amzn.to/3ZCaw4S', tag: 'Trending', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Ankle Boots', brand: 'Amazon', price: '$55', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
       { name: 'Oversized Trench Coat', brand: 'Amazon', price: '$68', url: 'https://amzn.to/4kNVNxy', tag: 'Investment Piece', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
@@ -782,7 +782,7 @@ export const guides: StyleGuide[] = [
     emoji: '🛒',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Fleece Pullover Hoodie', brand: 'Amazon', price: '$32', url: 'https://amzn.to/40drBCf', tag: '#1 Best Seller', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Fleece Pullover Hoodie', brand: 'Amazon', price: '$32', url: 'https://amzn.to/40drBCf', tag: '#1 Best Seller', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Yoga Pants (High Waist)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', tag: 'Most Reviewed', image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=200&h=200&fit=crop' },
       { name: 'Satin Slip Dress', brand: 'Amazon', price: '$29', url: 'https://amzn.to/4tH7kT9', tag: 'TikTok Viral', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop' },
       { name: 'V-Neck Cardigan', brand: 'Amazon', price: '$34', url: 'https://amzn.to/3Mro3JB', tag: 'Prime Pick', image: 'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=200&fit=crop' },
@@ -854,7 +854,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Ballet Flat (Square Toe)', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3OhrhzW', tag: 'Balletcore', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
-      { name: 'Cashmere Blend Sweater', brand: 'Amazon', price: '$55', url: 'https://amzn.to/40drBCf', tag: 'Quiet Luxury', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cashmere Blend Sweater', brand: 'Amazon', price: '$55', url: 'https://amzn.to/40drBCf', tag: 'Quiet Luxury', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Barrel Leg Jeans', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4rfVnSQ', tag: 'Viral Denim', image: 'https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=200&h=200&fit=crop' },
       { name: 'Mesh Ballet Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3OrVpsf', tag: 'TikTok Fave', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
     ],
@@ -906,7 +906,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Wool Blend Coat', brand: 'Amazon', price: '$78', url: 'https://amzn.to/4kNVNxy', tag: 'Best Overall', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
-      { name: 'Cashmere Turtleneck Sweater', brand: 'Amazon', price: '$45', url: 'https://amzn.to/40drBCf', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cashmere Turtleneck Sweater', brand: 'Amazon', price: '$45', url: 'https://amzn.to/40drBCf', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Thermal Lined Leggings', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', tag: 'Warmest Pick', image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=200&h=200&fit=crop' },
       { name: 'Knee-High Boots', brand: 'Amazon', price: '$65', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
       { name: 'Chunky Knit Scarf', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3Mro3JB', tag: 'Cozy Essential', image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=200&h=200&fit=crop' },
@@ -941,7 +941,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎨',
     image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Color Block Sweater', brand: 'Amazon', price: '$35', url: 'https://amzn.to/40drBCf', tag: 'Top Rated', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Color Block Sweater', brand: 'Amazon', price: '$35', url: 'https://amzn.to/40drBCf', tag: 'Top Rated', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Neutral Tone Midi Skirt', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3OrVpsf', tag: 'Versatile', image: 'https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=200&h=200&fit=crop' },
       { name: 'Silk Scarf (Multi-way)', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', tag: 'Color Pop', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=200&fit=crop' },
       { name: 'White Linen Shirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rUPDhk', tag: 'Base Layer', image: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=200&h=200&fit=crop' },
@@ -1083,7 +1083,7 @@ export const guides: StyleGuide[] = [
     emoji: '🤍',
     image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&h=400&fit=crop',
     affiliateProducts: [
-      { name: 'Cashmere-Blend Crewneck Sweater', brand: 'Amazon', price: '$45', url: 'https://amzn.to/40drBCf', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cashmere-Blend Crewneck Sweater', brand: 'Amazon', price: '$45', url: 'https://amzn.to/40drBCf', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Tailored Wide-Leg Trousers', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3ZCaw4S', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Classic Wool-Blend Coat', brand: 'Amazon', price: '$68', url: 'https://amzn.to/4kNVNxy', tag: 'Investment Piece', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
       { name: 'Leather Ballet Flats', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
@@ -1140,7 +1140,7 @@ export const guides: StyleGuide[] = [
       { name: 'Oversized Satin Blazer in Fuchsia', brand: 'The Drop', price: '$55', url: 'https://amzn.to/4rfVnSQ', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=200&fit=crop' },
       { name: 'Wide-Leg Trousers in Cobalt Blue', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Chunky Gold Statement Earrings', brand: 'Amazon', price: '$16', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=200&fit=crop' },
-      { name: 'Color-Block Knit Sweater', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4anggFT', tag: 'Trending', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Color-Block Knit Sweater', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4anggFT', tag: 'Trending', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'Bright Orange Crossbody Bag', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4tEIRhl', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=200&fit=crop' },
     ],
   },
@@ -1156,7 +1156,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Lightweight Trench Coat', brand: 'The Drop', price: '$65', url: 'https://amzn.to/4rfVnSQ', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=200&fit=crop' },
-      { name: 'Cotton-Cashmere Crewneck', brand: 'Amazon Essentials', price: '$32', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cotton-Cashmere Crewneck', brand: 'Amazon Essentials', price: '$32', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
       { name: 'High-Waisted Wide-Leg Jeans', brand: 'Levi\'s', price: '$48', url: 'https://amzn.to/3ZCaw4S', tag: 'Must Have', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=200&fit=crop' },
       { name: 'Quilted Vest', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Trending', image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=200&fit=crop' },
       { name: 'Chelsea Ankle Boots', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
@@ -1230,7 +1230,7 @@ export const guides: StyleGuide[] = [
       { name: 'Pointed Toe Stiletto Heels', brand: 'Amazon', price: '$52', url: 'https://amzn.to/3OhrhzW', tag: 'Elegant Choice', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
       { name: 'Crystal Drop Earrings', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=200&fit=crop' },
       { name: 'Embellished Evening Clutch', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4anggFT', tag: 'Statement Piece', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=200&fit=crop' },
-      { name: 'Cashmere Wrap Shawl', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4rfVnSQ', tag: 'Luxe Touch', image: 'https://images.unsplash.com/photo-1434389677669-e08b4cda3a20?w=200&h=200&fit=crop' },
+      { name: 'Cashmere Wrap Shawl', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4rfVnSQ', tag: 'Luxe Touch', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=200&fit=crop' },
     ],
   },
   {
