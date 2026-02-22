@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 import SafeImage from '@/components/SafeImage';
 import { guides } from '@/lib/guides-data';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants';
@@ -77,124 +78,113 @@ export default function HomePage() {
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <div>
-        {/* Hero - Premium editorial style */}
-        <section className="pt-12 pb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xs text-gold-600 font-mono tracking-[0.2em] uppercase mb-5">
-                Your Daily Style Edit
-              </p>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-6 text-gray-900">
-                Fashion that fits{{' '}}
-                <span className="font-display italic text-gold-500">your life</span>
-              </h1>
-              <p className="text-base text-gray-500 max-w-md mb-8 leading-relaxed">
-                Curated style guides, honest product reviews, and outfit inspiration
-                for every occasion and every budget.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
-                <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
+    <div>
+      <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+      <Script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <Script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      {/* Hero - Premium editorial style */}
+      <section className="pt-12 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs text-gold-600 font-mono tracking-[0.2em] uppercase mb-5">
+              Your Daily Style Edit
+            </p>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-6 text-gray-900">
+              Fashion that fits{' '}
+              <span className="font-display italic text-gold-500">your life</span>
+            </h1>
+            <p className="text-base text-gray-500 max-w-md mb-8 leading-relaxed">
+              Curated style guides, honest product reviews, and outfit inspiration
+              for every occasion and every budget.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
+              <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
+            </div>
+          </div>
+          <div className="relative hidden lg:block">
+            <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+              <SafeImage
+                src="/images/guides/hero-women-fashion.webp"
+                alt="StyleMeDaily - Premium Women Fashion Editorial"
+                width={600}
+                height={800}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-noir-900 text-white px-5 py-3">
+              <p className="text-[10px] font-mono tracking-widest uppercase text-gold-400">Editor&apos;s Choice</p>
+              <p className="text-sm font-display font-medium mt-0.5">SS 2026 Edit</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ad banner between hero and products */}
+      <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
+
+      {/* Trending Products */}
+      <TrendingProducts />
+
+      {/* Editor&apos;s Picks - Top 3 guides */}
+      <section className="mb-20">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="section-title">Editor&apos;s Picks</h2>
+            <p className="text-sm text-gray-400 mt-1">Hand-selected guides by our styling team</p>
+          </div>
+          <Link href="/guides" className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">View all</Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {editorPicks.map(g => <GuideCard key={g.slug} guide={g} />)}
+        </div>
+      </section>
+
+      {/* Ad banner between guides and shop */}
+      <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
+
+      {/* Shop by Category */}
+      <ShopByCategory />
+
+      {/* Newsletter */}
+      <section className="mb-20">
+        <NewsletterCTA />
+      </section>
+
+      {/* Pinterest Gallery - 4 pins */}
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="section-title">Trending Styles</h2>
+            <p className="text-sm text-gray-400 mt-1">Our most popular style guides this week</p>
+          </div>
+          <a href="https://www.pinterest.com/stylemedaily/" target="_blank" rel="noopener noreferrer"
+            className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">
+            Follow
+          </a>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          {pinterestPins.map((pin, i) => (
+            <Link key={i} href={pin.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
+              <SafeImage
+                src={pin.image}
+                alt={pin.title}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="font-display font-bold text-white text-sm leading-tight">
+                  {pin.title}
+                </p>
               </div>
-            </div>
-            <div className="relative hidden lg:block">
-              <div className="aspect-[3/4] overflow-hidden bg-gray-100">
-                <SafeImage
-                  src="/images/guides/hero-women-fashion.webp"
-                  alt="StyleMeDaily - Premium Women Fashion Editorial"
-                  width={{600}}
-                  height={{800}}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-noir-900 text-white px-5 py-3">
-                <p className="text-[10px] font-mono tracking-widest uppercase text-gold-400">Editor&apos;s Choice</p>
-                <p className="text-sm font-display font-medium mt-0.5">SS 2026 Edit</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        </section>
-
-        {/* Ad banner between hero and products */}
-        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
-
-        {/* Trending Products */}
-        <TrendingProducts />
-
-        {/* Editor's Picks â Top 3 guides */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="section-title">Editor&apos;s Picks</h2>
-              <p className="text-sm text-gray-400 mt-1">Hand-selected guides by our styling team</p>
-            </div>
-            <Link href="/guides" className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">View all</Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {editorPicks.map(g => <GuideCard key={g.slug} guide={g} />)}
-          </div>
-        </section>
-
-        {/* Ad banner between guides and shop */}
-        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
-
-        {/* Shop by Category */}
-        <ShopByCategory />
-
-        {/* Newsletter */}
-        <section className="mb-20">
-          <NewsletterCTA />
-        </section>
-
-        {/* Pinterest Gallery â 4 pins */}
-        <section className="mb-16">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="section-title">Trending Styles</h2>
-              <p className="text-sm text-gray-400 mt-1">Our most popular style guides this week</p>
-            </div>
-            <a href="https://www.pinterest.com/stylemedaily/" target="_blank" rel="noopener noreferrer"
-              className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">
-              Follow
-            </a>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {pinterestPins.map((pin, i) => (
-              <Link key={i} href={pin.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
-                <SafeImage
-                  src={pin.image}
-                  alt={pin.title}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="font-display font-bold text-white text-sm leading-tight">
-                    {pin.title}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </div>
-    </>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
