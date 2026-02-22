@@ -1277,13 +1277,23 @@ export function getAllProducts(): (AffiliateProduct & { fromGuide: string; fromG
   return products;
 }
 
-/** Get featured products based on tags like Editor Pick, Best Overall, etc. */
+/** Get featured products based on tags like Editor Pick, Best Overall, etc. Deduplicates by image. */
 export function getFeaturedProducts(count: number = 8): (AffiliateProduct & { fromGuide: string; fromGuideSlug: string })[] {
   const all = getAllProducts();
   const priorityTags = ['Editor Pick', 'Best Overall', 'Best Value', 'Best Seller', 'Trend Pick', 'Must Have', '#1 Must Have', 'Top Pick'];
   const featured = all.filter(p => p.tag && priorityTags.includes(p.tag));
   const rest = all.filter(p => !p.tag || !priorityTags.includes(p.tag));
-  return [...featured, ...rest].slice(0, count);
+  const sorted = [...featured, ...rest];
+  // Deduplicate by image path to prevent visual duplicates
+  const seenImages = new Set<string>();
+  const unique: typeof sorted = [];
+  for (const p of sorted) {
+    const imgKey = p.image || p.name;
+    if (seenImages.has(imgKey)) continue;
+    seenImages.add(imgKey);
+    unique.push(p);
+  }
+  return unique.slice(0, count);
 }
 
 /** Get products filtered by guide category */
