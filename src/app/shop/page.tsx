@@ -3,23 +3,27 @@ import { getAllProducts, shopCategories } from '@/lib/guides-data';
 import ShopPageClient from './ShopPageClient';
 
 export const metadata: Metadata = {
-  title: 'Shop All Items — Curated Fashion Picks',
-  description: 'Browse all curated fashion items from our style guides. Filter by category and price to find your perfect pieces.',
-  keywords: ['shop fashion', 'curated fashion', 'affordable fashion', 'women clothing', 'style picks 2026'],
+  title: 'The Edit — Curated Fashion Picks | StyleMeDaily',
+  description: 'A curated selection of considered fashion pieces, drawn from our style guides. Filter by category and price to find yours.',
+  keywords: ['curated fashion', 'editorial picks', 'affordable women fashion', 'style guide picks 2026'],
 };
 
 export default function ShopPage() {
   const allProducts = getAllProducts();
 
   return (
-    <div className="pt-8 max-w-6xl mx-auto">
-      <div className="mb-10">
-        <h1 className="section-title">Shop All Items</h1>
-        <p className="text-gray-400 mt-1 text-sm">
-          {allProducts.length} curated items from our style guides
+    <div className="pt-16 pb-32 max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-20">
+      {/* Editorial masthead */}
+      <div className="mb-20 border-b border-noir-100 pb-12">
+        <p className="text-[9px] tracking-[0.28em] uppercase text-noir-300 font-medium mb-6">
+          SS 2026 &nbsp;/&nbsp; {allProducts.length} Pieces
         </p>
+        <h1 className="font-display font-light italic text-5xl sm:text-6xl text-noir-900 tracking-tight leading-none">
+          The Edit
+        </h1>
       </div>
-      <ShopPageClient products={allProducts} categories={shopCategories} />
+
+      <ShopPageClient products={allProducts} categories={[{ slug: 'all', name: 'All' }, ...shopCategories]} />
     </div>
   );
 }

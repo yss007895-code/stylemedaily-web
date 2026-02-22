@@ -11,7 +11,7 @@ interface ShopPageClientProps {
 }
 
 const priceRanges = [
-  { label: 'All Prices', min: 0, max: Infinity },
+  { label: 'All', min: 0, max: Infinity },
   { label: 'Under $25', min: 0, max: 25 },
   { label: '$25 – $50', min: 25, max: 50 },
   { label: '$50+', min: 50, max: Infinity },
@@ -43,32 +43,32 @@ export default function ShopPageClient({ products, categories }: ShopPageClientP
 
   return (
     <div>
-      {/* Filters */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
-        <div className="flex gap-1 overflow-x-auto border-b border-gray-100 sm:border-0">
+      {/* Filters — minimal horizontal rule style */}
+      <div className="flex flex-col sm:flex-row gap-0 mb-16 border-b border-noir-100 pb-8">
+        <div className="flex gap-0 overflow-x-auto flex-1">
           {categories.map(cat => (
             <button
               key={cat.slug}
               onClick={() => setActiveCategory(cat.slug)}
-              className={`px-3.5 py-2 text-sm font-medium whitespace-nowrap rounded-lg transition-colors ${
+              className={`px-5 py-2 text-[10px] font-medium tracking-[0.18em] uppercase whitespace-nowrap transition-colors ${
                 activeCategory === cat.slug
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'
+                  ? 'text-noir-900 border-b-2 border-noir-900 -mb-px'
+                  : 'text-noir-300 hover:text-noir-600'
               }`}
             >
               {cat.name}
             </button>
           ))}
         </div>
-        <div className="flex gap-1 sm:ml-auto">
+        <div className="flex gap-0 items-center sm:border-l sm:border-noir-100 sm:pl-8">
           {priceRanges.map((range, i) => (
             <button
               key={range.label}
               onClick={() => setActivePriceRange(i)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+              className={`px-4 py-2 text-[10px] tracking-[0.14em] uppercase font-medium transition-colors ${
                 activePriceRange === i
-                  ? 'bg-gray-100 text-gray-900'
-                  : 'text-gray-400 hover:text-gray-600'
+                  ? 'text-noir-900'
+                  : 'text-noir-300 hover:text-noir-600'
               }`}
             >
               {range.label}
@@ -77,61 +77,68 @@ export default function ShopPageClient({ products, categories }: ShopPageClientP
         </div>
       </div>
 
-      {/* Results count */}
-      <p className="text-xs text-gray-400 mb-4">{filtered.length} items</p>
+      {/* Results count — ultra-small */}
+      <p className="text-[9px] tracking-[0.22em] uppercase text-noir-300 mb-12">
+        {filtered.length} pieces
+      </p>
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {/* Product Grid — 2 col mobile, 3 col desktop, massive whitespace */}
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
         {filtered.map((p, i) => (
           <a
             key={`${p.name}-${i}`}
             href={p.url}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
-            className="product-card group block"
+            className="group block"
           >
-            {p.image ? (
-              <div className="relative h-40 overflow-hidden bg-gray-50">
-                <SafeImage
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="product-card-action absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                  <span className="text-white text-sm font-semibold px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
-                    Shop Now
-                  </span>
+            {/* Image container — tall 3:4 ratio, no border radius */}
+            <div className="relative overflow-hidden bg-noir-50 mb-6" style={{ aspectRatio: '3/4' }}>
+              {p.image ? (
+                <>
+                  <SafeImage
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  {/* Hover overlay — reveals price + CTA */}
+                  <div className="absolute inset-0 bg-noir-950/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <span className="text-white text-[10px] tracking-[0.22em] uppercase font-medium mb-3">
+                      View Item
+                    </span>
+                    <span className="text-white font-display italic text-xl">
+                      {p.price}
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-[9px] tracking-[0.2em] uppercase text-noir-300">No image</span>
                 </div>
-              </div>
-            ) : (
-              <div className="h-40 bg-gray-50 flex items-center justify-center">
-                <span className="text-gray-300 text-sm">No image</span>
-              </div>
-            )}
-            <div className="p-3">
-              <p className="text-[11px] text-gray-400 uppercase tracking-wide">{p.brand}</p>
-              <h4 className="font-medium text-sm text-gray-800 group-hover:text-gray-900 transition-colors leading-tight mt-0.5 line-clamp-2">
+              )}
+            </div>
+
+            {/* Text — minimal, no price shown by default */}
+            <div className="space-y-1.5">
+              <p className="text-[9px] tracking-[0.22em] uppercase text-noir-300 font-medium">
+                {p.brand}
+              </p>
+              <h4 className="font-display font-normal italic text-sm text-noir-800 leading-snug group-hover:text-noir-500 transition-colors">
                 {p.name}
               </h4>
-              <div className="flex items-center gap-2 mt-1.5">
-                <span className="price-current text-sm">{p.price}</span>
-              </div>
-              <p className="text-[11px] text-gray-400 mt-1.5 line-clamp-1">
-                As seen in: {p.fromGuide}
-              </p>
             </div>
           </a>
         ))}
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center py-16">
-          <p className="text-gray-400">No items match your filters.</p>
+        <div className="text-center py-32">
+          <p className="text-[10px] tracking-[0.22em] uppercase text-noir-300">No items match your filters.</p>
           <button
             onClick={() => { setActiveCategory('all'); setActivePriceRange(0); }}
-            className="mt-3 text-sm text-gray-500 hover:text-gray-900 font-medium"
+            className="mt-6 text-[10px] tracking-[0.18em] uppercase text-noir-400 hover:text-noir-900 font-medium transition-colors border-b border-current pb-0.5"
           >
             Clear filters
           </button>

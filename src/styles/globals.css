@@ -45,24 +45,21 @@
     @apply font-display text-3xl sm:text-4xl font-light text-noir-900 tracking-wide;
   }
 
-  /* Product card styles */
+  /* Product card styles — editorial minimal */
   .product-card {
-    @apply bg-white border border-noir-100 overflow-hidden transition-all duration-300;
-  }
-  .product-card:hover {
-    @apply border-gold-400 shadow-lg;
+    @apply bg-white overflow-hidden transition-all duration-500;
   }
   .product-card:hover .product-card-action {
     @apply opacity-100;
   }
   .price-current {
-    @apply font-body font-semibold text-noir-900 tracking-wide;
+    @apply font-display italic text-lg font-normal text-white tracking-wide;
   }
   .price-original {
-    @apply font-body text-noir-400 line-through text-sm;
+    @apply font-body text-white/60 line-through text-sm;
   }
   .urgency-text {
-    @apply text-xs text-gold-600 font-medium tracking-wide uppercase;
+    @apply text-[9px] tracking-[0.22em] text-white/80 font-medium uppercase;
   }
 
   /* Tab styles */
