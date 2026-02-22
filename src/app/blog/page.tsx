@@ -17,7 +17,7 @@ const posts = [
     date: 'Feb 18, 2026',
     time: '8 min',
     cat: 'Style',
-    image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&h=400&fit=crop',
+    image: '/images/blog/quiet-luxury-guide.svg',
     link: '/blog/quiet-luxury-guide',
   },
   {
@@ -27,7 +27,7 @@ const posts = [
     date: 'Feb 17, 2026',
     time: '6 min',
     cat: 'Trends',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    image: '/images/blog/spring-color-trends-2026.svg',
     link: '/blog/spring-color-trends',
   },
   {
@@ -37,7 +37,7 @@ const posts = [
     date: 'Feb 16, 2026',
     time: '7 min',
     cat: 'Guide',
-    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop',
+    image: '/images/blog/capsule-wardrobe-mistakes.svg',
     link: '/blog/capsule-wardrobe-mistakes',
   },
   {
@@ -47,7 +47,7 @@ const posts = [
     date: 'Feb 15, 2026',
     time: '11 min',
     cat: 'Comparison',
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=400&fit=crop',
+    image: '/images/blog/nordstrom-vs-asos-comparison.svg',
     link: '/compare/nordstrom-vs-asos',
   },
   {
@@ -57,7 +57,7 @@ const posts = [
     date: 'Feb 14, 2026',
     time: '15 min',
     cat: 'Review',
-    image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=400&fit=crop',
+    image: '/images/blog/best-jeans-buying-guide.svg',
     link: '/guides/best-jeans-for-women-2026',
   },
   {
@@ -67,7 +67,7 @@ const posts = [
     date: 'Feb 12, 2026',
     time: '16 min',
     cat: 'Guide',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop',
+    image: '/images/blog/body-shape-dressing-guide.svg',
     link: '/guides/dress-for-body-shape-guide',
   },
   {
@@ -77,7 +77,7 @@ const posts = [
     date: 'Feb 10, 2026',
     time: '12 min',
     cat: 'Finds',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop',
+    image: '/images/blog/amazon-fashion-haul-under-30.svg',
     link: '/guides/amazon-fashion-finds-under-30',
   },
   {
@@ -87,7 +87,7 @@ const posts = [
     date: 'Feb 8, 2026',
     time: '12 min',
     cat: 'Workwear',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop',
+    image: '/images/blog/spring-workwear-capsule.svg',
     link: '/guides/spring-workwear-capsule-2026',
   },
   {
@@ -97,7 +97,7 @@ const posts = [
     date: 'Feb 6, 2026',
     time: '11 min',
     cat: 'Guide',
-    image: 'https://images.unsplash.com/photo-1560264280-88b68371db39?w=600&h=400&fit=crop',
+    image: '/images/blog/interview-outfits-guide.svg',
     link: '/guides/what-to-wear-job-interview-2026',
   },
   {
@@ -107,7 +107,7 @@ const posts = [
     date: 'Feb 4, 2026',
     time: '9 min',
     cat: 'Preview',
-    image: 'https://images.unsplash.com/photo-1469504512102-900f29606341?w=600&h=400&fit=crop',
+    image: '/images/blog/summer-2026-fashion-preview.svg',
     link: '/guides/summer-fashion-essentials-2026',
   },
   {
@@ -117,7 +117,7 @@ const posts = [
     date: 'Feb 2, 2026',
     time: '10 min',
     cat: 'Accessories',
-    image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop',
+    image: '/images/blog/sunglasses-face-shape-guide.svg',
     link: '/guides/best-sunglasses-face-shape-2026',
   },
   {
@@ -127,7 +127,7 @@ const posts = [
     date: 'Jan 30, 2026',
     time: '10 min',
     cat: 'Review',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop',
+    image: '/images/blog/stitch-fix-review-after-6-months.svg',
     link: '/guides/stitch-fix-vs-personal-stylist',
   },
 ];

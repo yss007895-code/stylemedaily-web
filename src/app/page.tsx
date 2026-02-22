@@ -12,10 +12,10 @@ export default function HomePage() {
   const editorPicks = guides.slice(0, 3);
 
   const pinterestPins = [
-    { title: 'Capsule Wardrobe Guide 2026', image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop', url: '/guides/capsule-wardrobe-working-women-2026' },
-    { title: 'Casual Outfits That Look Expensive', image: 'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop', url: '/guides/casual-outfits-look-expensive' },
-    { title: 'First Date Outfits', image: 'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=400&h=600&fit=crop', url: '/guides/first-date-outfits-every-vibe' },
-    { title: 'Spring Fashion Trends', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop', url: '/guides/spring-fashion-trends-2026' },
+    { title: 'Capsule Wardrobe Guide 2026', image: '/images/guides/pin-capsule-wardrobe-guide-2026.svg', url: '/guides/capsule-wardrobe-working-women-2026' },
+    { title: 'Casual Outfits That Look Expensive', image: '/images/guides/pin-casual-outfits-that-look-expensive.svg', url: '/guides/casual-outfits-look-expensive' },
+    { title: 'First Date Outfits', image: '/images/guides/pin-first-date-outfits.svg', url: '/guides/first-date-outfits-every-vibe' },
+    { title: 'Spring Fashion Trends', image: '/images/guides/pin-spring-fashion-trends.svg', url: '/guides/spring-fashion-trends-2026' },
   ];
 
   const organizationJsonLd = {
