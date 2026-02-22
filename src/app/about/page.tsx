@@ -58,9 +58,9 @@ export default function AboutPage() {
         <h2>Get in Touch</h2>
         <p>
           Questions, feedback, or partnership inquiries? Reach us at{' '}
-          <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>.
+          <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>.
           You can also follow us on{' '}
-          <a href="https://www.pinterest.com/trendloopusa/" target="_blank" rel="noopener noreferrer">Pinterest</a> for daily outfit inspiration.
+          <a href="https://www.pinterest.com/stylemedaily/" target="_blank" rel="noopener noreferrer">Pinterest</a> for daily outfit inspiration.
         </p>
       </div>
 

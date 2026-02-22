@@ -82,7 +82,7 @@ export default function PrivacyPage() {
 
         <h2>Contact</h2>
         <p>
-          Privacy questions or data requests: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+          Privacy questions or data requests: <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>
         </p>
       </div>
     </div>

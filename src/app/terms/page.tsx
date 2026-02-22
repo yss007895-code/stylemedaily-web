@@ -62,7 +62,7 @@ export default function TermsPage() {
 
         <h2>Contact</h2>
         <p>
-          Questions about these Terms? Contact us at <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>.
+          Questions about these Terms? Contact us at <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>.
         </p>
       </div>
     </div>

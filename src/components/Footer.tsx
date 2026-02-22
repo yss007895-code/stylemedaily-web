@@ -10,8 +10,8 @@ export default function Footer() {
               Style<span className="text-blush-500">Me</span>Daily
             </span>
             <p className="text-sm text-gray-400 leading-relaxed mt-3">Expert styling guides and curated fashion advice for every woman, every occasion.</p>
-            <a href="mailto:contact@trendloopusa.net" className="inline-block mt-3 text-sm text-gray-400 hover:text-gray-600 transition-colors">
-              contact@trendloopusa.net
+            <a href="mailto:contact@stylemedaily.org" className="inline-block mt-3 text-sm text-gray-400 hover:text-gray-600 transition-colors">
+              contact@stylemedaily.org
             </a>
           </div>
           <div>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">&copy; {new Date().getFullYear()} TrendLoop Team. All rights reserved.</p>
+          <p className="text-xs text-gray-400">&copy; {new Date().getFullYear()} StyleMeDaily. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Privacy</Link>
             <span className="text-gray-200">|</span>

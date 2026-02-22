@@ -50,12 +50,12 @@ export default function DisclaimerPage() {
 
         <h2>DMCA Notice</h2>
         <p>
-          If you believe that content on this website infringes your copyright, please send a DMCA notice to <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>. We will respond to legitimate DMCA requests promptly.
+          If you believe that content on this website infringes your copyright, please send a DMCA notice to <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>. We will respond to legitimate DMCA requests promptly.
         </p>
 
         <h2>Contact</h2>
         <p>
-          Questions about this disclaimer? Contact us at <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>.
+          Questions about this disclaimer? Contact us at <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>.
         </p>
       </div>
     </div>

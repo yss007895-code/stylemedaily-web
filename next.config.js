@@ -3,8 +3,8 @@ const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
   trailingSlash: true,
-  basePath: '/stylemedaily-web',
-  assetPrefix: '/stylemedaily-web/',
+  basePath: '',
+  assetPrefix: '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
 module.exports = nextConfig;
