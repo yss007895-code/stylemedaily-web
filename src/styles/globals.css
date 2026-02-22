@@ -18,16 +18,19 @@
     @apply bg-white border border-noir-200 shadow-sm;
   }
   .card-hover {
-    @apply card hover:border-gold-400 hover:shadow-md transition-all duration-300;
+    @apply card hover:border-gold-400 hover:shadow-md;
+    transition: border-color 0.3s var(--ease-luxury), box-shadow 0.3s var(--ease-luxury);
   }
   .gradient-text {
     @apply bg-gradient-to-r from-gold-500 to-gold-700 bg-clip-text text-transparent;
   }
   .btn-primary {
-    @apply bg-noir-900 text-white font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-800 transition-all duration-200;
+    @apply bg-noir-900 text-white font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-800;
+    transition: background-color var(--t-base), color var(--t-base);
   }
   .btn-secondary {
-    @apply bg-transparent border border-noir-900 text-noir-900 font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-900 hover:text-white transition-all duration-200;
+    @apply bg-transparent border border-noir-900 text-noir-900 font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-900 hover:text-white;
+    transition: background-color var(--t-base), color var(--t-base), border-color var(--t-base);
   }
   .badge {
     @apply inline-flex items-center px-3 py-1 text-[10px] font-medium tracking-wider uppercase;
@@ -127,6 +130,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* The Row luxury easing - applied globally for consistent feel */
+:root {
+  --ease-luxury: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --t-fast: 0.2s ease;
+  --t-base: 0.3s ease;
+  --t-slow: 0.5s var(--ease-luxury);
+  --product-gap: 60px;
+}
+
 
 /* Skip to content link for screen readers */
 .skip-link {
