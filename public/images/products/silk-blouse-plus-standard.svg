@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg-3100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4E6"/>
+      <stop offset="50%" stop-color="white"/>
+      <stop offset="100%" stop-color="#FFE4E6"/>
+    </linearGradient>
+    <linearGradient id="accent-3100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F1239"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#bg-3100)" rx="12"/>
+  <!-- Decorative pattern -->
+  <g transform="translate(18, 18) rotate(10, 100, 100)" opacity="0.06">
+    <circle cx="30" cy="30" r="25" fill="#9F1239"/>
+    <circle cx="130" cy="30" r="20" fill="#FB7185"/>
+    <circle cx="170" cy="130" r="30" fill="#9F1239"/>
+    <circle cx="30" cy="170" r="15" fill="#FB7185"/>
+  </g>
+  <!-- Fashion icon -->
+  <g transform="translate(20, 15) scale(0.85)">
+    <path d="M55 45 L105 45 L110 130 L50 130 Z" fill="#FB7185" opacity="0.8"/><path d="M55 45 L40 70 L50 72" fill="#FB7185" opacity="0.6"/><path d="M105 45 L120 70 L110 72" fill="#FB7185" opacity="0.6"/>
+  </g>
+  <!-- Product initial -->
+  <text x="170" y="35" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#9F1239" opacity="0.25" text-anchor="end">S</text>
+  <!-- Product name -->
+  <text x="100" y="180" font-family="Georgia, serif" font-size="10" fill="#9F1239" opacity="0.6" text-anchor="middle">
+    Silk Blouse (Plus & Standard
+  </text>
+</svg>
