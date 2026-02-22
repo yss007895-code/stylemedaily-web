@@ -179,8 +179,8 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/eclectic-grandpa-style-gen-z-guide.svg',
     affiliateProducts: [
       { name: 'Oversized Knit Cardigan', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/oversized-knit-cardigan.webp' },
-      { name: 'Corduroy Wide-Leg Trousers', brand: 'Amazon', price: '$34', url: 'https://amzn.to/40drBCf', image: '/images/products/corduroy-wide-leg-trousers.svg' },
-      { name: 'Argyle Sweater Vest', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4kNVNxy', image: '/images/products/argyle-sweater-vest.svg' },
+      { name: 'Corduroy Wide-Leg Trousers', brand: 'Amazon', price: '$34', url: 'https://amzn.to/40drBCf', image: '/images/products/corduroy-wide-leg-trousers.webp' },
+      { name: 'Argyle Sweater Vest', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4kNVNxy', image: '/images/products/argyle-sweater-vest.webp' },
     ],
   },
 
@@ -231,7 +231,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/pastel-cardigan-with-pearl-buttons.webp' },
       { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pleated-tennis-skirt.svg' },
-      { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: '/images/products/cloud-slides-pastel-pink.svg' },
+      { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: '/images/products/cloud-slides-pastel-pink.webp' },
     ],
   },
 
