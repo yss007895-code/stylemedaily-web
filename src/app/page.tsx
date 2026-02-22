@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { guides } from '@/lib/guides-data';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants';
 import GuideCard from '@/components/GuideCard';
@@ -11,11 +10,11 @@ import AdUnit from '@/components/AdUnit';
 export default function HomePage() {
   const editorPicks = guides.slice(0, 3);
 
-  const pinterestPins = [
-    { title: 'Capsule Wardrobe Guide 2026', image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=400&h=600&fit=crop', url: '/guides/capsule-wardrobe-working-women-2026' },
-    { title: 'Casual Outfits That Look Expensive', image: 'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=600&fit=crop', url: '/guides/casual-outfits-look-expensive' },
-    { title: 'First Date Outfits', image: 'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=400&h=600&fit=crop', url: '/guides/first-date-outfits-every-vibe' },
-    { title: 'Spring Fashion Trends', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop', url: '/guides/spring-fashion-trends-2026' },
+  const trendingGuides = [
+    { title: 'Capsule Wardrobe Guide 2026', emoji: '\uD83D\uDC57', color: 'from-rose-400 to-pink-500', url: '/guides/capsule-wardrobe-working-women-2026' },
+    { title: 'Casual Outfits That Look Expensive', emoji: '\u2728', color: 'from-amber-400 to-orange-500', url: '/guides/casual-outfits-look-expensive' },
+    { title: 'First Date Outfits', emoji: '\uD83C\uDF39', color: 'from-purple-400 to-indigo-500', url: '/guides/first-date-outfits-every-vibe' },
+    { title: 'Spring Fashion Trends', emoji: '\uD83C\uDF38', color: 'from-emerald-400 to-teal-500', url: '/guides/spring-fashion-trends-2026' },
   ];
 
   const organizationJsonLd = {
@@ -91,35 +90,38 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div>
-        {/* Hero â Clean editorial style */}
-        <section className="pt-16 pb-20">
-          <p className="text-sm text-gray-400 font-mono tracking-wide uppercase mb-4">
+        {/* Hero */}
+        <section className="pt-16 pb-20 relative overflow-hidden">
+          <div className="absolute -top-20 -left-20 w-72 h-72 bg-blush-100 rounded-full blur-3xl opacity-40 pointer-events-none" />
+          <div className="absolute -top-10 right-0 w-56 h-56 bg-purple-100 rounded-full blur-3xl opacity-30 pointer-events-none" />
+
+          <p className="text-sm text-gray-400 font-mono tracking-wide uppercase mb-4 relative">
             Your Daily Style Edit
           </p>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 text-gray-900">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 text-gray-900 relative">
             Fashion that fits{' '}
-            <span className="font-display italic text-gray-400">your life</span>
+            <span className="font-display italic bg-gradient-to-r from-blush-500 to-purple-400 bg-clip-text text-transparent">your life</span>
           </h1>
 
-          <p className="text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
+          <p className="text-lg text-gray-500 max-w-lg mb-8 leading-relaxed relative">
             Curated style guides, honest product reviews, and outfit inspiration
             for every occasion and every budget.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 relative">
             <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
             <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
           </div>
         </section>
 
-        {/* Ad banner between hero and products */}
+        {/* Ad banner */}
         <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
 
         {/* Trending Products */}
         <TrendingProducts />
 
-        {/* Editor's Picks â Top 3 guides */}
+        {/* Editor Picks */}
         <section className="mb-20">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -133,7 +135,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Ad banner between guides and shop */}
+        {/* Ad banner */}
         <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
 
         {/* Shop by Category */}
@@ -144,7 +146,7 @@ export default function HomePage() {
           <NewsletterCTA />
         </section>
 
-        {/* Pinterest Gallery â 4 pins */}
+        {/* Trending Styles - Gradient cards */}
         <section className="mb-16">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -157,20 +159,17 @@ export default function HomePage() {
             </a>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {pinterestPins.map((pin, i) => (
-              <Link key={i} href={pin.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
-                <Image
-                  src={pin.image}
-                  alt={pin.title}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="font-display font-bold text-white text-sm leading-tight">
-                    {pin.title}
+            {trendingGuides.map((guide, i) => (
+              <Link key={i} href={guide.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
+                <div className={`absolute inset-0 bg-gradient-to-br ${guide.color} opacity-90 group-hover:opacity-100 transition-opacity duration-300`} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                  <span className="text-4xl mb-4">{guide.emoji}</span>
+                  <p className="font-display font-bold text-white text-base sm:text-lg leading-tight drop-shadow-sm">
+                    {guide.title}
                   </p>
+                  <span className="mt-3 text-white/80 text-xs font-medium border border-white/30 px-3 py-1 rounded-full group-hover:bg-white/20 transition-colors">
+                    Read Guide
+                  </span>
                 </div>
               </Link>
             ))}
