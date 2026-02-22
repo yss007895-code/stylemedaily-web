@@ -145,7 +145,7 @@ export const guides: StyleGuide[] = [
     image: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=600&h=400&fit=crop',
     affiliateProducts: [
       { name: 'Wrap Ballet Flats', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=200&fit=crop' },
-      { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=200&h=200&fit=crop' },
+      { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: 'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?w=200&h=200&fit=crop' },
       { name: 'Cropped Wrap Cardigan', brand: 'Amazon', price: '$26', url: 'https://amzn.to/4kNVNxy', image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=200&h=200&fit=crop' },
     ],
   },
