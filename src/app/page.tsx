@@ -12,10 +12,10 @@ export default function HomePage() {
   const editorPicks = guides.slice(0, 3);
 
   const pinterestPins = [
-    { title: 'Capsule Wardrobe Guide 2026', image: '/images/guides/pin-capsule-wardrobe-guide-2026.svg', url: '/guides/capsule-wardrobe-working-women-2026' },
-    { title: 'Casual Outfits That Look Expensive', image: '/images/guides/pin-casual-outfits-that-look-expensive.svg', url: '/guides/casual-outfits-look-expensive' },
-    { title: 'First Date Outfits', image: '/images/guides/pin-first-date-outfits.svg', url: '/guides/first-date-outfits-every-vibe' },
-    { title: 'Spring Fashion Trends', image: '/images/guides/pin-spring-fashion-trends.svg', url: '/guides/spring-fashion-trends-2026' },
+    { title: 'Capsule Wardrobe Guide 2026', image: '/images/guides/pin-capsule-wardrobe.webp', url: '/guides/capsule-wardrobe-working-women-2026' },
+    { title: 'Casual Outfits That Look Expensive', image: '/images/guides/pin-casual-expensive.webp', url: '/guides/casual-outfits-look-expensive' },
+    { title: 'First Date Outfits', image: '/images/guides/pin-first-date.webp', url: '/guides/first-date-outfits-every-vibe' },
+    { title: 'Spring Fashion Trends', image: '/images/guides/pin-spring-trends.webp', url: '/guides/spring-fashion-trends-2026' },
   ];
 
   const organizationJsonLd = {
@@ -91,26 +91,44 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div>
-        {/* Hero â Clean editorial style */}
-        <section className="pt-16 pb-20">
-          <p className="text-sm text-gray-400 font-mono tracking-wide uppercase mb-4">
-            Your Daily Style Edit
-          </p>
-
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 text-gray-900">
-            Fashion that fits{' '}
-            <span className="font-display italic text-gray-400">your life</span>
-          </h1>
-
-          <p className="text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
-            Curated style guides, honest product reviews, and outfit inspiration
-            for every occasion and every budget.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
-            <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
+        {/* Hero - Premium editorial style */}
+        <section className="pt-12 pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-xs text-gold-600 font-mono tracking-[0.2em] uppercase mb-5">
+                Your Daily Style Edit
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-6 text-gray-900">
+                Fashion that fits{{' '}}
+                <span className="font-display italic text-gold-500">your life</span>
+              </h1>
+              <p className="text-base text-gray-500 max-w-md mb-8 leading-relaxed">
+                Curated style guides, honest product reviews, and outfit inspiration
+                for every occasion and every budget.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
+                <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
+              </div>
+            </div>
+            <div className="relative hidden lg:block">
+              <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+                <SafeImage
+                  src="/images/guides/hero-women-fashion.webp"
+                  alt="StyleMeDaily - Premium Women Fashion Editorial"
+                  width={{600}}
+                  height={{800}}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-noir-900 text-white px-5 py-3">
+                <p className="text-[10px] font-mono tracking-widest uppercase text-gold-400">Editor&apos;s Choice</p>
+                <p className="text-sm font-display font-medium mt-0.5">SS 2026 Edit</p>
+              </div>
+            </div>
           </div>
+        </section>
         </section>
 
         {/* Ad banner between hero and products */}
