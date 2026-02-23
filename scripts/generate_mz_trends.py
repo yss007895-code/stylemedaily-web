@@ -148,7 +148,7 @@ def resolve_urls_and_generate_images(guide: dict, gemini_client) -> dict:
 
     # Process products and generate 1:1 thumbnails concurrently
     def process_product(i, p):
-        p["url"] = "https://amzn.to/example"
+        p["url"] = "https://amzn.to/example?tag=stylemedaily-20"
         if not p.get("brand"): p["brand"] = "Amazon"
         prod_prompt = p.pop("product_image_prompt", f"Product photography on white background of {p['name']}")
         p["image"] = generate_imagen_image(gemini_client, prod_prompt, slug, f"prod{i}", "1:1")
