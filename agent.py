@@ -247,7 +247,7 @@ def update_feed_xml(data, slug):
     ET.SubElement(new_item, "link").text = blog_url
     ET.SubElement(new_item, "description").text = data.get("meta_description", "Fashion style guide")
     
-    img = data.get("nano_banana_image") or "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg"
+    img = data.get("nano_banana_image") or "https://placehold.co/600x400?text=Image"
     enclosure = ET.SubElement(new_item, "enclosure")
     enclosure.set("url", img)
     enclosure.set("type", "image/jpeg")
@@ -275,7 +275,7 @@ def update_site_registry(slug, data):
     date: '{datetime.now().strftime('%Y-%m-%d')}',
     tag: '{data['meta'].get('tag', 'New')}',
     emoji: '{data['meta'].get('emoji', '✨')}',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    image: 'https://placehold.co/600x400?text=Image
     affiliateProducts: [],
   }},
 """

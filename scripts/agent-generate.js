@@ -84,7 +84,7 @@ function generatePostContent(topic) {
     publishedAt: now.toISOString().split('T')[0],
     featured: false,
     tags: ['fashion', 'style', 'outfit ideas', topic.category],
-    heroImage: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&auto=format&fit=crop',
+    heroImage: 'https://placehold.co/600x400?text=Image
     content: `
 # ${topic.title}
 
