@@ -207,8 +207,8 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/office-siren-workwear-trend.svg',
     affiliateProducts: [
       { name: 'Fitted Pencil Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: '/images/products/fitted-pencil-skirt.webp' },
-      { name: 'Sheer Button-Down Blouse', brand: 'Amazon', price: '$24', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/sheer-button-down-blouse.svg' },
-      { name: 'Pointed-Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4rVjOFg', image: '/images/products/pointed-toe-kitten-heels.svg' },
+      { name: 'Sheer Button-Down Blouse', brand: 'Amazon', price: '$24', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/sheer-button-down-blouse.webp' },
+      { name: 'Pointed-Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4rVjOFg', image: '/images/products/pointed-toe-kitten-heels.webp' },
     ],
   },
 
@@ -223,9 +223,9 @@ export const guides: StyleGuide[] = [
     emoji: '🖤',
     image: '/images/guides/indie-sleaze-style-guide-2025.svg',
     affiliateProducts: [
-      { name: 'Distressed Band Tee', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3Mro3JB', tag: 'Trending', image: '/images/products/distressed-band-tee.svg' },
-      { name: 'Faux Leather Mini Skirt', brand: 'Amazon', price: '$26', url: 'https://amzn.to/40drBCf', image: '/images/products/faux-leather-mini-skirt.svg' },
-      { name: 'Chunky Platform Boots', brand: 'Amazon', price: '$52', url: 'https://amzn.to/4kNVNxy', image: '/images/products/chunky-platform-boots.svg' },
+      { name: 'Distressed Band Tee', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3Mro3JB', tag: 'Trending', image: '/images/products/distressed-band-tee.webp' },
+      { name: 'Faux Leather Mini Skirt', brand: 'Amazon', price: '$26', url: 'https://amzn.to/40drBCf', image: '/images/products/faux-leather-mini-skirt.webp' },
+      { name: 'Chunky Platform Boots', brand: 'Amazon', price: '$52', url: 'https://amzn.to/4kNVNxy', image: '/images/products/chunky-platform-boots.webp' },
     ],
   },
 
@@ -241,7 +241,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/soft-girl-aesthetic-dreamy-style.svg',
     affiliateProducts: [
       { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/pastel-cardigan-with-pearl-buttons.webp' },
-      { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pleated-tennis-skirt.svg' },
+      { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pleated-tennis-skirt.webp' },
       { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: '/images/products/cloud-slides-pastel-pink.webp' },
     ],
   },
@@ -257,9 +257,9 @@ export const guides: StyleGuide[] = [
     emoji: '🧥',
     image: '/images/guides/mob-wife-aesthetic-bold-luxe-trend.svg',
     affiliateProducts: [
-      { name: 'Faux Fur Coat', brand: 'Amazon', price: '$65', url: 'https://amzn.to/4kNVNxy', tag: 'Editor Pick', image: '/images/products/faux-fur-coat.svg' },
-      { name: 'Chunky Gold Chain Necklace', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', image: '/images/products/chunky-gold-chain-necklace.svg' },
-      { name: 'Leopard Print Scarf', brand: 'Amazon', price: '$16', url: 'https://amzn.to/40drBCf', image: '/images/products/leopard-print-scarf.svg' },
+      { name: 'Faux Fur Coat', brand: 'Amazon', price: '$65', url: 'https://amzn.to/4kNVNxy', tag: 'Editor Pick', image: '/images/products/faux-fur-coat.webp' },
+      { name: 'Chunky Gold Chain Necklace', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', image: '/images/products/chunky-gold-chain-necklace.webp' },
+      { name: 'Leopard Print Scarf', brand: 'Amazon', price: '$16', url: 'https://amzn.to/40drBCf', image: '/images/products/leopard-print-scarf.webp' },
     ],
   },
 
@@ -274,9 +274,9 @@ export const guides: StyleGuide[] = [
     emoji: '🌹',
     image: '/images/guides/maximalist-vintage-revival.svg',
     affiliateProducts: [
-      { name: 'Vintage Patchwork Jacket', brand: 'Amazon', price: '$48', url: 'https://amzn.to/3ZCaw4S', tag: 'Trending', image: '/images/products/vintage-patchwork-jacket.svg' },
-      { name: 'Printed Maxi Skirt', brand: 'Amazon', price: '$34', url: 'https://amzn.to/3OhrhzW', image: '/images/products/printed-maxi-skirt.svg' },
-      { name: 'Chunky Statement Rings Set', brand: 'Amazon', price: '$15', url: 'https://amzn.to/4rVjOFg', image: '/images/products/chunky-statement-rings-set.svg' },
+      { name: 'Vintage Patchwork Jacket', brand: 'Amazon', price: '$48', url: 'https://amzn.to/3ZCaw4S', tag: 'Trending', image: '/images/products/vintage-patchwork-jacket.webp' },
+      { name: 'Printed Maxi Skirt', brand: 'Amazon', price: '$34', url: 'https://amzn.to/3OhrhzW', image: '/images/products/printed-maxi-skirt.webp' },
+      { name: 'Chunky Statement Rings Set', brand: 'Amazon', price: '$15', url: 'https://amzn.to/4rVjOFg', image: '/images/products/chunky-statement-rings-set.webp' },
     ],
   },
 
@@ -292,10 +292,10 @@ export const guides: StyleGuide[] = [
     emoji: '👔',
     image: '\images\guides/capsule-wardrobe-working-women-2026.webp',
     affiliateProducts: [
-      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/tailored-blazer.svg' },
-      { name: 'High-Rise Wide Leg Pants', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/high-rise-wide-leg-pants.svg' },
-      { name: 'Silk Camisole', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', image: '/images/products/silk-camisole.svg' },
-      { name: 'Classic Pumps', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/classic-pumps.svg' },
+      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/tailored-blazer.webp' },
+      { name: 'High-Rise Wide Leg Pants', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/high-rise-wide-leg-pants.webp' },
+      { name: 'Silk Camisole', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', image: '/images/products/silk-camisole.webp' },
+      { name: 'Classic Pumps', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/classic-pumps.webp' },
     ],
   },
   {
@@ -309,9 +309,9 @@ export const guides: StyleGuide[] = [
     emoji: '👗',
     image: '/images/guides/casual-outfits-that-look-expensive.svg',
     affiliateProducts: [
-      { name: 'Oversized Linen Shirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rVjOFg', tag: 'Best Value', image: '/images/products/oversized-linen-shirt.svg' },
-      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', image: '/images/products/straight-leg-jeans.svg' },
-      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', image: '/images/products/white-sneakers.svg' },
+      { name: 'Oversized Linen Shirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rVjOFg', tag: 'Best Value', image: '/images/products/oversized-linen-shirt.webp' },
+      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', image: '/images/products/straight-leg-jeans.webp' },
+      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', image: '/images/products/white-sneakers.webp' },
     ],
   },
   {
@@ -325,7 +325,7 @@ export const guides: StyleGuide[] = [
     emoji: '💃',
     image: '/images/guides/first-date-outfits-every-vibe.svg',
     affiliateProducts: [
-      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', tag: 'Date Night Fave', image: '/images/products/satin-midi-dress.svg' },
+      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', tag: 'Date Night Fave', image: '/images/products/satin-midi-dress.webp' },
       { name: 'Strappy Heels', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/strappy-heels.svg' },
       { name: 'Statement Earrings', brand: 'Amazon', price: '$15', url: 'https://amzn.to/3Mro3JB', image: '/images/products/statement-earrings.svg' },
     ],
@@ -387,7 +387,7 @@ export const guides: StyleGuide[] = [
     emoji: '👖',
     image: '\images\guides/best-jeans-for-women-2026.webp',
     affiliateProducts: [
-      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Overall', image: '/images/products/straight-leg-jeans.svg' },
+      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Overall', image: '/images/products/straight-leg-jeans.webp' },
       { name: 'Wide Leg Pants', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Best Comfort', image: '/images/products/wide-leg-pants.svg' },
     ],
   },
@@ -435,7 +435,7 @@ export const guides: StyleGuide[] = [
     emoji: '💕',
     image: '/images/guides/what-to-wear-date-night.svg',
     affiliateProducts: [
-      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', tag: 'Editor Pick', image: '/images/products/satin-midi-dress.svg' },
+      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', tag: 'Editor Pick', image: '/images/products/satin-midi-dress.webp' },
       { name: 'Strappy Heeled Sandals', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/strappy-heeled-sandals.svg' },
       { name: 'Statement Earrings', brand: 'Amazon', price: '$15', url: 'https://amzn.to/3Mro3JB', tag: 'Budget Pick', image: '/images/products/statement-earrings.svg' },
       { name: 'Clutch Bag', brand: 'Amazon', price: '$22', url: 'https://amzn.to/4anggFT', image: '/images/products/clutch-bag.svg' },
@@ -452,9 +452,9 @@ export const guides: StyleGuide[] = [
     emoji: '👖',
     image: '\images\guides/best-jeans-every-body-type.webp',
     affiliateProducts: [
-      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Overall', image: '/images/products/straight-leg-jeans.svg' },
+      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Overall', image: '/images/products/straight-leg-jeans.webp' },
       { name: 'Wide Leg Pants', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Best for Curves', image: '/images/products/wide-leg-pants.svg' },
-      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', tag: 'Best Pairing', image: '/images/products/white-sneakers.svg' },
+      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', tag: 'Best Pairing', image: '/images/products/white-sneakers.webp' },
     ],
   },
   {
@@ -469,9 +469,9 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/spring-fashion-trends-2026.svg',
     affiliateProducts: [
       { name: 'Linen Blend Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Trend Pick', image: '/images/products/linen-blend-blazer.svg' },
-      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', image: '/images/products/satin-midi-dress.svg' },
+      { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', image: '/images/products/satin-midi-dress.webp' },
       { name: 'Woven Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Must Have', image: '/images/products/woven-tote-bag.svg' },
-      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', image: '/images/products/white-sneakers.svg' },
+      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', image: '/images/products/white-sneakers.webp' },
     ],
   },
   {
@@ -500,9 +500,9 @@ export const guides: StyleGuide[] = [
     emoji: '💰',
     image: '\images\guides/affordable-fashion-brands-guide.webp',
     affiliateProducts: [
-      { name: 'Silk Camisole', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', tag: 'Best Quality', image: '/images/products/silk-camisole.svg' },
-      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', image: '/images/products/straight-leg-jeans.svg' },
-      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/tailored-blazer.svg' },
+      { name: 'Silk Camisole', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', tag: 'Best Quality', image: '/images/products/silk-camisole.webp' },
+      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', image: '/images/products/straight-leg-jeans.webp' },
+      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/tailored-blazer.webp' },
     ],
   },
   {
@@ -517,7 +517,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/how-to-build-minimalist-wardrobe.svg',
     affiliateProducts: [
       { name: 'Classic White Camisole', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', tag: 'Wardrobe Essential', image: '/images/products/classic-white-camisole.svg' },
-      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Worth the Splurge', image: '/images/products/tailored-blazer.svg' },
+      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Worth the Splurge', image: '/images/products/tailored-blazer.webp' },
       { name: 'Versatile Wide Leg Pants', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/versatile-wide-leg-pants.svg' },
     ],
   },
@@ -532,8 +532,8 @@ export const guides: StyleGuide[] = [
     emoji: '👟',
     image: '\images\guides/best-white-sneakers-women-2026.webp',
     affiliateProducts: [
-      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', tag: 'Best Overall', image: '/images/products/white-sneakers.svg' },
-      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Pairing', image: '/images/products/straight-leg-jeans.svg' },
+      { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', tag: 'Best Overall', image: '/images/products/white-sneakers.webp' },
+      { name: 'Straight Leg Jeans', brand: 'Amazon', price: '$39', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Pairing', image: '/images/products/straight-leg-jeans.webp' },
     ],
   },
   {
@@ -547,7 +547,7 @@ export const guides: StyleGuide[] = [
     emoji: '👩‍💼',
     image: '/images/guides/professional-outfits-women-2026.svg',
     affiliateProducts: [
-      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Investment Piece', image: '/images/products/tailored-blazer.svg' },
+      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Investment Piece', image: '/images/products/tailored-blazer.webp' },
       { name: 'Wide Leg Trousers', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Best Value', image: '/images/products/wide-leg-trousers.svg' },
       { name: 'Silk Blouse', brand: 'Amazon', price: '$25', url: 'https://amzn.to/3Mro3JB', image: '/images/products/silk-blouse.svg' },
       { name: 'Pointed Toe Pumps', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pointed-toe-pumps.svg' },
@@ -704,7 +704,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/amazon-fashion-finds-under-30.svg',
     affiliateProducts: [
       { name: 'Satin Pleated Skirt', brand: 'Amazon', price: '$26', url: 'https://amzn.to/3OrVpsf', tag: 'Editor\'s Choice', image: '/images/products/satin-pleated-skirt.svg' },
-      { name: 'Oversized Linen Shirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rUPDhk', tag: 'Most Versatile', image: '/images/products/oversized-linen-shirt.svg' },
+      { name: 'Oversized Linen Shirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rUPDhk', tag: 'Most Versatile', image: '/images/products/oversized-linen-shirt.webp' },
       { name: 'Gold Layered Necklace Set', brand: 'Amazon', price: '$14', url: 'https://amzn.to/3Mro3JB', tag: 'Best Under $15', image: '/images/products/gold-layered-necklace-set.svg' },
       { name: 'Ribbed Bodysuit', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4tH7kT9', tag: 'Wardrobe Staple', image: '/images/products/ribbed-bodysuit.svg' },
       { name: 'Crossbody Bag', brand: 'Amazon', price: '$24', url: 'https://amzn.to/4anggFT', tag: 'Best Seller', image: '/images/products/crossbody-bag.svg' },
@@ -778,7 +778,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'High-Waist Skinny Jeans', brand: 'Amazon', price: '$36', url: 'https://amzn.to/4rfVnSQ', tag: 'Best for Petite', image: '/images/products/high-waist-skinny-jeans.svg' },
       { name: 'Midi Dress with Belt', brand: 'Amazon', price: '$34', url: 'https://amzn.to/4tH7kT9', tag: 'Elongating', image: '/images/products/midi-dress-with-belt.svg' },
-      { name: 'Pointed Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Height Boost', image: '/images/products/pointed-toe-kitten-heels.svg' },
+      { name: 'Pointed Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Height Boost', image: '/images/products/pointed-toe-kitten-heels.webp' },
       { name: 'Cropped Blazer', brand: 'Amazon', price: '$45', url: 'https://amzn.to/4rVjOFg', tag: 'Perfect Length', image: '/images/products/cropped-blazer.svg' },
     ],
   },
@@ -1060,7 +1060,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Straight Leg Dark Jeans', brand: 'Amazon', price: '$40', url: 'https://amzn.to/4rfVnSQ', tag: 'Smart Casual Staple', image: '/images/products/straight-leg-dark-jeans.svg' },
       { name: 'Silk Blend Blouse', brand: 'Amazon', price: '$35', url: 'https://amzn.to/3Mro3JB', tag: 'Elevated Basic', image: '/images/products/silk-blend-blouse.svg' },
-      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Must Have', image: '/images/products/tailored-blazer.svg' },
+      { name: 'Tailored Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Must Have', image: '/images/products/tailored-blazer.webp' },
       { name: 'White Leather Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', tag: 'Casual Lift', image: '/images/products/white-leather-sneakers.svg' },
       { name: 'Structured Crossbody Bag', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4anggFT', tag: 'Polish Touch', image: '/images/products/structured-crossbody-bag.svg' },
     ],
