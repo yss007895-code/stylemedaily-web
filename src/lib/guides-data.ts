@@ -33,6 +33,60 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'the-ultimate-office-siren-style-guide-how-to-get-the-viral-tiktok-look',
+    title: 'The Ultimate Office Siren Style Guide: How to Get the Viral TikTok Look',
+    category: 'Style Guides',
+    description: 'Unlock the viral office siren aesthetic with our ultimate style guide. Get chic outfit ideas, styling tips, and shop the essentials to master this 90s-inspired look.',
+    readTime: '10 min',
+    date: '2026-02-24',
+    tag: 'office siren',
+    emoji: '📠',
+    image: '/images/guides/best-work-bags-under-100.svg',
+    affiliateProducts: [
+      {
+        name: 'Calvin Klein Women\'s Classic Pencil Skirt',
+        brand: 'Calvin Klein',
+        price: '59.50',
+        url: 'https://www.amazon.com/dp/B07K6YJ3B7',
+        tag: 'office_siren_essential',
+        image: '/images/guides/office-siren-pencil-skirt.jpg',
+      },
+      {
+        name: 'MANGOPOP Women\'s Mock Turtle Neck Long Sleeve Bodysuit',
+        brand: 'MANGOPOP',
+        price: '22.98',
+        url: 'https://www.amazon.com/dp/B07W3T4J7F',
+        tag: 'office_siren_essential',
+        image: '/images/guides/office-siren-bodysuit.jpg',
+      },
+      {
+        name: 'FEISEDY Classic Square Cat Eye Reading Glasses',
+        brand: 'FEISEDY',
+        price: '15.99',
+        url: 'https://www.amazon.com/dp/B09V7Y1Z5C',
+        tag: 'office_siren_essential',
+        image: '/images/guides/office-siren-glasses.jpg',
+      },
+      {
+        name: 'DREAM PAIRS Women\'s Low Kitten Heel Pump Shoes',
+        brand: 'DREAM PAIRS',
+        price: '36.99',
+        url: 'https://www.amazon.com/dp/B073WWL5P5',
+        tag: 'office_siren_essential',
+        image: '/images/guides/office-siren-kitten-heels.jpg',
+      },
+      {
+        name: 'The Drop Women\'s Addison Soft Volume Top Handle Bag',
+        brand: 'The Drop',
+        price: '39.90',
+        url: 'https://www.amazon.com/dp/B08KH1YQ8C',
+        tag: 'office_siren_essential',
+        image: '/images/guides/office-siren-top-handle-bag.jpg',
+      },
+    ],
+  },
+
+  {
     slug: 'your-viral-style-guide-to-the-eclectic-grandpa-trend',
     title: 'Your Viral Style Guide to the Eclectic Grandpa Trend',
     category: 'Style Guides',
