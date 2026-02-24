@@ -33,6 +33,60 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: 'your-viral-style-guide-to-the-eclectic-grandpa-trend',
+    title: 'Your Viral Style Guide to the Eclectic Grandpa Trend',
+    category: 'Style Guides',
+    description: 'Slay the viral eclectic grandpa aesthetic with our expert style guide. We've got the best outfit ideas, tips on how to wear the trend, and a shoppable list of essentials.',
+    readTime: '10 min',
+    date: '2026-02-24',
+    tag: 'eclectic_grandpa',
+    emoji: '👴',
+    image: '/images/guides/how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026-hero.jpg',
+    affiliateProducts: [
+      {
+        name: 'The Drop Women\'s Standard Argyle V-Neck Sweater Vest',
+        brand: 'The Drop',
+        price: '34.90',
+        url: 'https://www.amazon.com/dp/B09QFZ8Y9L',
+        tag: 'stylemedaily-20',
+        image: '/images/guides/eclectic-grandpa-1.jpg',
+      },
+      {
+        name: 'Amazon Essentials Women\'s Pleated Chino Wide Leg Pant',
+        brand: 'Amazon Essentials',
+        price: '29.30',
+        url: 'https://www.amazon.com/dp/B0B3YJ5G5B',
+        tag: 'stylemedaily-20',
+        image: '/images/guides/eclectic-grandpa-2.jpg',
+      },
+      {
+        name: 'Franco Sarto Women\'s Carolynn Loafer Flat',
+        brand: 'Franco Sarto',
+        price: '99.00',
+        url: 'https://www.amazon.com/dp/B096N6W89R',
+        tag: 'stylemedaily-20',
+        image: '/images/guides/eclectic-grandpa-3.jpg',
+      },
+      {
+        name: 'Timex Women\'s Easy Reader 25mm Watch',
+        brand: 'Timex',
+        price: '38.50',
+        url: 'https://www.amazon.com/dp/B000B55AFE',
+        tag: 'stylemedaily-20',
+        image: '/images/guides/eclectic-grandpa-4.jpg',
+      },
+      {
+        name: 'Hue Women\'s Slouch Sock 3-Pair Pack',
+        brand: 'HUE',
+        price: '18.00',
+        url: 'https://www.amazon.com/dp/B00FFUPQ9W',
+        tag: 'stylemedaily-20',
+        image: '/images/guides/eclectic-grandpa-5.jpg',
+      },
+    ],
+  },
+
+  {
     slug: 'your-ultimate-balletcore-style-guide',
     title: 'Your Ultimate Balletcore Style Guide 🩰',
     category: 'Style Guides',
