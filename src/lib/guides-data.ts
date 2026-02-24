@@ -33,6 +33,17 @@ export const categories = [
 
 export const guides: StyleGuide[] = [
   {
+    slug: "best-wide-leg-pants-for-petites-2026",
+    title: "The Best Wide Leg Pants for Petites in 2026: No Hemming",
+    category: "Style Guide",
+    description: "Discover the best wide leg pants for petites in 2026. Flattering, no-hem-required options for work, weekends, and denim—all for women under 5'4\".",
+    readTime: "13 min",
+    date: "2026-02-24",
+    tag: "Guide",
+    emoji: "👖",
+    image: "",
+  },
+  {
     slug: 'coastal-grandmother-style-guide-how-to-wear-the-viral-trend-that-lives-in-my-head-rentfree',
     title: 'Coastal Grandmother Style Guide: How to Wear the Editor\'s Choice Trend That Lives in My Head Rent-Free',
     category: 'Style Guide',
