@@ -475,7 +475,7 @@ export const guides: StyleGuide[] = [
     image: '\images\guides/best-work-bags-under-100.webp',
     affiliateProducts: [
       { name: 'Professional Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Best Overall', image: '/images/products/professional-tote-bag.svg' },
-      { name: 'Structured Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Style It With', image: '/images/products/structured-blazer.svg' },
+      { name: 'Structured Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Style It With', image: '/images/products/structured-work-blazer.svg' },
     ],
   },
   {
@@ -731,7 +731,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Wrap Maxi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4tH7kT9', tag: 'Best Seller', image: '/images/products/wrap-maxi-dress.svg' },
       { name: 'High-Waist Wide Leg Pants', brand: 'Amazon', price: '$36', url: 'https://amzn.to/3ZCaw4S', tag: 'Most Flattering', image: '/images/products/high-waist-wide-leg-pants.svg' },
-      { name: 'Structured Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/structured-blazer.svg' },
+      { name: 'Structured Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/structured-work-blazer.svg' },
       { name: 'Stretchy Bodycon Dress', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rfVnSQ', tag: 'Date Night', image: '/images/products/stretchy-bodycon-dress.svg' },
       { name: 'Block Heel Sandals (Wide)', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Comfort Pick', image: '/images/products/block-heel-sandals-wide.svg' },
     ],
@@ -1102,7 +1102,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/how-to-style-leather-jacket-women.svg',
     affiliateProducts: [
       { name: 'AllSaints Balfern Leather Biker Jacket', brand: 'Amazon', price: '$499', url: 'https://amzn.to/4rVjOFg', tag: 'Best Overall', image: '/images/products/allsaints-balfern-leather-biker-jacket.svg' },
-      { name: 'Levi\'s Faux Leather Moto Jacket', brand: 'Amazon', price: '$89', url: 'https://amzn.to/3OhrhzW', tag: 'Budget Pick', image: '/images/products/levi.svg' },
+      { name: 'Levi\'s Faux Leather Moto Jacket', brand: 'Amazon', price: '$89', url: 'https://amzn.to/3OhrhzW', tag: 'Budget Pick', image: '/images/products/levis-faux-leather-moto-jacket.svg' },
       { name: 'Madewell Washed Leather Motorcycle Jacket', brand: 'Amazon', price: '$548', url: 'https://amzn.to/40drBCf', tag: 'Editor\'s Choice', image: '/images/products/madewell-washed-leather-motorcycle-jacket.svg' },
       { name: 'BLANKNYC Faux Leather Jacket', brand: 'Amazon', price: '$98', url: 'https://amzn.to/4tEIRhl', tag: 'Most Popular', image: '/images/products/blanknyc-faux-leather-jacket.svg' },
       { name: 'Sezane Emile Leather Jacket', brand: 'Amazon', price: '$625', url: 'https://amzn.to/4tH7kT9', tag: 'Luxury Pick', image: '/images/products/sezane-emile-leather-jacket.svg' },
@@ -1193,7 +1193,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Floral Wrap Midi Dress', brand: 'Amazon', price: '$36', url: 'https://amzn.to/4rVjOFg', tag: 'Best Seller', image: '/images/products/floral-wrap-midi-dress.svg' },
       { name: 'Strappy Block Heel Sandals', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Most Comfortable', image: '/images/products/strappy-block-heel-sandals.svg' },
-      { name: 'Layered Gold Necklace Set', brand: 'Amazon', price: '$16', url: 'https://amzn.to/3Mro3JB', tag: 'Summer Essential', image: '/images/products/layered-gold-necklace-set.svg' },
+      { name: 'Layered Gold Necklace Set', brand: 'Amazon', price: '$16', url: 'https://amzn.to/3Mro3JB', tag: 'Summer Essential', image: '/images/products/gold-layered-necklace-set.svg' },
       { name: 'Straw Clutch Bag', brand: 'Amazon', price: '$24', url: 'https://amzn.to/4anggFT', tag: 'Trendy', image: '/images/products/straw-clutch-bag.svg' },
       { name: 'Linen Blend Blazer', brand: 'Amazon', price: '$48', url: 'https://amzn.to/4rfVnSQ', tag: 'Layering Pick', image: '/images/products/linen-blend-blazer.svg' },
     ],

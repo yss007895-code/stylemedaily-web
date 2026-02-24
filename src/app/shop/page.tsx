@@ -23,7 +23,7 @@ export default function ShopPage() {
         </h1>
       </div>
 
-      <ShopPageClient products={allProducts} categories={[{ slug: 'all', name: 'All' }, ...shopCategories]} />
+      <ShopPageClient products={allProducts} categories={shopCategories} />
     </div>
   );
 }
