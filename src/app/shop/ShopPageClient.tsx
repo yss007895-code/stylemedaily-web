@@ -11,6 +11,7 @@ interface ShopPageClientProps {
 
 export default function ShopPageClient({ products, categories }: ShopPageClientProps) {
   const [activeCategory, setActiveCategory] = useState('all');
+  const fallbackImage = '/images/guides/editors-choice-fashion-trends-2026.svg';
 
   const filtered = useMemo(() => {
     return products.filter(p => {
@@ -48,10 +49,10 @@ export default function ShopPageClient({ products, categories }: ShopPageClientP
               <a href={p.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="block">
                 <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
                   <img
-                    src={p.image || 'https://placehold.co/600x800?text=Fashion+Item'}
+                    src={p.image || fallbackImage}
                     alt={p.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x800?text=Image_Fallback'; }}
+                    onError={(e) => { e.currentTarget.src = fallbackImage; }}
                   />
                   {/* Quick Shop Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
