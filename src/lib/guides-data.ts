@@ -41,7 +41,7 @@ export const guides: StyleGuide[] = [
     date: "2026-02-24",
     tag: "Guide",
     emoji: "👖",
-        image: "/images/articles/the-best-wide-leg-pants-for-petites-in-2-thumb.webp",
+        image: "/images/articles/wide-leg-pants-petites-2026-01.jpg",
   },
   {
     slug: 'coastal-grandmother-style-guide-how-to-wear-the-viral-trend-that-lives-in-my-head-rentfree',
