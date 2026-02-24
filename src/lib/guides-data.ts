@@ -31,7 +31,20 @@ export const categories = [
   { slug: 'occasion', name: 'Occasions', icon: '🎉' },
 ];
 
-export const guides: StyleGuide[] = [  {
+export const guides: StyleGuide[] = [
+  {
+    slug: 'the-coastal-grandmother-aesthetic-your-ultimate-style-guide',
+    title: 'The Coastal Grandmother Aesthetic: Your Ultimate Style Guide',
+    category: 'Style Guide',
+    description: 'Ready to enter your coastal grandmother era? Our Gen Z-approved style guide breaks down the viral TikTok trend with easy outfit ideas and tips on how to wear linen, neutrals, and more.',
+    readTime: '10 min',
+    date: '2026-02-24',
+    tag: 'CoastalGrandmother',
+    emoji: '🐚',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=400&fit=crop',
+    affiliateProducts: [],
+  },
+  {
     slug: 'y2k-fashion-revival-ultimate-guide-2026',
     title: 'The Ultimate Y2K Fashion Revival Guide (2026): How to Rock Low-Rise Jeans & Baby Tees',
     category: 'casual',
