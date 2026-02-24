@@ -4,7 +4,7 @@ import '@/styles/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
-import NewsletterPopup from '@/components/NewsletterPopup';
+
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -93,7 +93,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <BackToTop />
-        <NewsletterPopup />
       </body>
     </html>
   );
