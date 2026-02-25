@@ -1,11 +1,22 @@
 import Link from 'next/link';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Nordstrom vs ASOS 2026: Best Online Shopping for Women',
   description: 'We compared Nordstrom and ASOS on quality, price, sizing, returns, and style. Find out which is better for your wardrobe and budget.',
   keywords: ['nordstrom vs asos', 'online shopping comparison', 'best online store women', 'nordstrom review', 'asos review 2026'],
+  alternates: { canonical: `${SITE_URL}/compare/nordstrom-vs-asos` },
+  openGraph: {
+    title: 'Nordstrom vs ASOS 2026: Best Online Shopping for Women',
+    description: 'We compared Nordstrom and ASOS on quality, price, sizing, returns, and style.',
+    type: 'article',
+    url: `${SITE_URL}/compare/nordstrom-vs-asos`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/blog/nordstrom-vs-asos-comparison.webp', width: 1200, height: 630, alt: 'Nordstrom vs ASOS Comparison 2026' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 const data = [
@@ -21,7 +32,41 @@ const data = [
 ];
 
 export default function NordstromVsAsos() {
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Nordstrom vs ASOS 2026: Best Online Shopping for Women',
+    description: 'We compared Nordstrom and ASOS on quality, price, sizing, returns, and style.',
+    image: `${SITE_URL}/images/blog/nordstrom-vs-asos-comparison.webp`,
+    datePublished: '2026-02-15',
+    dateModified: '2026-02-15',
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/compare/nordstrom-vs-asos` },
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Compare', item: `${SITE_URL}/compare` },
+      { '@type': 'ListItem', position: 3, name: 'Nordstrom vs ASOS', item: `${SITE_URL}/compare/nordstrom-vs-asos` },
+    ],
+  };
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Which has better quality, Nordstrom or ASOS?', acceptedAnswer: { '@type': 'Answer', text: 'Nordstrom wins on quality across the board. Better fabrics, construction, and longevity. ASOS is great for trends but expect fast-fashion quality at fast-fashion prices.' } },
+      { '@type': 'Question', name: 'Which is more size-inclusive, Nordstrom or ASOS?', acceptedAnswer: { '@type': 'Answer', text: 'ASOS is the clear winner with dedicated Petite, Tall, Curve, and Maternity lines, ranging from XXS to 4XL. Nordstrom tops out at 3X for most brands.' } },
+      { '@type': 'Question', name: 'Which has better sales, Nordstrom or ASOS?', acceptedAnswer: { '@type': 'Answer', text: 'Both have excellent sales. Nordstrom\'s Anniversary Sale (July) offers deep discounts on premium brands. ASOS runs frequent 20–30% off promotions year-round.' } },
+    ],
+  };
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <article className="pt-8 max-w-3xl mx-auto">
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
         <Link href="/" className="hover:text-gray-600">Home</Link>
@@ -123,5 +168,6 @@ export default function NordstromVsAsos() {
 
       <NewsletterCTA />
     </article>
+    </>
   );
 }

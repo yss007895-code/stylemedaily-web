@@ -1,8 +1,18 @@
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer',
-  description: 'Disclaimer for StyleMeDaily - affiliate disclosure and content disclaimer.',
+  title: 'Disclaimer | StyleMeDaily',
+  description: 'Disclaimer for StyleMeDaily — affiliate disclosure, content accuracy, and pricing information.',
+  alternates: { canonical: `${SITE_URL}/disclaimer` },
+  robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Disclaimer | StyleMeDaily',
+    description: 'StyleMeDaily affiliate disclosure, content accuracy, and pricing information.',
+    type: 'website',
+    url: `${SITE_URL}/disclaimer`,
+    siteName: SITE_NAME,
+  },
 };
 
 export default function DisclaimerPage() {

@@ -1,8 +1,18 @@
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | StyleMeDaily',
   description: 'StyleMeDaily privacy policy — how we collect, use, and protect your data.',
+  alternates: { canonical: `${SITE_URL}/privacy` },
+  robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Privacy Policy | StyleMeDaily',
+    description: 'How StyleMeDaily collects, uses, and protects your data.',
+    type: 'website',
+    url: `${SITE_URL}/privacy`,
+    siteName: SITE_NAME,
+  },
 };
 
 export default function PrivacyPage() {

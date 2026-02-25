@@ -1,8 +1,19 @@
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure | StyleMeDaily',
-  description: 'StyleMeDaily participates in affiliate programs. Learn how we earn commissions and our commitment to editorial independence.',
+  description: 'StyleMeDaily participates in affiliate programs including Amazon Associates. Learn how we earn commissions and our commitment to editorial independence.',
+  keywords: ['affiliate disclosure', 'amazon associates disclosure', 'stylemedaily affiliate', 'FTC disclosure'],
+  alternates: { canonical: `${SITE_URL}/affiliate-disclosure` },
+  openGraph: {
+    title: 'Affiliate Disclosure | StyleMeDaily',
+    description: 'How StyleMeDaily earns commissions and our commitment to editorial independence.',
+    type: 'website',
+    url: `${SITE_URL}/affiliate-disclosure`,
+    siteName: SITE_NAME,
+  },
+  twitter: { card: 'summary', site: '@stylemedaily' },
 };
 
 export default function AffiliateDisclosurePage() {

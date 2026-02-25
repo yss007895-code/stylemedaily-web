@@ -1,13 +1,22 @@
 import Link from 'next/link';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/lib/constants';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'SHEIN vs ASOS 2026: Ultra-Budget vs Mid-Range Fashion Compared',
   description: 'Is SHEIN worth it or should you spend more at ASOS? We compared quality, shipping, returns, sustainability, and value to help you decide.',
   keywords: ['shein vs asos', 'shein review', 'asos review', 'cheap online fashion', 'is shein worth it 2026', 'best online fashion store'],
   alternates: { canonical: `${SITE_URL}/compare/shein-vs-asos` },
+  openGraph: {
+    title: 'SHEIN vs ASOS 2026: Ultra-Budget vs Mid-Range Fashion Compared',
+    description: 'Is SHEIN worth it or should you spend more at ASOS? We compared quality, shipping, returns, and value.',
+    type: 'article',
+    url: `${SITE_URL}/compare/shein-vs-asos`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'SHEIN vs ASOS Comparison 2026' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 const data = [
@@ -23,6 +32,27 @@ const data = [
 ];
 
 export default function SheinVsAsos() {
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'SHEIN vs ASOS 2026: Ultra-Budget vs Mid-Range Fashion Compared',
+    description: 'Is SHEIN worth it or should you spend more at ASOS? We compared quality, shipping, returns, sustainability, and value.',
+    image: `${SITE_URL}/images/guides/hero-women-fashion.webp`,
+    datePublished: '2026-02-18',
+    dateModified: '2026-02-18',
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/compare/shein-vs-asos` },
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Compare', item: `${SITE_URL}/compare` },
+      { '@type': 'ListItem', position: 3, name: 'SHEIN vs ASOS', item: `${SITE_URL}/compare/shein-vs-asos` },
+    ],
+  };
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -34,8 +64,11 @@ export default function SheinVsAsos() {
   };
 
   return (
-    <article className="pt-8 max-w-3xl mx-auto">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+    <article className="pt-8 max-w-3xl mx-auto">
 
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
         <Link href="/" className="hover:text-gray-600">Home</Link>
@@ -128,5 +161,6 @@ export default function SheinVsAsos() {
 
       <NewsletterCTA />
     </article>
+    </>
   );
 }

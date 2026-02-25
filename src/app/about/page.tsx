@@ -1,14 +1,47 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { teamMembers } from '@/lib/team';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'About StyleMeDaily — Our Mission & Team',
   description: 'StyleMeDaily provides expert styling guides and personalized fashion advice for every woman. Learn about our mission and editorial standards.',
+  keywords: ['about stylemedaily', 'fashion blog team', 'women fashion editors', 'style advice editorial'],
+  alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: 'About StyleMeDaily — Our Mission & Team',
+    description: 'StyleMeDaily provides expert styling guides and personalized fashion advice for every woman.',
+    type: 'website',
+    url: `${SITE_URL}/about`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'StyleMeDaily Team' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 export default function AboutPage() {
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/guides/hero-women-fashion.webp`,
+    description: 'Expert styling guides and personalized fashion advice for every woman.',
+    contactPoint: { '@type': 'ContactPoint', email: 'contact@stylemedaily.org', contactType: 'customer service' },
+    sameAs: ['https://www.pinterest.com/stylemedaily/'],
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE_URL}/about` },
+    ],
+  };
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="pt-12 max-w-3xl mx-auto">
       <header className="mb-12">
         <p className="text-sm text-gray-400 font-mono uppercase tracking-wide mb-3">About Us</p>
@@ -94,5 +127,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,13 +1,22 @@
 import Link from 'next/link';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/lib/constants';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Zara vs H&M 2026: Which Fast Fashion Brand Is Better?',
   description: 'We compared Zara and H&M on quality, price, sustainability, style, and sizing. Find out which fast fashion retailer wins for your wardrobe.',
   keywords: ['zara vs hm', 'zara vs h&m', 'fast fashion comparison', 'best fast fashion brand', 'zara review 2026', 'h&m review 2026'],
   alternates: { canonical: `${SITE_URL}/compare/zara-vs-hm` },
+  openGraph: {
+    title: 'Zara vs H&M 2026: Which Fast Fashion Brand Is Better?',
+    description: 'We compared Zara and H&M on quality, price, sustainability, and style.',
+    type: 'article',
+    url: `${SITE_URL}/compare/zara-vs-hm`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'Zara vs H&M Comparison 2026' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 const data = [
@@ -23,6 +32,27 @@ const data = [
 ];
 
 export default function ZaraVsHM() {
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Zara vs H&M 2026: Which Fast Fashion Brand Is Better?',
+    description: 'We compared Zara and H&M on quality, price, sustainability, style, and sizing.',
+    image: `${SITE_URL}/images/guides/hero-women-fashion.webp`,
+    datePublished: '2026-02-20',
+    dateModified: '2026-02-20',
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/compare/zara-vs-hm` },
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Compare', item: `${SITE_URL}/compare` },
+      { '@type': 'ListItem', position: 3, name: 'Zara vs H&M', item: `${SITE_URL}/compare/zara-vs-hm` },
+    ],
+  };
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -34,8 +64,11 @@ export default function ZaraVsHM() {
   };
 
   return (
-    <article className="pt-8 max-w-3xl mx-auto">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+    <article className="pt-8 max-w-3xl mx-auto">
 
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
         <Link href="/" className="hover:text-gray-600">Home</Link>
@@ -132,5 +165,6 @@ export default function ZaraVsHM() {
 
       <NewsletterCTA />
     </article>
+    </>
   );
 }

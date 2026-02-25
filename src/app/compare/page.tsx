@@ -5,6 +5,7 @@ import { SITE_URL } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Fashion Comparisons & Reviews | StyleMeDaily',
   description: 'Honest side-by-side comparisons of top fashion retailers, brands, and styling services. Make smarter shopping decisions with our in-depth guides.',
+  keywords: ['fashion retailer comparison', 'nordstrom vs asos', 'zara vs h&m', 'shein vs asos', 'best online fashion store'],
   alternates: { canonical: `${SITE_URL}/compare` },
   openGraph: {
     title: 'Fashion Comparisons & Reviews | StyleMeDaily',
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/compare`,
     siteName: 'StyleMeDaily',
     type: 'website',
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'StyleMeDaily Fashion Comparisons' }],
   },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 const comparisons = [

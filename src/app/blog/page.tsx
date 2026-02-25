@@ -2,11 +2,22 @@ import Link from 'next/link';
 import SafeImage from '@/components/SafeImage';
 import type { Metadata } from 'next';
 import NewsletterCTA from '@/components/NewsletterCTA';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Blog — Fashion Tips, Trends & Style News',
   description: 'The latest fashion tips, trend reports, and style advice for modern women. Stay updated with seasonal trends, outfit ideas, and product reviews.',
-  keywords: ['fashion blog', 'style news', 'fashion trends 2026', 'outfit ideas', 'style tips'],
+  keywords: ['fashion blog', 'style news', 'fashion trends 2026', 'outfit ideas', 'style tips', 'women fashion advice'],
+  alternates: { canonical: `${SITE_URL}/blog` },
+  openGraph: {
+    title: 'Blog — Fashion Tips, Trends & Style News',
+    description: 'The latest fashion tips, trend reports, and style advice for modern women.',
+    type: 'website',
+    url: `${SITE_URL}/blog`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/blog/quiet-luxury-guide.webp', width: 1200, height: 630, alt: 'StyleMeDaily Blog' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 const posts = [
@@ -136,7 +147,35 @@ export default function BlogPage() {
   const featured = posts[0];
   const rest = posts.slice(1);
 
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'StyleMeDaily Blog — Fashion Tips & Style News',
+    description: 'The latest fashion tips, trend reports, and style advice for modern women.',
+    url: `${SITE_URL}/blog`,
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    hasPart: posts.map(p => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `${SITE_URL}${p.link}`,
+      image: `${SITE_URL}${p.image}`,
+      datePublished: p.date,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="pt-8 max-w-4xl mx-auto">
       <div className="mb-10">
         <h1 className="section-title">The Edit</h1>
@@ -214,5 +253,6 @@ export default function BlogPage() {
       {/* Newsletter CTA */}
       <NewsletterCTA />
     </div>
+    </>
   );
 }

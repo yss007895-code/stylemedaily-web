@@ -1,12 +1,48 @@
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Partnerships & Inquiries',
+  title: 'Contact Us — Partnerships & Inquiries | StyleMeDaily',
   description: 'Get in touch with the StyleMeDaily team for partnerships, sponsorships, or general inquiries.',
+  keywords: ['contact stylemedaily', 'fashion blog partnerships', 'stylemedaily sponsorship', 'fashion affiliate inquiry'],
+  alternates: { canonical: `${SITE_URL}/contact` },
+  openGraph: {
+    title: 'Contact StyleMeDaily — Partnerships & Inquiries',
+    description: 'Get in touch with our team for partnerships, sponsorships, or general inquiries.',
+    type: 'website',
+    url: `${SITE_URL}/contact`,
+    siteName: SITE_NAME,
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'Contact StyleMeDaily' }],
+  },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 export default function ContactPage() {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact StyleMeDaily',
+    url: `${SITE_URL}/contact`,
+    description: 'Get in touch with StyleMeDaily for partnerships, sponsorships, or general inquiries.',
+    mainEntity: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      contactPoint: { '@type': 'ContactPoint', email: 'contact@stylemedaily.org', contactType: 'customer service, partnerships', availableLanguage: 'English' },
+    },
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
+    ],
+  };
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="pt-12 max-w-2xl mx-auto">
       <header className="mb-10">
         <p className="text-sm text-gray-400 font-mono uppercase tracking-wide mb-3">Contact</p>
@@ -47,5 +83,6 @@ export default function ContactPage() {
         <a href="mailto:contact@stylemedaily.org" className="btn-primary text-sm inline-block">Send Partnership Inquiry</a>
       </div>
     </div>
+    </>
   );
 }

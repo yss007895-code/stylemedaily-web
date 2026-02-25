@@ -1,8 +1,18 @@
 import type { Metadata } from 'next';
+import { SITE_URL, SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Terms of Service for StyleMeDaily - read our usage terms and conditions.',
+  title: 'Terms of Service | StyleMeDaily',
+  description: 'Terms of Service for StyleMeDaily — read our usage terms and conditions.',
+  alternates: { canonical: `${SITE_URL}/terms` },
+  robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Terms of Service | StyleMeDaily',
+    description: 'StyleMeDaily terms of service and usage conditions.',
+    type: 'website',
+    url: `${SITE_URL}/terms`,
+    siteName: SITE_NAME,
+  },
 };
 
 export default function TermsPage() {

@@ -13,7 +13,9 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/style-quiz`,
     siteName: SITE_NAME,
     type: 'website',
+    images: [{ url: '/images/guides/hero-women-fashion.webp', width: 1200, height: 630, alt: 'StyleMeDaily Style Quiz' }],
   },
+  twitter: { card: 'summary_large_image', site: '@stylemedaily' },
 };
 
 export default function StyleQuizPage() {
