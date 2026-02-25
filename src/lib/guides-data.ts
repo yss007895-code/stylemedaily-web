@@ -373,7 +373,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/wedding-guest-outfit-2026.webp',
     affiliateProducts: [
       { name: 'Wedding Guest Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', tag: 'Best Seller', image: '/images/products/wedding-guest-dress.svg' },
-      { name: 'Elegant Heels', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/elegant-heels.svg' },
+      { name: 'Elegant Heels', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3OhrhzW', image: '/images/products/elegant-heels.webp' },
     ],
   },
   {
@@ -650,7 +650,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/best-running-shoes-women-2026.webp',
     affiliateProducts: [
       { name: 'Lightweight Running Shoes', brand: 'Amazon', price: '$65', url: 'https://amzn.to/3Mro7cj', tag: 'Best Overall', image: '/images/products/lightweight-running-shoes.svg' },
-      { name: 'Cushioned Trail Runners', brand: 'Amazon', price: '$72', url: 'https://amzn.to/3OhrhzW', tag: 'Best for Trails', image: '/images/products/cushioned-trail-runners.svg' },
+      { name: 'Cushioned Trail Runners', brand: 'Amazon', price: '$72', url: 'https://amzn.to/3OhrhzW', tag: 'Best for Trails', image: '/images/products/cushioned-trail-runners.webp' },
       { name: 'Budget Running Shoes', brand: 'Amazon', price: '$45', url: 'https://amzn.to/4rfVnSQ', tag: 'Best Value', image: '/images/products/budget-running-shoes.webp' },
       { name: 'Running Leggings', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3ZCaw4S', tag: 'Pair With', image: '/images/products/running-leggings.svg' },
       { name: 'Sports Bra (High Impact)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3Mro3JB', tag: 'Essential', image: '/images/products/sports-bra-high-impact.svg' },
@@ -973,7 +973,7 @@ export const guides: StyleGuide[] = [
       { name: 'Linen Co-ord Set', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/linen-co-ord-set.svg' },
       { name: 'Strappy Block Heel Sandals', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: '/images/products/strappy-block-heel-sandals.svg' },
       { name: 'Woven Straw Bag', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4anggFT', tag: 'Trendy', image: '/images/products/woven-straw-bag.svg' },
-      { name: 'Dainty Gold Earrings Set', brand: 'Amazon', price: '$14', url: 'https://amzn.to/3Mro3JB', tag: 'Finishing Touch', image: '/images/products/dainty-gold-earrings-set.svg' },
+      { name: 'Dainty Gold Earrings Set', brand: 'Amazon', price: '$14', url: 'https://amzn.to/3Mro3JB', tag: 'Finishing Touch', image: '/images/products/dainty-gold-earrings-set.webp' },
     ],
   },
   {
@@ -1239,8 +1239,8 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Satin Midi Dress (Black)', brand: 'Amazon', price: '$45', url: 'https://amzn.to/4tH7kT9', tag: 'Editor Pick', image: '/images/products/satin-midi-dress-black.svg' },
       { name: 'Pointed Toe Stiletto Heels', brand: 'Amazon', price: '$52', url: 'https://amzn.to/3OhrhzW', tag: 'Elegant Choice', image: '/images/products/pointed-toe-stiletto-heels.svg' },
-      { name: 'Crystal Drop Earrings', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: '/images/products/crystal-drop-earrings.svg' },
-      { name: 'Embellished Evening Clutch', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4anggFT', tag: 'Statement Piece', image: '/images/products/embellished-evening-clutch.svg' },
+      { name: 'Crystal Drop Earrings', brand: 'Amazon', price: '$18', url: 'https://amzn.to/3Mro3JB', tag: 'Best Value', image: '/images/products/crystal-drop-earrings.webp' },
+      { name: 'Embellished Evening Clutch', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4anggFT', tag: 'Statement Piece', image: '/images/products/embellished-evening-clutch.webp' },
       { name: 'Cashmere Wrap Shawl', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4rfVnSQ', tag: 'Luxe Touch', image: '/images/products/cashmere-wrap-shawl.webp' },
     ],
   },
