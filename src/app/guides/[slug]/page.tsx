@@ -29,7 +29,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: guide.description,
       type: 'article',
       publishedTime: guide.date,
-      authors: ['TrendLoop USA Team'],
+      authors: ['StyleMeDaily Team'],
       images: guide.image ? [{ url: guide.image, width: 1200, height: 630 }] : [],
       siteName: SITE_NAME,
       url: `${SITE_URL}/guides/${params.slug}`,

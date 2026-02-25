@@ -17,7 +17,7 @@ const posts = [
     date: 'Feb 18, 2026',
     time: '8 min',
     cat: 'Style',
-    image: '/images/blog/quiet-luxury-guide.svg',
+    image: '/images/blog/quiet-luxury-guide.webp',
     link: '/blog/quiet-luxury-guide',
   },
   {
@@ -27,7 +27,7 @@ const posts = [
     date: 'Feb 17, 2026',
     time: '6 min',
     cat: 'Trends',
-    image: '/images/blog/spring-color-trends-2026.svg',
+    image: '/images/blog/spring-color-trends-2026.webp',
     link: '/blog/spring-color-trends',
   },
   {
@@ -37,7 +37,7 @@ const posts = [
     date: 'Feb 16, 2026',
     time: '7 min',
     cat: 'Guide',
-    image: '/images/blog/capsule-wardrobe-mistakes.svg',
+    image: '/images/blog/capsule-wardrobe-mistakes.webp',
     link: '/blog/capsule-wardrobe-mistakes',
   },
   {
@@ -47,7 +47,7 @@ const posts = [
     date: 'Feb 15, 2026',
     time: '11 min',
     cat: 'Comparison',
-    image: '/images/blog/nordstrom-vs-asos-comparison.svg',
+    image: '/images/blog/nordstrom-vs-asos-comparison.webp',
     link: '/compare/nordstrom-vs-asos',
   },
   {
@@ -57,7 +57,7 @@ const posts = [
     date: 'Feb 14, 2026',
     time: '15 min',
     cat: 'Review',
-    image: '/images/blog/best-jeans-buying-guide.svg',
+    image: '/images/blog/best-jeans-buying-guide.webp',
     link: '/guides/best-jeans-for-women-2026',
   },
   {
@@ -67,7 +67,7 @@ const posts = [
     date: 'Feb 12, 2026',
     time: '16 min',
     cat: 'Guide',
-    image: '/images/blog/body-shape-dressing-guide.svg',
+    image: '/images/blog/body-shape-dressing-guide.webp',
     link: '/guides/dress-for-body-shape-guide',
   },
   {
@@ -77,7 +77,7 @@ const posts = [
     date: 'Feb 10, 2026',
     time: '12 min',
     cat: 'Finds',
-    image: '/images/blog/amazon-fashion-haul-under-30.svg',
+    image: '/images/blog/amazon-fashion-haul-under-30.webp',
     link: '/guides/amazon-fashion-finds-under-30',
   },
   {
@@ -87,7 +87,7 @@ const posts = [
     date: 'Feb 8, 2026',
     time: '12 min',
     cat: 'Workwear',
-    image: '/images/blog/spring-workwear-capsule.svg',
+    image: '/images/blog/spring-workwear-capsule.webp',
     link: '/guides/spring-workwear-capsule-2026',
   },
   {
@@ -97,7 +97,7 @@ const posts = [
     date: 'Feb 6, 2026',
     time: '11 min',
     cat: 'Guide',
-    image: '/images/blog/interview-outfits-guide.svg',
+    image: '/images/blog/interview-outfits-guide.webp',
     link: '/guides/what-to-wear-job-interview-2026',
   },
   {
@@ -107,7 +107,7 @@ const posts = [
     date: 'Feb 4, 2026',
     time: '9 min',
     cat: 'Preview',
-    image: '/images/blog/summer-2026-fashion-preview.svg',
+    image: '/images/blog/summer-2026-fashion-preview.webp',
     link: '/guides/summer-fashion-essentials-2026',
   },
   {
@@ -117,7 +117,7 @@ const posts = [
     date: 'Feb 2, 2026',
     time: '10 min',
     cat: 'Accessories',
-    image: '/images/blog/sunglasses-face-shape-guide.svg',
+    image: '/images/blog/sunglasses-face-shape-guide.webp',
     link: '/guides/best-sunglasses-face-shape-2026',
   },
   {
@@ -127,7 +127,7 @@ const posts = [
     date: 'Jan 30, 2026',
     time: '10 min',
     cat: 'Review',
-    image: '/images/blog/stitch-fix-review-after-6-months.svg',
+    image: '/images/blog/stitch-fix-review-after-6-months.webp',
     link: '/guides/stitch-fix-vs-personal-stylist',
   },
 ];

@@ -10,7 +10,7 @@ export default function Header() {
     { href: '/shop', label: 'Shop' },
     { href: '/guides', label: 'Style Guides' },
     { href: '/blog', label: 'Blog' },
-    { href: '/compare/nordstrom-vs-asos', label: 'Compare' },
+    { href: '/compare', label: 'Compare' },
     { href: '/style-quiz', label: 'Style Quiz' },
   ];
 
