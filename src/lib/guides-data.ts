@@ -342,7 +342,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/dressing-for-body-shape-guide.webp',
     affiliateProducts: [
       { name: 'Wrap Dress (Hourglass)', brand: 'Amazon', price: '$36', url: 'https://amzn.to/4tH7kT9', image: '/images/products/wrap-dress-hourglass.svg' },
-      { name: 'A-Line Skirt (Pear)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/a-line-skirt-pear.svg' },
+      { name: 'A-Line Skirt (Pear)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/a-line-skirt-pear.webp' },
       { name: 'Structured Blazer (Rectangle)', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', image: '/images/products/structured-blazer-rectangle.svg' },
     ],
   },
@@ -1112,7 +1112,7 @@ export const guides: StyleGuide[] = [
     emoji: '🧥',
     image: '/images/guides/how-to-style-leather-jacket-women.svg',
     affiliateProducts: [
-      { name: 'AllSaints Balfern Leather Biker Jacket', brand: 'Amazon', price: '$499', url: 'https://amzn.to/4rVjOFg', tag: 'Best Overall', image: '/images/products/allsaints-balfern-leather-biker-jacket.svg' },
+      { name: 'AllSaints Balfern Leather Biker Jacket', brand: 'Amazon', price: '$499', url: 'https://amzn.to/4rVjOFg', tag: 'Best Overall', image: '/images/products/allsaints-balfern-leather-biker-jacket.webp' },
       { name: 'Levi\'s Faux Leather Moto Jacket', brand: 'Amazon', price: '$89', url: 'https://amzn.to/3OhrhzW', tag: 'Budget Pick', image: '/images/products/levis-faux-leather-moto-jacket.svg' },
       { name: 'Madewell Washed Leather Motorcycle Jacket', brand: 'Amazon', price: '$548', url: 'https://amzn.to/40drBCf', tag: 'Editor\'s Choice', image: '/images/products/madewell-washed-leather-motorcycle-jacket.svg' },
       { name: 'BLANKNYC Faux Leather Jacket', brand: 'Amazon', price: '$98', url: 'https://amzn.to/4tEIRhl', tag: 'Most Popular', image: '/images/products/blanknyc-faux-leather-jacket.svg' },
