@@ -243,6 +243,9 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
           </div>
         )}
 
+        {/* Affiliate Disclosure Banner - Bottom */}
+        <AffiliateDisclosureBanner />
+
         {/* Share & Save */}
         <div className="border border-gray-100 rounded-xl p-5 my-8 bg-white">
           <p className="font-display font-bold text-gray-900 text-sm mb-1 text-center">Found this helpful?</p>

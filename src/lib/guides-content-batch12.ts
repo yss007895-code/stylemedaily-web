@@ -93,7 +93,7 @@ export const batch12Content: Record<string, { heading: string; paragraphs: strin
       paragraphs: [
         'Coffee dates call for approachable, put-together casual. You want to look like you did not try too hard but clearly have excellent taste. Try a fitted crewneck sweater in a flattering color like soft pink, sage, or cream, tucked into high-waisted straight-leg jeans with clean white sneakers or ankle boots. Add delicate gold jewelry and a crossbody bag. This outfit says "I woke up like this, but also I have great style."',
         'Another winning coffee date formula: a midi skirt in a subtle print like floral or gingham, paired with a simple fitted tee and a denim jacket. Finish with ballet flats or low-heel mules. The skirt adds femininity and effort while the denim jacket keeps things grounded. For cooler weather, swap the denim jacket for a camel coat and add a cashmere scarf. The key is one dressy element plus two casual elements — never more, never less.',
-        'Colors matter on first dates. Warm tones like blush, terracotta, and soft red are scientifically shown to be perceived as more approachable and attractive. Avoid wearing all black to a daytime coffee date — it can read as guarded or too serious for a casual meeting. Instead, use black as an accent (a black bag, black boots) against warmer, softer clothing colors.',
+        'Colors matter on first dates. Warm tones like blush, terracotta, and soft red are widely considered more approachable and inviting. Avoid wearing all black to a daytime coffee date — it can read as guarded or too serious for a casual meeting. Instead, use black as an accent (a black bag, black boots) against warmer, softer clothing colors.',
       ],
     },
     {
@@ -189,7 +189,7 @@ export const batch12Content: Record<string, { heading: string; paragraphs: strin
       paragraphs: [
         'Nordstrom excels at personalized shopping support. Their free personal styling service, available both in-store and virtually, connects you with a professional stylist who curates options based on your body type, career, budget, and preferences. For professional women who find shopping overwhelming or time-consuming, this service is genuinely valuable. Nordstrom also offers a loyalty program with early access to sales, complimentary alterations for higher-tier members, and a beauty rewards program.',
         'ASOS counters with technology-driven tools. Their app features a visual search function where you can photograph an outfit you like and find similar items in their inventory. Their editorial content and style guides are trend-focused and updated weekly. The ASOS Fit Assistant uses data from millions of returns to recommend your best size in each brand. While less personal than Nordstrom\'s human stylists, ASOS\'s tech tools are available 24/7 and improve with each purchase you make.',
-        'For returns, both retailers are excellent. Nordstrom accepts returns with essentially no time limit (though they may flag excessive returns). ASOS offers 28-day free returns in the US. Both provide free return shipping, making risk-free online shopping possible at either retailer.',
+        'For returns, both retailers are excellent. Nordstrom accepts returns with essentially no time limit (though they may flag excessive returns). ASOS offers 28-day free returns in the US. Both provide free return shipping, making returns easy and cost-free at either retailer.',
       ],
     },
     {
