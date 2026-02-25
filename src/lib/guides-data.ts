@@ -86,7 +86,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎀',
     image: '/images/guides/coquette-aesthetic-feminine-style-2026.webp',
     affiliateProducts: [
-      { name: 'Satin Bow Hair Clips Set', brand: 'Amazon', price: '$12', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/satin-bow-hair-clips-set.webp' },
+      { name: 'Satin Bow Hair Clips Set', brand: 'Amazon', price: '$12', url: 'https://www.amazon.com/s?k=Satin+Bow+Hair+Clips+Set+Women&tag=styleme-20', tag: 'Editor Pick', image: '/images/products/satin-bow-hair-clips-set.webp' },
       { name: 'Lace Trim Camisole Top', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/lace-trim-camisole-top.webp' },
       { name: 'Ballet Flats with Bow', brand: 'Amazon', price: '$35', url: 'https://amzn.to/3Mro3JB', image: '/images/products/ballet-flats-with-bow.webp' },
       { name: 'Pearl Drop Earrings', brand: 'Amazon', price: '$15', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pearl-drop-earrings.webp' },
@@ -104,7 +104,7 @@ export const guides: StyleGuide[] = [
     emoji: '🥾',
     image: '/images/guides/gorpcore-for-women-complete-style-guide.webp',
     affiliateProducts: [
-      { name: 'Waterproof Hiking Boots', brand: 'Amazon', price: '$58', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/waterproof-hiking-boots.webp' },
+      { name: 'Waterproof Hiking Boots', brand: 'Amazon', price: '$58', url: 'https://www.amazon.com/s?k=Waterproof+Hiking+Boots+Women&tag=styleme-20', tag: 'Editor Pick', image: '/images/products/waterproof-hiking-boots.webp' },
       { name: 'Fleece Half-Zip Pullover', brand: 'Amazon', price: '$35', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/fleece-half-zip-pullover.webp' },
       { name: 'Cargo Jogger Pants', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3Mro3JB', image: '/images/products/cargo-jogger-pants.webp' },
     ],
@@ -121,7 +121,7 @@ export const guides: StyleGuide[] = [
     emoji: '🌸',
     image: '/images/guides/cottagecore-spring-outfits.webp',
     affiliateProducts: [
-      { name: 'Floral Midi Wrap Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: '/images/products/floral-midi-wrap-dress.webp' },
+      { name: 'Floral Midi Wrap Dress', brand: 'Amazon', price: '$38', url: 'https://www.amazon.com/s?k=Floral+Midi+Wrap+Dress+Women&tag=styleme-20', tag: 'Best Seller', image: '/images/products/floral-midi-wrap-dress.webp' },
       { name: 'Straw Sun Hat', brand: 'Amazon', price: '$18', url: 'https://amzn.to/40drBCf', image: '/images/products/straw-sun-hat.webp' },
       { name: 'Puff Sleeve Linen Blouse', brand: 'Amazon', price: '$26', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/puff-sleeve-linen-blouse.webp' },
     ],
@@ -155,7 +155,7 @@ export const guides: StyleGuide[] = [
     emoji: '🩰',
     image: '/images/guides/balletcore-essentials-viral-trend.webp',
     affiliateProducts: [
-      { name: 'Wrap Ballet Flats', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/wrap-ballet-flats.webp' },
+      { name: 'Wrap Ballet Flats', brand: 'Amazon', price: '$32', url: 'https://www.amazon.com/s?k=Wrap+Ballet+Flats+Women&tag=styleme-20', tag: 'Editor Pick', image: '/images/products/wrap-ballet-flats.webp' },
       { name: 'Mesh Overlay Midi Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/40drBCf', image: '/images/products/mesh-overlay-midi-skirt.webp' },
       { name: 'Cropped Wrap Cardigan', brand: 'Amazon', price: '$26', url: 'https://amzn.to/4kNVNxy', image: '/images/products/cropped-wrap-cardigan.webp' },
     ],
@@ -189,7 +189,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎩',
     image: '/images/guides/eclectic-grandpa-style-gen-z-guide.webp',
     affiliateProducts: [
-      { name: 'Oversized Knit Cardigan', brand: 'Amazon', price: '$38', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/oversized-knit-cardigan.webp' },
+      { name: 'Oversized Knit Cardigan', brand: 'Amazon', price: '$38', url: 'https://www.amazon.com/s?k=Oversized+Knit+Cardigan+Women&tag=styleme-20', tag: 'Editor Pick', image: '/images/products/oversized-knit-cardigan.webp' },
       { name: 'Corduroy Wide-Leg Trousers', brand: 'Amazon', price: '$34', url: 'https://amzn.to/40drBCf', image: '/images/products/corduroy-wide-leg-trousers.webp' },
       { name: 'Argyle Sweater Vest', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4kNVNxy', image: '/images/products/argyle-sweater-vest.webp' },
     ],
@@ -206,7 +206,7 @@ export const guides: StyleGuide[] = [
     emoji: '👓',
     image: '/images/guides/office-siren-workwear-trend.svg',
     affiliateProducts: [
-      { name: 'Fitted Pencil Skirt', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3OhrhzW', tag: 'Best Seller', image: '/images/products/fitted-pencil-skirt.webp' },
+      { name: 'Fitted Pencil Skirt', brand: 'Amazon', price: '$28', url: 'https://www.amazon.com/s?k=Fitted+Pencil+Skirt+Women&tag=styleme-20', tag: 'Best Seller', image: '/images/products/fitted-pencil-skirt.webp' },
       { name: 'Sheer Button-Down Blouse', brand: 'Amazon', price: '$24', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/sheer-button-down-blouse.webp' },
       { name: 'Pointed-Toe Kitten Heels', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4rVjOFg', image: '/images/products/pointed-toe-kitten-heels.webp' },
     ],
@@ -240,7 +240,7 @@ export const guides: StyleGuide[] = [
     emoji: '🎀',
     image: '/images/guides/soft-girl-aesthetic-dreamy-style.svg',
     affiliateProducts: [
-      { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/pastel-cardigan-with-pearl-buttons.webp' },
+      { name: 'Pastel Cardigan with Pearl Buttons', brand: 'Amazon', price: '$30', url: 'https://www.amazon.com/s?k=Pastel+Cardigan+Pearl+Buttons+Women&tag=styleme-20', tag: 'Editor Pick', image: '/images/products/pastel-cardigan-with-pearl-buttons.webp' },
       { name: 'Pleated Tennis Skirt', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3OhrhzW', image: '/images/products/pleated-tennis-skirt.webp' },
       { name: 'Cloud Slides Pastel Pink', brand: 'Amazon', price: '$18', url: 'https://amzn.to/4rVjOFg', image: '/images/products/cloud-slides-pastel-pink.webp' },
     ],

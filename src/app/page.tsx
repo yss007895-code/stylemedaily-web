@@ -85,8 +85,8 @@ export default function HomePage() {
 
       {/* Hero - Premium editorial style */}
       <section className="pt-12 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+          <div className="w-full md:w-1/2">
             <p className="text-xs text-gold-600 font-mono tracking-[0.2em] uppercase mb-5">
               Your Daily Style Edit
             </p>
@@ -103,8 +103,8 @@ export default function HomePage() {
               <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
             </div>
           </div>
-          <div className="relative hidden lg:block">
-            <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+          <div className="relative w-full md:w-1/2">
+            <div className="aspect-[3/4] overflow-hidden bg-gray-100 max-h-[480px] md:max-h-none">
               <SafeImage
                 src="/images/guides/hero-women-fashion.webp"
                 alt="StyleMeDaily - Premium Women Fashion Editorial"
@@ -137,7 +137,7 @@ export default function HomePage() {
           </div>
           <Link href="/guides" className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">View all</Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {editorPicks.map(g => <GuideCard key={g.slug} guide={g} />)}
         </div>
       </section>
@@ -165,7 +165,7 @@ export default function HomePage() {
             Follow
           </a>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {pinterestPins.map((pin, i) => (
             <Link key={i} href={pin.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
               <SafeImage

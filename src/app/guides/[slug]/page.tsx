@@ -132,16 +132,22 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="badge-new">{guide.tag}</span>
-            <span className="text-xs text-gray-400">{guide.readTime} read</span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
             {guide.title}
           </h1>
           <p className="text-lg text-gray-400 leading-relaxed">{guide.description}</p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-gray-400">
-            <span>By TrendLoop USA Team</span>
-            <span>·</span>
-            <span>{new Date(guide.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <div className="flex items-center gap-3 mt-4">
+            <div className="w-9 h-9 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+              <span className="text-xs font-display font-bold text-gold-700">SM</span>
+            </div>
+            <div className="text-sm text-gray-400">
+              <span className="font-medium text-gray-600">Sarah Mitchell</span>
+              <span className="mx-2">·</span>
+              <span>{new Date(guide.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span className="mx-2">·</span>
+              <span>{guide.readTime} read</span>
+            </div>
           </div>
         </header>
 
@@ -242,6 +248,21 @@ export default function GuideDetailPage({ params }: { params: { slug: string } }
             title={guide.title}
             image={guide.image}
           />
+        </div>
+
+        {/* Author Bio Box */}
+        <div className="border border-gray-100 rounded-2xl p-6 my-8 bg-white flex items-start gap-5">
+          <div className="w-14 h-14 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+            <span className="text-base font-display font-bold text-gold-700">SM</span>
+          </div>
+          <div>
+            <p className="text-[10px] font-medium text-gold-500 tracking-ultra-wide uppercase mb-0.5">Written by</p>
+            <h4 className="font-display font-bold text-gray-900 text-base">Sarah Mitchell</h4>
+            <p className="text-[11px] text-gold-600 font-medium tracking-wide uppercase mb-2">Editor-in-Chief</p>
+            <p className="text-xs text-gray-500 leading-relaxed">
+              Sarah has 10+ years of experience in fashion editorial. She leads our team&apos;s style direction and ensures every guide meets our standards for accuracy, inclusivity, and real-world wearability.
+            </p>
+          </div>
         </div>
 
         {/* Related Guides */}

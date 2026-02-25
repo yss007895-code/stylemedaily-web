@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { teamMembers } from '@/lib/team';
 
 export const metadata: Metadata = {
   title: 'About StyleMeDaily — Our Mission & Team',
@@ -54,7 +55,27 @@ export default function AboutPage() {
         <p>
           Some links on StyleMeDaily are affiliate links. This means we may earn a small commission if you purchase through our links, at no extra cost to you. This helps us keep creating free content for our readers.
         </p>
+      </div>
 
+      {/* Meet the Team */}
+      <section className="mt-14 mb-12">
+        <h2 className="font-display text-2xl font-bold text-gray-900 mb-2">Meet the Team</h2>
+        <p className="text-sm text-gray-400 mb-8">The people behind every guide, review, and recommendation.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {teamMembers.map((member) => (
+            <div key={member.name} className="border border-gray-100 rounded-2xl p-6 bg-white text-center">
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center text-lg font-display font-bold mx-auto mb-4 ${member.color}`}>
+                {member.initials}
+              </div>
+              <h3 className="font-display font-bold text-gray-900 text-base">{member.name}</h3>
+              <p className="text-xs text-gold-500 font-medium tracking-wide uppercase mt-1 mb-3">{member.role}</p>
+              <p className="text-xs text-gray-400 leading-relaxed">{member.bio}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="prose-style">
         <h2>Get in Touch</h2>
         <p>
           Questions, feedback, or partnership inquiries? Reach us at{' '}

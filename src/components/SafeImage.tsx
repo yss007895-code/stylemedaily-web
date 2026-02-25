@@ -2,7 +2,7 @@
 import Image, { ImageProps } from 'next/image';
 import { useState } from 'react';
 
-const FALLBACK_IMAGE = '/images/placeholder.svg';
+const FALLBACK_IMAGE = '/images/placeholder.webp';
 
 interface SafeImageProps extends Omit<ImageProps, 'onError'> {
   category?: string;
