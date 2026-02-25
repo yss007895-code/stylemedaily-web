@@ -59,6 +59,7 @@ export default function Footer() {
               <Link href="/contact" className="block text-sm text-noir-400 hover:text-white transition-colors">Contact</Link>
               <Link href="/privacy" className="block text-sm text-noir-400 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="block text-sm text-noir-400 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/affiliate-disclosure" className="block text-sm text-noir-400 hover:text-white transition-colors">Affiliate Disclosure</Link>
               <Link href="/disclaimer" className="block text-sm text-noir-400 hover:text-white transition-colors">Disclaimer</Link>
             </div>
           </div>
@@ -76,6 +77,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-[11px] text-noir-500 hover:text-gold-400 transition-colors tracking-wide uppercase">Privacy</Link>
             <Link href="/terms" className="text-[11px] text-noir-500 hover:text-gold-400 transition-colors tracking-wide uppercase">Terms</Link>
+            <Link href="/affiliate-disclosure" className="text-[11px] text-noir-500 hover:text-gold-400 transition-colors tracking-wide uppercase">Affiliate Disclosure</Link>
             <Link href="/disclaimer" className="text-[11px] text-noir-500 hover:text-gold-400 transition-colors tracking-wide uppercase">Disclaimer</Link>
             <Link href="/about" className="text-[11px] text-noir-500 hover:text-gold-400 transition-colors tracking-wide uppercase">About</Link>
           </div>
