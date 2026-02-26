@@ -341,7 +341,7 @@ export const guides: StyleGuide[] = [
     emoji: '💖',
     image: '/images/guides/dressing-for-body-shape-guide.webp',
     affiliateProducts: [
-      { name: 'Wrap Dress (Hourglass)', brand: 'Amazon', price: '$36', url: 'https://amzn.to/4tH7kT9', image: '/images/products/wrap-dress-hourglass.svg' },
+      { name: 'Wrap Dress (Hourglass)', brand: 'Amazon', price: '$36', url: 'https://amzn.to/4tH7kT9', image: '/images/products/wrap-dress-hourglass.webp' },
       { name: 'A-Line Skirt (Pear)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', image: '/images/products/a-line-skirt-pear.webp' },
       { name: 'Structured Blazer (Rectangle)', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', image: '/images/products/structured-blazer-rectangle.webp' },
     ],
@@ -740,7 +740,7 @@ export const guides: StyleGuide[] = [
     emoji: '💗',
     image: '/images/guides/plus-size-fashion-guide-2026.webp',
     affiliateProducts: [
-      { name: 'Wrap Maxi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4tH7kT9', tag: 'Best Seller', image: '/images/products/wrap-maxi-dress.svg' },
+      { name: 'Wrap Maxi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4tH7kT9', tag: 'Best Seller', image: '/images/products/wrap-maxi-dress.webp' },
       { name: 'High-Waist Wide Leg Pants', brand: 'Amazon', price: '$36', url: 'https://amzn.to/3ZCaw4S', tag: 'Most Flattering', image: '/images/products/high-waist-wide-leg-pants.svg' },
       { name: 'Structured Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Editor Pick', image: '/images/products/structured-work-blazer.webp' },
       { name: 'Stretchy Bodycon Dress', brand: 'Amazon', price: '$28', url: 'https://amzn.to/4rfVnSQ', tag: 'Date Night', image: '/images/products/stretchy-bodycon-dress.webp' },
@@ -794,7 +794,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/amazon-prime-fashion-deals-2026.webp',
     affiliateProducts: [
       { name: 'Fleece Pullover Hoodie', brand: 'Amazon', price: '$32', url: 'https://amzn.to/40drBCf', tag: '#1 Best Seller', image: '/images/products/fleece-pullover-hoodie.svg' },
-      { name: 'Yoga Pants (High Waist)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', tag: 'Most Reviewed', image: '/images/products/yoga-pants-high-waist.svg' },
+      { name: 'Yoga Pants (High Waist)', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', tag: 'Most Reviewed', image: '/images/products/yoga-pants-high-waist.webp' },
       { name: 'Satin Slip Dress', brand: 'Amazon', price: '$29', url: 'https://amzn.to/4tH7kT9', tag: 'Editor\'s Choice', image: '/images/products/satin-slip-dress.webp' },
       { name: 'V-Neck Cardigan', brand: 'Amazon', price: '$34', url: 'https://amzn.to/3Mro3JB', tag: 'Prime Pick', image: '/images/products/v-neck-cardigan.webp' },
       { name: 'Platform Sneakers', brand: 'Amazon', price: '$48', url: 'https://amzn.to/3Mro7cj', tag: 'Editor Pick', image: '/images/products/platform-sneakers.webp' },
@@ -1041,7 +1041,7 @@ export const guides: StyleGuide[] = [
     emoji: '⏳',
     image: '/images/guides/hourglass-figure-style-guide.webp',
     affiliateProducts: [
-      { name: 'Wrap Midi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4tH7kT9', tag: 'Most Flattering', image: '/images/products/wrap-midi-dress.svg' },
+      { name: 'Wrap Midi Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4tH7kT9', tag: 'Most Flattering', image: '/images/products/wrap-midi-dress.webp' },
       { name: 'Belted Trench Coat', brand: 'Amazon', price: '$65', url: 'https://amzn.to/4kNVNxy', tag: 'Editor Pick', image: '/images/products/belted-trench-coat.webp' },
       { name: 'High Waist Pencil Skirt', brand: 'Amazon', price: '$32', url: 'https://amzn.to/3OrVpsf', tag: 'Classic Choice', image: '/images/products/high-waist-pencil-skirt.svg' },
       { name: 'Fitted Ribbed Bodysuit', brand: 'Amazon', price: '$22', url: 'https://amzn.to/4tH7kT9', tag: 'Wardrobe Essential', image: '/images/products/fitted-ribbed-bodysuit.svg' },
@@ -1452,7 +1452,7 @@ export const guides: StyleGuide[] = [
     emoji: '💸',
     image: '/images/guides/amazon-fashion-finds-under-30.webp',
     affiliateProducts: [
-      { name: 'Amazon Essentials Wrap Midi Dress', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4tH7kT9', tag: 'Best Overall', image: '/images/products/wrap-midi-dress.svg' },
+      { name: 'Amazon Essentials Wrap Midi Dress', brand: 'Amazon', price: '$32', url: 'https://amzn.to/4tH7kT9', tag: 'Best Overall', image: '/images/products/wrap-midi-dress.webp' },
       { name: 'Linen-Blend Shift Dress', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4anggFT', tag: 'Best for Work', image: '/images/products/linen-shift-dress.svg' },
       { name: 'Satin Mini Slip Dress', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3Mro7cj', tag: 'Best Going Out', image: '/images/products/satin-slip-mini.svg' },
     ],
