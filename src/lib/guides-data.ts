@@ -881,7 +881,7 @@ export const guides: StyleGuide[] = [
     emoji: '🧥',
     image: '/images/guides/how-to-style-oversized-blazer.webp',
     affiliateProducts: [
-      { name: 'Oversized Blazer (Neutral)', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Hero Piece', image: '/images/products/oversized-blazer-neutral.svg' },
+      { name: 'Oversized Blazer (Neutral)', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Hero Piece', image: '/images/products/oversized-blazer-neutral.webp' },
       { name: 'Biker Shorts', brand: 'Amazon', price: '$22', url: 'https://amzn.to/3ZCaw4S', tag: 'Style With', image: '/images/products/biker-shorts.webp' },
       { name: 'Pointed Toe Boots', brand: 'Amazon', price: '$52', url: 'https://amzn.to/3OhrhzW', tag: 'Best Pairing', image: '/images/products/pointed-toe-boots.svg' },
       { name: 'White Straight Leg Jeans', brand: 'Amazon', price: '$38', url: 'https://amzn.to/4rfVnSQ', tag: 'Classic Combo', image: '/images/products/white-straight-leg-jeans.svg' },
