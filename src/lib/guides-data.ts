@@ -357,8 +357,8 @@ export const guides: StyleGuide[] = [
     emoji: '🛍️',
     image: '/images/guides/nordstrom-vs-asos-professional-women.webp',
     affiliateProducts: [
-      { name: 'Work Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Top Pick', image: '/images/products/work-blazer.svg' },
-      { name: 'Work Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', image: '/images/products/work-tote-bag.svg' },
+      { name: 'Work Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Top Pick', image: '/images/products/work-blazer.webp' },
+      { name: 'Work Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', image: '/images/products/work-tote-bag.webp' },
     ],
   },
   {
@@ -470,7 +470,7 @@ export const guides: StyleGuide[] = [
     affiliateProducts: [
       { name: 'Linen Blend Blazer', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'Trend Pick', image: '/images/products/linen-blend-blazer.webp' },
       { name: 'Satin Midi Dress', brand: 'Amazon', price: '$42', url: 'https://amzn.to/4tH7kT9', image: '/images/products/satin-midi-dress.webp' },
-      { name: 'Woven Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Must Have', image: '/images/products/woven-tote-bag.svg' },
+      { name: 'Woven Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', tag: 'Must Have', image: '/images/products/woven-tote-bag.webp' },
       { name: 'White Sneakers', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3Mro7cj', image: '/images/products/white-sneakers.webp' },
     ],
   },
@@ -565,7 +565,7 @@ export const guides: StyleGuide[] = [
     image: '/images/guides/stitch-fix-vs-personal-stylist.webp',
     affiliateProducts: [
       { name: 'Build Your Own Style Kit', brand: 'Amazon', price: '$49', url: 'https://amzn.to/4rVjOFg', tag: 'DIY Pick', image: '/images/products/build-your-own-style-kit.webp' },
-      { name: 'Work Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', image: '/images/products/work-tote-bag.svg' },
+      { name: 'Work Tote Bag', brand: 'Amazon', price: '$35', url: 'https://amzn.to/4anggFT', image: '/images/products/work-tote-bag.webp' },
     ],
   },
   {
@@ -916,7 +916,7 @@ export const guides: StyleGuide[] = [
     emoji: '❄️',
     image: '/images/guides/winter-fashion-essentials-2026.webp',
     affiliateProducts: [
-      { name: 'Wool Blend Coat', brand: 'Amazon', price: '$78', url: 'https://amzn.to/4kNVNxy', tag: 'Best Overall', image: '/images/products/wool-blend-coat.svg' },
+      { name: 'Wool Blend Coat', brand: 'Amazon', price: '$78', url: 'https://amzn.to/4kNVNxy', tag: 'Best Overall', image: '/images/products/wool-blend-coat.webp' },
       { name: 'Cashmere Turtleneck Sweater', brand: 'Amazon', price: '$45', url: 'https://amzn.to/40drBCf', tag: 'Editor Pick', image: '/images/products/cashmere-turtleneck-sweater.webp' },
       { name: 'Thermal Lined Leggings', brand: 'Amazon', price: '$28', url: 'https://amzn.to/3ZCaw4S', tag: 'Warmest Pick', image: '/images/products/thermal-lined-leggings.webp' },
       { name: 'Knee-High Boots', brand: 'Amazon', price: '$65', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: '/images/products/knee-high-boots.webp' },
@@ -972,7 +972,7 @@ export const guides: StyleGuide[] = [
       { name: 'Floral Mini Dress', brand: 'Amazon', price: '$34', url: 'https://amzn.to/4tH7kT9', tag: 'Best Seller', image: '/images/products/floral-mini-dress.svg' },
       { name: 'Linen Co-ord Set', brand: 'Amazon', price: '$45', url: 'https://amzn.to/3ZCaw4S', tag: 'Editor Pick', image: '/images/products/linen-co-ord-set.webp' },
       { name: 'Strappy Block Heel Sandals', brand: 'Amazon', price: '$42', url: 'https://amzn.to/3OhrhzW', tag: 'Must Have', image: '/images/products/strappy-block-heel-sandals.webp' },
-      { name: 'Woven Straw Bag', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4anggFT', tag: 'Trendy', image: '/images/products/woven-straw-bag.svg' },
+      { name: 'Woven Straw Bag', brand: 'Amazon', price: '$25', url: 'https://amzn.to/4anggFT', tag: 'Trendy', image: '/images/products/woven-straw-bag.webp' },
       { name: 'Dainty Gold Earrings Set', brand: 'Amazon', price: '$14', url: 'https://amzn.to/3Mro3JB', tag: 'Finishing Touch', image: '/images/products/dainty-gold-earrings-set.webp' },
     ],
   },
