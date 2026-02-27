@@ -14,7 +14,7 @@ export default function NewsletterCTA() {
           Outfit ideas, trend analysis, and curated picks -- delivered straight to your inbox.
         </p>
         <iframe
-          src="https://yss007895.substack.com/embed"
+          src="https://stylemedaily.substack.com/embed"
           title="Newsletter signup form"
           width="100%"
           height="130"

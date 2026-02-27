@@ -44,7 +44,7 @@ export default function DisclaimerPage() {
         <p>StyleMeDaily contains links to external websites. We are not responsible for the content, accuracy, or privacy practices of these external sites.</p>
 
         <h2>Contact</h2>
-        <p>If you have questions about this disclaimer, contact us at <a href="mailto:yss007895@gmail.com">yss007895@gmail.com</a>.</p>
+        <p>If you have questions about this disclaimer, contact us at <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>.</p>
       </div>
     </div>
   );

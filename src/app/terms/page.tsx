@@ -55,7 +55,7 @@ export default function TermsPage() {
         <p>We reserve the right to modify these Terms at any time. Continued use of the Site after changes constitutes acceptance of the updated Terms.</p>
 
         <h2>11. Contact</h2>
-        <p>For questions about these Terms, please contact us at <a href="mailto:yss007895@gmail.com">yss007895@gmail.com</a>.</p>
+        <p>For questions about these Terms, please contact us at <a href="mailto:contact@stylemedaily.org">contact@stylemedaily.org</a>.</p>
       </div>
     </div>
   );
