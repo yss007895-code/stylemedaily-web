@@ -91,9 +91,9 @@ export default function StyleGuidesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="pt-12">
+      <div className="pt-10">
         {/* Page heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-light italic text-editorial-text mb-4">
             The Seasonal Edit
           </h1>
@@ -103,9 +103,9 @@ export default function StyleGuidesPage() {
         </div>
 
         {/* Featured story */}
-        <section className="mb-20">
+        <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div className="relative aspect-[4/5] overflow-hidden bg-editorial-light">
+            <div className="relative aspect-[3/4] overflow-hidden bg-editorial-light">
               {featured?.image && (
                 <SafeImage
                   src={featured.image}
@@ -138,7 +138,7 @@ export default function StyleGuidesPage() {
         </section>
 
         {/* Latest Collections grid */}
-        <section className="mb-20">
+        <section className="mb-16">
           <h2 className="text-[11px] tracking-editorial uppercase text-editorial-text font-body font-medium mb-8">
             Latest Collections
           </h2>
@@ -173,7 +173,7 @@ export default function StyleGuidesPage() {
         </section>
 
         {/* Newsletter section */}
-        <section className="mb-20 py-16 border-t border-b border-editorial-border">
+        <section className="mb-16 py-12 border-t border-b border-editorial-border">
           <div className="max-w-lg mx-auto text-center">
             <h2 className="font-display text-3xl font-light italic text-editorial-text mb-3">
               The Weekly Edit

@@ -13,8 +13,8 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   blurDataURL?: string;
 }
 
-export default function SafeImage({ 
-  fallbackSrc, src, alt, category, fill, priority, sizes, placeholder, blurDataURL, ...props 
+export default function SafeImage({
+  fallbackSrc, src, alt, category, fill, priority, sizes, placeholder, blurDataURL, className, style, ...props
 }: SafeImageProps) {
   const [imgSrc, setImgSrc] = useState(src || FALLBACK_IMAGE);
   const [hasError, setHasError] = useState(false);
@@ -26,11 +26,18 @@ export default function SafeImage({
     }
   };
 
+  const fillStyle: React.CSSProperties = fill
+    ? { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', ...style }
+    : { ...style };
+
   return (
     <img
       {...props}
       src={imgSrc as string}
       alt={alt || "Image"}
+      className={className}
+      style={fillStyle}
+      loading={priority ? 'eager' : 'lazy'}
       onError={handleError}
     />
   );

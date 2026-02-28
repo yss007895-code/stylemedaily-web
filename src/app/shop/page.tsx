@@ -14,8 +14,8 @@ export default function ShopPage() {
   return (
     <div className="pt-8 max-w-6xl mx-auto">
       <div className="mb-10">
-        <h1 className="section-title">Shop All Items</h1>
-        <p className="text-gray-400 mt-1 text-sm">
+        <h1 className="font-display text-4xl sm:text-5xl font-light italic text-editorial-text">Shop All Items</h1>
+        <p className="text-editorial-muted mt-2 text-sm font-body">
           {allProducts.length} curated items from our style guides
         </p>
       </div>

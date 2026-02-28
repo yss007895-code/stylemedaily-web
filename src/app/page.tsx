@@ -74,17 +74,17 @@ export default function HomePage() {
 
       <div>
         {/* Hero — Editorial asymmetric split */}
-        <section className="pt-16 pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section className="pt-10 pb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="lg:pr-8">
               <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium mb-6">
-                EDITORIAL, FALL 2024
+                EDITORIAL, SPRING 2026
               </p>
               <h1 className="font-display text-[3rem] sm:text-[4rem] lg:text-[4.5rem] font-light leading-[1.05] text-editorial-text mb-6">
                 Refining Your{' '}
                 <em className="italic">Daily Style</em>
               </h1>
-              <p className="text-sm text-editorial-muted font-body leading-relaxed max-w-md mb-10">
+              <p className="text-sm text-editorial-muted font-body leading-relaxed max-w-md mb-8">
                 Curated recommendations for the woman who values substance over spectacle. Discover timeless pieces that define your personal narrative.
               </p>
               <Link href="/shop" className="btn-primary inline-block">
@@ -108,19 +108,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        <AdUnit slot="8863913673" format="horizontal" className="mb-6" />
+        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
 
         {/* The Edit — Products */}
         <TrendingProducts />
 
         {/* Editorial divider */}
-        <div className="editorial-divider" aria-hidden="true">
+        <div className="editorial-divider !my-10" aria-hidden="true">
           <span className="text-[10px] tracking-editorial uppercase text-editorial-muted">Style Me Daily</span>
         </div>
 
         {/* Stories — Editorial cards with horizontal scroll */}
-        <section className="mb-24">
-          <div className="mb-10">
+        <section className="mb-16">
+          <div className="mb-8">
             <h2 className="font-display text-4xl sm:text-5xl font-light italic text-editorial-text">Stories</h2>
           </div>
           <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
@@ -160,7 +160,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <AdUnit slot="8863913673" format="horizontal" className="mb-6" />
+        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
       </div>
     </>
   );

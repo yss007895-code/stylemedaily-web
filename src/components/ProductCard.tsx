@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, size = 'md', showFrom = false }: ProductCardProps) {
   const p = product;
-  const imageHeight = size === 'sm' ? 'h-48' : size === 'lg' ? 'h-80' : 'h-64';
+  const aspectClass = size === 'sm' ? 'aspect-[3/4]' : size === 'lg' ? 'aspect-[3/4]' : 'aspect-[3/4]';
 
   return (
     <a
@@ -19,7 +19,7 @@ export default function ProductCard({ product, size = 'md', showFrom = false }: 
       className="group block text-center"
     >
       {p.image ? (
-        <div className={`relative ${imageHeight} overflow-hidden bg-editorial-light`}>
+        <div className={`relative ${aspectClass} w-full overflow-hidden bg-editorial-light`}>
           <SafeImage
             src={p.image}
             alt={p.name}
@@ -29,7 +29,7 @@ export default function ProductCard({ product, size = 'md', showFrom = false }: 
           />
         </div>
       ) : (
-        <div className={`${imageHeight} bg-editorial-light flex items-center justify-center`}>
+        <div className={`${aspectClass} w-full bg-editorial-light flex items-center justify-center`}>
           <span className="text-editorial-muted text-sm font-body">No image</span>
         </div>
       )}
