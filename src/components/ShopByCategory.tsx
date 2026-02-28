@@ -4,7 +4,6 @@ import SafeImage from '@/components/SafeImage';
 import { shopCategories, getProductsByCategory } from '@/lib/guides-data';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
-// Pre-compute all category products at module level for static compatibility
 const categoryProducts: Record<string, (AffiliateProduct & { fromGuide: string; fromGuideSlug: string })[]> = {};
 for (const cat of shopCategories) {
   categoryProducts[cat.slug] = getProductsByCategory(cat.slug, 4);
@@ -15,19 +14,20 @@ export default function ShopByCategory() {
   const products = categoryProducts[active] || [];
 
   return (
-    <section className="mb-20">
-      <div className="mb-6">
-        <h2 className="section-title">Shop by Category</h2>
-        <p className="text-sm text-gray-400 mt-1">Find exactly what you need</p>
+    <section className="mb-24">
+      <div className="mb-8">
+        <h2 className="font-display text-3xl sm:text-4xl font-light text-editorial-text">By Category</h2>
       </div>
 
-      <div className="flex gap-1 border-b border-gray-100 mb-6 overflow-x-auto">
+      <div className="flex gap-6 mb-8 overflow-x-auto">
         {shopCategories.map(cat => (
           <button
             key={cat.slug}
             onClick={() => setActive(cat.slug)}
-            className={`px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-colors ${
-              active === cat.slug ? 'tab-active' : 'tab-inactive'
+            className={`text-[11px] tracking-editorial uppercase font-body font-medium whitespace-nowrap pb-2 transition-colors border-b ${
+              active === cat.slug
+                ? 'text-editorial-text border-editorial-accent'
+                : 'text-editorial-muted hover:text-editorial-text border-transparent'
             }`}
           >
             {cat.name}
@@ -35,51 +35,44 @@ export default function ShopByCategory() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {products.map((p, i) => (
           <a
             key={`${p.name}-${i}`}
             href={p.url}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
-            className="product-card group block"
+            className="group block"
           >
             {p.image ? (
-              <div className="relative h-40 overflow-hidden bg-gray-50">
+              <div className="relative h-44 overflow-hidden bg-editorial-light">
                 <SafeImage
                   src={p.image}
                   alt={p.name}
                   fill
                   sizes="(max-width: 640px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                 />
-                <div className="product-card-action absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                  <span className="text-white text-sm font-semibold px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
-                    Shop Now
-                  </span>
-                </div>
               </div>
             ) : (
-              <div className="h-40 bg-gray-50 flex items-center justify-center">
-                <span className="text-gray-300 text-sm">No image</span>
+              <div className="h-44 bg-editorial-light flex items-center justify-center">
+                <span className="text-editorial-muted text-sm">No image</span>
               </div>
             )}
-            <div className="p-3">
-              <p className="text-[11px] text-gray-400 uppercase tracking-wide">{p.brand}</p>
-              <h4 className="font-medium text-sm text-gray-800 group-hover:text-gray-900 transition-colors leading-tight mt-0.5 line-clamp-2">
+            <div className="pt-3">
+              <p className="text-[10px] text-editorial-muted tracking-editorial uppercase">{p.brand}</p>
+              <h4 className="font-display text-base font-normal text-editorial-text group-hover:text-editorial-accent transition-colors leading-tight mt-1 line-clamp-2">
                 {p.name}
               </h4>
-              <div className="flex items-center gap-2 mt-1.5">
-                <span className="price-current text-sm">{p.price}</span>
-              </div>
+              <span className="text-sm text-editorial-text mt-1.5 block">{p.price}</span>
             </div>
           </a>
         ))}
       </div>
 
-      <div className="text-center mt-6">
-        <a href="/shop" className="inline-block text-sm text-gray-500 hover:text-gray-900 font-medium border border-gray-200 px-6 py-2.5 rounded-lg hover:border-gray-300 transition-all">
-          Browse all {active === 'all' ? '' : shopCategories.find(c => c.slug === active)?.name.toLowerCase() + ' '}items
+      <div className="mt-8">
+        <a href="/shop" className="text-[11px] tracking-editorial uppercase text-editorial-muted hover:text-editorial-text font-body font-medium transition-colors border-b border-editorial-border pb-1">
+          View all items
         </a>
       </div>
     </section>

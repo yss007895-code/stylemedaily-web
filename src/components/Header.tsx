@@ -7,11 +7,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const links = [
-    { href: '/shop', label: 'Shop' },
-    { href: '/guides', label: 'Style Guides' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/compare/nordstrom-vs-asos', label: 'Compare' },
-    { href: '/style-quiz', label: 'Style Quiz' },
+    { href: '/shop', label: 'SHOP' },
+    { href: '/style-guides', label: 'STYLE GUIDES' },
+    { href: '/blog', label: 'BLOG' },
+    { href: '/compare/zara-vs-hm', label: 'COMPARE' },
+    { href: '/style-quiz', label: 'STYLE QUIZ' },
   ];
 
   const isActive = (href: string) => {
@@ -20,25 +20,30 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-noir-950 border-b border-gold-400/20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-[#FAFAF8]">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-display text-2xl font-light text-white tracking-editorial">
-              STYLE<span className="text-gold-400">ME</span>DAILY
+          {/* Left: Logo */}
+          <Link href="/" className="flex items-center gap-2.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-editorial-text">
+              <path d="M8 0L10 6L16 8L10 10L8 16L6 10L0 8L6 6L8 0Z" fill="currentColor" />
+            </svg>
+            <span className="font-display text-lg tracking-wide-editorial text-editorial-text uppercase font-light">
+              Style Me Daily
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-0">
+          {/* Center: Nav links */}
+          <nav className="hidden lg:flex items-center gap-8">
             {links.map(l => (
               <Link
                 key={l.href}
                 href={l.href}
                 aria-current={isActive(l.href) ? 'page' : undefined}
-                className={`px-4 py-5 text-[11px] font-medium tracking-wider uppercase transition-all border-b-2 ${
+                className={`text-[11px] tracking-editorial uppercase font-body font-medium transition-colors ${
                   isActive(l.href)
-                    ? 'text-gold-400 border-gold-400'
-                    : 'text-noir-400 hover:text-white border-transparent hover:border-gold-400/50'
+                    ? 'text-editorial-text'
+                    : 'text-editorial-muted hover:text-editorial-text'
                 }`}
               >
                 {l.label}
@@ -46,48 +51,77 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Link href="/style-quiz" className="hidden sm:block text-[10px] font-medium tracking-wider uppercase text-noir-950 bg-gold-400 px-5 py-2 hover:bg-gold-300 transition-colors">
-              Style Quiz
-            </Link>
-            <button
-              onClick={() => setOpen(!open)}
-              className="md:hidden text-noir-400 hover:text-white p-2"
-              aria-label={open ? 'Close menu' : 'Open menu'}
-              aria-expanded={open}
-            >
-              {open ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-              )}
+          {/* Right: Search, Cart, Login */}
+          <div className="hidden lg:flex items-center gap-5">
+            <button aria-label="Search" className="text-editorial-muted hover:text-editorial-text transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
             </button>
+            <button aria-label="Cart" className="text-editorial-muted hover:text-editorial-text transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+            </button>
+            <Link
+              href="/about"
+              className="text-[11px] tracking-editorial uppercase font-body font-medium text-editorial-muted hover:text-editorial-text transition-colors"
+            >
+              LOG IN
+            </Link>
           </div>
-        </div>
 
-        {open && (
-          <nav className="md:hidden pb-4 pt-2 animate-fade-in border-t border-noir-800">
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden text-editorial-muted hover:text-editorial-text p-2"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+          >
+            {open ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Gold separator line */}
+      <div className="h-px bg-editorial-accent" />
+
+      {/* Mobile menu */}
+      {open && (
+        <nav className="lg:hidden bg-[#FAFAF8] border-b border-editorial-border animate-fade-in">
+          <div className="max-w-6xl mx-auto px-6 py-4">
             {links.map(l => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 aria-current={isActive(l.href) ? 'page' : undefined}
-                className={`block px-4 py-3 text-xs tracking-wider uppercase ${
+                className={`block py-3 text-[11px] tracking-editorial uppercase font-body ${
                   isActive(l.href)
-                    ? 'text-gold-400 font-medium'
-                    : 'text-noir-400 hover:text-white'
+                    ? 'text-editorial-text font-medium'
+                    : 'text-editorial-muted hover:text-editorial-text'
                 }`}
               >
                 {l.label}
               </Link>
             ))}
-            <Link href="/style-quiz" className="block mx-4 mt-3 text-center text-[10px] font-medium tracking-wider uppercase text-noir-950 bg-gold-400 px-5 py-2.5 hover:bg-gold-300 transition-colors">
-              Style Quiz
+            <Link
+              href="/about"
+              onClick={() => setOpen(false)}
+              className="block py-3 text-[11px] tracking-editorial uppercase font-body text-editorial-muted hover:text-editorial-text"
+            >
+              LOG IN
             </Link>
-          </nav>
-        )}
-      </div>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }

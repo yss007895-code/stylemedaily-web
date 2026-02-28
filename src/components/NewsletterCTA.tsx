@@ -1,29 +1,21 @@
 export default function NewsletterCTA() {
   return (
-    <div className="relative border border-noir-200 p-10 sm:p-14 text-center bg-noir-950 overflow-hidden">
-      {/* Gold accent corners */}
-      <div className="absolute top-0 left-0 w-16 h-px bg-gold-400" />
-      <div className="absolute top-0 left-0 w-px h-16 bg-gold-400" />
-      <div className="absolute bottom-0 right-0 w-16 h-px bg-gold-400" />
-      <div className="absolute bottom-0 right-0 w-px h-16 bg-gold-400" />
-
-      <div className="relative">
-        <p className="text-[10px] font-medium text-gold-400 tracking-ultra-wide uppercase mb-3">Every Thursday</p>
-        <h3 className="font-display text-3xl font-light text-white mb-3 tracking-wide">The Weekly Style Edit</h3>
-        <p className="text-noir-400 text-sm mb-8 max-w-md mx-auto leading-relaxed">
-          Outfit ideas, trend analysis, and curated picks -- delivered straight to your inbox.
-        </p>
-        <iframe
-          src="https://yss007895.substack.com/embed"
-          title="Newsletter signup form"
-          width="100%"
-          height="130"
-          style={{ border: 'none', background: 'transparent', maxWidth: '420px', display: 'block', margin: '0 auto' }}
-          frameBorder={0}
-          scrolling="no"
-        />
-        <p className="text-[10px] text-noir-600 mt-4 tracking-wide">No spam. Unsubscribe anytime.</p>
-      </div>
+    <div className="border-t border-b border-editorial-border py-14 text-center">
+      <p className="text-[10px] tracking-editorial uppercase text-editorial-accent mb-4 font-body">Every Thursday</p>
+      <h3 className="font-display text-3xl font-light text-editorial-text mb-3">The Weekly Edit</h3>
+      <p className="text-editorial-muted text-sm mb-8 max-w-sm mx-auto leading-relaxed font-body">
+        Style notes, new arrivals, and considered recommendations.
+      </p>
+      <iframe
+        src="https://yss007895.substack.com/embed"
+        title="Newsletter signup form"
+        width="100%"
+        height="130"
+        style={{ border: 'none', background: 'transparent', maxWidth: '400px', display: 'block', margin: '0 auto' }}
+        frameBorder={0}
+        scrolling="no"
+      />
+      <p className="text-[10px] text-editorial-muted mt-4 tracking-wide-editorial font-body">No spam. Unsubscribe anytime.</p>
     </div>
   );
 }

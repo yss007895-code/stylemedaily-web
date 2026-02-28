@@ -1,13 +1,125 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import SafeImage from '@/components/SafeImage';
 
-const questions = [
-  { q: 'What best describes your daily life?', options: ['Corporate / Office', 'Creative / Freelance', 'Stay-at-home Mom', 'Student / Campus Life'] },
-  { q: 'Your ideal weekend outfit is...', options: ['Jeans & a nice top', 'Flowy dress & sandals', 'Athleisure everything', 'Something bold & trendy'] },
-  { q: 'Your style icon is closest to...', options: ['Amal Clooney (classic elegance)', 'Zendaya (bold & fashion-forward)', 'Jennifer Aniston (effortless casual)', 'Hailey Bieber (streetwear chic)'] },
-  { q: 'Your monthly fashion budget is...', options: ['Under $50', '$50–150', '$150–300', '$300+'] },
-  { q: 'When shopping, you prioritize...', options: ['Quality & longevity', 'Trendy & fun', 'Comfort above all', 'Versatility & mix-match'] },
+interface QuizOption {
+  label: string;
+  description: string;
+  image: string;
+}
+
+interface QuizQuestion {
+  heading: string;
+  subtitle: string;
+  options: QuizOption[];
+}
+
+const questions: QuizQuestion[] = [
+  {
+    heading: 'Define Your Signature Aesthetic',
+    subtitle: 'Which silhouette best describes your daily uniform?',
+    options: [
+      {
+        label: 'OVERSIZED & EFFORTLESS',
+        description: 'Relaxed fits, draped layers, comfort-first dressing',
+        image: '/images/guides/quiet-luxury-essentials-investment-pieces-2026-hero.jpg',
+      },
+      {
+        label: 'TAILORED & SHARP',
+        description: 'Structured blazers, clean lines, polished precision',
+        image: '/images/guides/office-siren-corporate-wear-guide-2026-hero.jpg',
+      },
+      {
+        label: 'SOFT & ROMANTIC',
+        description: 'Flowing fabrics, delicate details, feminine charm',
+        image: '/images/guides/coquette-aesthetic-2026-ultimate-guide-hero.jpg',
+      },
+      {
+        label: 'AVANT-GARDE',
+        description: 'Bold shapes, experimental cuts, artistic expression',
+        image: '/images/guides/gorpcore-womens-style-guide-2026-hero.jpg',
+      },
+    ],
+  },
+  {
+    heading: 'Your Color Palette',
+    subtitle: 'Which color family dominates your wardrobe?',
+    options: [
+      {
+        label: 'NEUTRALS & EARTH',
+        description: 'Beige, cream, camel, olive, warm browns',
+        image: '/images/guides/old-money-summer-aesthetic-guide-2026-hero.jpg',
+      },
+      {
+        label: 'MONOCHROME',
+        description: 'Black, white, grey, stark contrast',
+        image: '/images/guides/how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026-hero.jpg',
+      },
+      {
+        label: 'SOFT PASTELS',
+        description: 'Blush, lavender, powder blue, mint',
+        image: '/images/guides/balletcore-style-guide-how-to-dress-like-a-ballerina-off-duty-2026-hero.jpg',
+      },
+      {
+        label: 'BOLD & VIBRANT',
+        description: 'Rich jewel tones, statement-making hues',
+        image: '/images/guides/mob-wife-glamour-aesthetic-guide-2026-hero.jpg',
+      },
+    ],
+  },
+  {
+    heading: 'Weekend Wardrobe',
+    subtitle: 'What does your ideal Saturday outfit look like?',
+    options: [
+      {
+        label: 'ELEVATED CASUAL',
+        description: 'Great jeans, a perfect knit, clean sneakers',
+        image: '/images/guides/eclectic-grandpa-chic-style-guide-2026-hero.jpg',
+      },
+      {
+        label: 'DRESSED UP',
+        description: 'A beautiful dress, heels, going-out ready',
+        image: '/images/guides/editors-choice-fashion-trends-2026.webp',
+      },
+      {
+        label: 'ATHLEISURE',
+        description: 'Chic leggings, oversized hoodie, comfort first',
+        image: '/images/guides/y2k-fashion-revival-ultimate-guide-2026-hero.jpg',
+      },
+      {
+        label: 'BOHEMIAN',
+        description: 'Flowy maxi, layered jewelry, free-spirited',
+        image: '/images/guides/clean-girl-aesthetic-2026.webp',
+      },
+    ],
+  },
+  {
+    heading: 'Investment Philosophy',
+    subtitle: 'How do you approach building your wardrobe?',
+    options: [
+      {
+        label: 'CAPSULE CURATOR',
+        description: 'Fewer, better pieces that mix and match endlessly',
+        image: '/images/guides/quiet-luxury-essentials-investment-pieces-2026-hero.jpg',
+      },
+      {
+        label: 'TREND CHASER',
+        description: 'Always first to try the latest runway looks',
+        image: '/images/guides/y2k-fashion-revival-ultimate-guide-2026-hero.jpg',
+      },
+      {
+        label: 'VINTAGE HUNTER',
+        description: 'One-of-a-kind finds, thrift stores, pre-loved treasures',
+        image: '/images/guides/eclectic-grandpa-chic-style-guide-2026-hero.jpg',
+      },
+      {
+        label: 'PRACTICAL LUXE',
+        description: 'Quality basics with a few statement splurges',
+        image: '/images/guides/old-money-summer-aesthetic-guide-2026-hero.jpg',
+      },
+    ],
+  },
 ];
 
 interface StyleResult {
@@ -83,30 +195,29 @@ const styleProfiles: Record<string, StyleResult> = {
 function computeResult(answers: number[]): StyleResult {
   const scores = { classic: 0, trendy: 0, casual: 0, streetwear: 0 };
 
-  if (answers[0] === 0) { scores.classic += 3; scores.trendy += 1; }
-  if (answers[0] === 1) { scores.trendy += 3; scores.streetwear += 1; }
-  if (answers[0] === 2) { scores.casual += 3; scores.streetwear += 1; }
-  if (answers[0] === 3) { scores.trendy += 2; scores.casual += 2; }
+  // Q1: Silhouette
+  if (answers[0] === 0) { scores.casual += 3; scores.streetwear += 1; }
+  if (answers[0] === 1) { scores.classic += 3; scores.trendy += 1; }
+  if (answers[0] === 2) { scores.trendy += 2; scores.casual += 2; }
+  if (answers[0] === 3) { scores.trendy += 3; scores.streetwear += 1; }
 
-  if (answers[1] === 0) { scores.casual += 3; scores.classic += 1; }
-  if (answers[1] === 1) { scores.trendy += 2; scores.classic += 2; }
-  if (answers[1] === 2) { scores.casual += 3; scores.streetwear += 1; }
+  // Q2: Color palette
+  if (answers[1] === 0) { scores.classic += 3; scores.casual += 1; }
+  if (answers[1] === 1) { scores.streetwear += 3; scores.classic += 1; }
+  if (answers[1] === 2) { scores.trendy += 2; scores.casual += 2; }
   if (answers[1] === 3) { scores.trendy += 3; scores.streetwear += 1; }
 
-  if (answers[2] === 0) { scores.classic += 4; }
-  if (answers[2] === 1) { scores.trendy += 4; }
-  if (answers[2] === 2) { scores.casual += 4; }
-  if (answers[2] === 3) { scores.streetwear += 4; }
+  // Q3: Weekend
+  if (answers[2] === 0) { scores.casual += 4; }
+  if (answers[2] === 1) { scores.classic += 3; scores.trendy += 1; }
+  if (answers[2] === 2) { scores.casual += 3; scores.streetwear += 1; }
+  if (answers[2] === 3) { scores.trendy += 2; scores.casual += 2; }
 
-  if (answers[3] === 0) { scores.streetwear += 2; scores.casual += 2; }
-  if (answers[3] === 1) { scores.casual += 2; scores.classic += 1; }
-  if (answers[3] === 2) { scores.classic += 2; scores.trendy += 1; }
-  if (answers[3] === 3) { scores.classic += 2; scores.trendy += 2; }
-
-  if (answers[4] === 0) { scores.classic += 3; scores.streetwear += 1; }
-  if (answers[4] === 1) { scores.trendy += 3; scores.casual += 1; }
-  if (answers[4] === 2) { scores.casual += 3; scores.streetwear += 1; }
-  if (answers[4] === 3) { scores.streetwear += 3; scores.classic += 1; }
+  // Q4: Investment
+  if (answers[3] === 0) { scores.streetwear += 3; scores.classic += 1; }
+  if (answers[3] === 1) { scores.trendy += 4; }
+  if (answers[3] === 2) { scores.casual += 2; scores.trendy += 2; }
+  if (answers[3] === 3) { scores.classic += 3; scores.streetwear += 1; }
 
   const sorted = Object.entries(scores).sort(([, a], [, b]) => b - a);
   return styleProfiles[sorted[0][0]];
@@ -119,14 +230,18 @@ export default function StyleQuizClient() {
   const [done, setDone] = useState(false);
   const [result, setResult] = useState<StyleResult | null>(null);
 
+  const totalQuestions = questions.length;
+  const progress = Math.round(((step + 1) / totalQuestions) * 100);
+  const currentQ = questions[step];
+
   const handleAnswer = (idx: number) => {
     const newAnswers = [...answers, idx];
     setAnswers(newAnswers);
-    if (step < questions.length - 1) {
+    if (step < totalQuestions - 1) {
       setStep(step + 1);
     } else {
       setResult(computeResult(newAnswers));
-      setStep(questions.length);
+      setStep(totalQuestions);
     }
   };
 
@@ -139,52 +254,84 @@ export default function StyleQuizClient() {
   };
 
   return (
-    <div className="pt-8 max-w-2xl mx-auto">
-      <div className="text-center mb-8">
-        <h1 className="font-display text-3xl font-bold text-gray-900 mb-2">
-          Discover Your Style Personality
-        </h1>
-        <p className="text-gray-400">Answer 5 quick questions for personalized recommendations.</p>
-      </div>
-
-      {step < questions.length ? (
+    <div className="pt-8">
+      {step < totalQuestions && currentQ ? (
         <div className="animate-fade-in">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-400 font-mono">{step + 1} / {questions.length}</span>
-            <span className="text-xs text-gray-400">{Math.round(((step + 1) / questions.length) * 100)}% complete</span>
-          </div>
-          <div className="h-1 bg-gray-100 rounded-full mb-8 overflow-hidden" role="progressbar" aria-valuenow={step + 1} aria-valuemin={0} aria-valuemax={questions.length}>
-            <div className="h-full bg-gray-900 rounded-full transition-all duration-500" style={{ width: `${((step + 1) / questions.length) * 100}%` }} />
+          {/* Progress bar */}
+          <div className="flex items-center gap-6 mb-16">
+            <span className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium whitespace-nowrap">
+              QUESTION {step + 1} OF {totalQuestions}
+            </span>
+            <div className="flex-1 h-1 bg-editorial-border overflow-hidden" role="progressbar" aria-valuenow={step + 1} aria-valuemin={0} aria-valuemax={totalQuestions}>
+              <div className="h-full bg-editorial-accent transition-all duration-500" style={{ width: `${progress}%` }} />
+            </div>
+            <span className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium whitespace-nowrap">
+              {progress}% COMPLETED
+            </span>
           </div>
 
-          <div className="card p-8 text-center">
-            <h2 className="font-display text-xl font-bold text-gray-900 mb-6">{questions[step].q}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {questions[step].options.map((opt, i) => (
-                <button key={i} onClick={() => handleAnswer(i)}
-                  className="p-4 rounded-xl text-left font-medium text-gray-700 bg-white border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all">
-                  {opt}
-                </button>
-              ))}
-            </div>
+          {/* Question */}
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-editorial-text mb-3">
+              {currentQ.heading}
+            </h2>
+            <p className="font-display text-lg italic text-editorial-muted">
+              {currentQ.subtitle}
+            </p>
           </div>
+
+          {/* Option cards — 4 across */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {currentQ.options.map((opt, i) => (
+              <button
+                key={i}
+                onClick={() => handleAnswer(i)}
+                className="group text-left transition-opacity hover:opacity-90"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-editorial-light mb-4">
+                  <SafeImage
+                    src={opt.image}
+                    alt={opt.label}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                </div>
+                <h3 className="text-[12px] tracking-editorial uppercase font-body font-semibold text-editorial-text mb-1">
+                  {opt.label}
+                </h3>
+                <p className="font-display text-sm italic text-editorial-muted leading-snug">
+                  {opt.description}
+                </p>
+              </button>
+            ))}
+          </div>
+
+          {/* Next step */}
+          {step < totalQuestions - 1 && (
+            <div className="text-right">
+              <span className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body">
+                Select an option to continue
+              </span>
+            </div>
+          )}
         </div>
       ) : result && !done ? (
-        <div className="card p-8 text-center animate-slide-up">
-          <p className="text-xs text-gray-400 uppercase tracking-wide font-mono mb-2">Your Style</p>
-          <h2 className="font-display text-2xl font-bold text-gray-900 mb-2">{result.style}</h2>
-          <p className="text-gray-400 mb-8 max-w-md mx-auto">{result.desc}</p>
+        <div className="max-w-2xl mx-auto text-center animate-slide-up pt-12">
+          <p className="text-[11px] tracking-editorial uppercase text-editorial-accent font-body font-medium mb-4">YOUR STYLE PROFILE</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-light text-editorial-text mb-4">{result.style}</h2>
+          <p className="text-editorial-muted font-body leading-relaxed mb-10 max-w-md mx-auto">{result.desc}</p>
 
           {/* Recommended Products */}
-          <div className="text-left mb-6">
-            <h3 className="font-display font-bold text-sm text-gray-900 mb-3">Your Starter Kit</h3>
-            <div className="grid grid-cols-2 gap-2">
+          <div className="text-left mb-8">
+            <h3 className="text-[11px] tracking-editorial uppercase text-editorial-text font-body font-medium mb-4">Your Starter Kit</h3>
+            <div className="grid grid-cols-2 gap-4">
               {result.products.map((p, i) => (
                 <a key={i} href={p.url} target="_blank" rel="noopener noreferrer nofollow sponsored"
-                  className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-gray-200 hover:bg-gray-50 transition-all">
+                  className="flex items-center gap-3 py-3 border-b border-editorial-border hover:bg-editorial-light transition-colors">
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-gray-800 truncate">{p.name}</p>
-                    <p className="text-xs font-mono text-gray-900">{p.price}</p>
+                    <p className="text-sm font-body text-editorial-text">{p.name}</p>
+                    <p className="text-sm font-body text-editorial-muted">{p.price}</p>
                   </div>
                 </a>
               ))}
@@ -192,45 +339,40 @@ export default function StyleQuizClient() {
           </div>
 
           {/* Recommended Guides */}
-          <div className="text-left mb-6">
-            <h3 className="font-display font-bold text-sm text-gray-900 mb-3">Recommended Guides</h3>
+          <div className="text-left mb-8">
+            <h3 className="text-[11px] tracking-editorial uppercase text-editorial-text font-body font-medium mb-4">Recommended Guides</h3>
             <div className="space-y-2">
               {result.guides.map((g, i) => (
                 <Link key={i} href={`/guides/${g.slug}`}
-                  className="flex items-center gap-2 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  <span className="text-gray-300">&#8594;</span>
+                  className="flex items-center gap-2 py-2 text-sm text-editorial-muted hover:text-editorial-text font-body transition-colors">
+                  <span>&rarr;</span>
                   <span>{g.title}</span>
                 </Link>
               ))}
             </div>
           </div>
 
-          <p className="text-sm text-gray-400 mb-3">Get your full style profile via email:</p>
-          <div className="flex gap-2 max-w-sm mx-auto">
+          <p className="text-sm text-editorial-muted font-body mb-4">Get your full style profile via email:</p>
+          <div className="flex gap-3 max-w-sm mx-auto">
             <input type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
-              className="flex-1 bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gray-400" />
-            <button onClick={() => setDone(true)} className="btn-primary text-sm !px-5">Get Results</button>
+              className="flex-1 bg-transparent border border-editorial-border px-4 py-3 text-sm font-body focus:outline-none focus:border-editorial-accent" />
+            <button onClick={() => setDone(true)} className="btn-primary !px-6">GET RESULTS</button>
           </div>
 
           <button
             onClick={handleRetake}
-            className="mt-4 text-sm text-gray-400 hover:text-gray-600 font-medium transition-colors"
+            className="mt-6 text-[11px] tracking-editorial uppercase text-editorial-muted hover:text-editorial-text font-body font-medium transition-colors"
           >
             Retake Quiz
           </button>
         </div>
       ) : result ? (
-        <div className="card p-8 text-center animate-fade-in">
-          <h2 className="font-display text-2xl font-bold text-gray-900 mb-2">Check Your Inbox</h2>
-          <p className="text-gray-400 mb-4">Your personalized style profile is on its way.</p>
+        <div className="max-w-2xl mx-auto text-center animate-fade-in pt-12">
+          <h2 className="font-display text-3xl font-light text-editorial-text mb-3">Check Your Inbox</h2>
+          <p className="text-editorial-muted font-body mb-8">Your personalized style profile is on its way.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/guides" className="btn-primary inline-block">Browse Style Guides</Link>
-            <button
-              onClick={handleRetake}
-              className="btn-secondary inline-block text-sm"
-            >
-              Retake Quiz
-            </button>
+            <button onClick={handleRetake} className="btn-secondary inline-block">Retake Quiz</button>
           </div>
         </div>
       ) : null}

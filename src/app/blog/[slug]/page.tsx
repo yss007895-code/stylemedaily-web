@@ -8,9 +8,12 @@ import type { Metadata } from 'next';
 interface BlogPost {
   slug: string;
   title: string;
+  titleItalic?: string;
   excerpt: string;
   date: string;
   cat: string;
+  author: string;
+  volume: string;
   image: string;
   content: { heading: string; paragraphs: string[] }[];
   relatedGuides: { title: string; slug: string }[];
@@ -19,10 +22,13 @@ interface BlogPost {
 const blogPosts: Record<string, BlogPost> = {
   'quiet-luxury-guide': {
     slug: 'quiet-luxury-guide',
-    title: 'Quiet Luxury in 2026: How to Nail the "Old Money" Look on Any Budget',
+    title: 'The Silhouette of',
+    titleItalic: 'the Season',
     excerpt: 'The quiet luxury trend isn\'t going anywhere. Here\'s how to achieve that understated, expensive-looking aesthetic without spending a fortune.',
     date: '2026-02-18',
-    cat: 'Style',
+    cat: 'EDITORIAL',
+    author: 'Sophie Marceau',
+    volume: 'VOL. 84',
     image: '/images/blog/quiet-luxury-guide.webp',
     content: [
       { heading: 'What Is Quiet Luxury?', paragraphs: [
@@ -50,10 +56,13 @@ const blogPosts: Record<string, BlogPost> = {
   },
   'spring-color-trends': {
     slug: 'spring-color-trends',
-    title: 'The 5 Colors That Will Dominate Spring 2026 (And How to Wear Them)',
+    title: 'The 5 Colors That Will Dominate',
+    titleItalic: 'Spring 2026',
     excerpt: 'Vanilla yellow, soft sage, powder blue, warm terracotta, and lavender are this season\'s key colors.',
     date: '2026-02-17',
-    cat: 'Trends',
+    cat: 'TRENDS',
+    author: 'Claire Dubois',
+    volume: 'VOL. 83',
     image: '/images/blog/spring-color-trends-2026.webp',
     content: [
       { heading: 'Vanilla Yellow', paragraphs: [
@@ -85,10 +94,13 @@ const blogPosts: Record<string, BlogPost> = {
   },
   'capsule-wardrobe-mistakes': {
     slug: 'capsule-wardrobe-mistakes',
-    title: '7 Capsule Wardrobe Mistakes That Are Costing You Money',
+    title: '7 Capsule Wardrobe Mistakes',
+    titleItalic: 'That Are Costing You Money',
     excerpt: 'Building a capsule wardrobe sounds simple, but most people get it wrong.',
     date: '2026-02-16',
-    cat: 'Guide',
+    cat: 'GUIDE',
+    author: 'Elise Martin',
+    volume: 'VOL. 82',
     image: '/images/blog/capsule-wardrobe-mistakes.webp',
     content: [
       { heading: 'Mistake 1: Too Many Neutrals, Not Enough Personality', paragraphs: [
@@ -129,11 +141,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = blogPosts[params.slug];
   if (!post) return {};
+  const fullTitle = post.titleItalic ? `${post.title} ${post.titleItalic}` : post.title;
   return {
-    title: post.title,
+    title: fullTitle,
     description: post.excerpt,
     openGraph: {
-      title: post.title,
+      title: fullTitle,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
@@ -148,59 +161,72 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts[params.slug];
   if (!post) notFound();
 
-  return (
-    <article className="pt-8 max-w-3xl mx-auto">
-      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-        <Link href="/" className="hover:text-gray-600">Home</Link>
-        <span>/</span>
-        <Link href="/blog" className="hover:text-gray-600">Blog</Link>
-        <span>/</span>
-        <span className="text-gray-600">{post.cat}</span>
-      </nav>
+  const fullTitle = post.titleItalic ? (
+    <>
+      {post.title}{' '}
+      <em className="italic">{post.titleItalic}</em>
+    </>
+  ) : post.title;
 
-      <header className="mb-8">
-        <span className="badge-new mb-3 inline-block">{post.cat}</span>
-        <h1 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">{post.title}</h1>
-        <p className="text-lg text-gray-400 leading-relaxed">{post.excerpt}</p>
-        <div className="flex items-center gap-4 mt-4 text-sm text-gray-400">
-          <span>By TrendLoop USA Team</span>
-          <span>·</span>
-          <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-        </div>
+  return (
+    <article className="pt-8">
+      {/* Article header */}
+      <header className="max-w-3xl mx-auto text-center mb-10">
+        <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium mb-6">
+          {post.cat} &gt; {post.volume}
+        </p>
+        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-editorial-text leading-tight mb-6">
+          {fullTitle}
+        </h1>
+        <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body">
+          BY {post.author.toUpperCase()}
+        </p>
       </header>
 
-      <div className="mb-8 rounded-2xl overflow-hidden relative h-64 sm:h-80">
-        <SafeImage src={post.image} alt={post.title} fill priority sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
+      {/* Full-width hero image */}
+      <div className="relative w-full aspect-[16/9] overflow-hidden bg-editorial-light mb-12">
+        <SafeImage
+          src={post.image}
+          alt={post.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
 
-      <div className="prose-style">
-        {post.content.map((section, idx) => (
-          <div key={idx}>
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((p, pIdx) => (
-              <p key={pIdx}>{p}</p>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      {post.relatedGuides.length > 0 && (
-        <div className="mt-10 mb-8">
-          <h3 className="font-display font-bold text-gray-900 mb-4">Related Guides</h3>
-          <div className="grid gap-3">
-            {post.relatedGuides.map(g => (
-              <Link key={g.slug} href={`/guides/${g.slug}`} className="card-hover p-4 flex items-center gap-4 group">
-                <div className="flex-1">
-                  <p className="font-semibold text-sm text-gray-800 group-hover:text-gray-600 transition-colors">{g.title}</p>
-                </div>
-                <span className="text-gray-400 text-sm">View guide</span>
-              </Link>
-            ))}
-          </div>
+      {/* Article body */}
+      <div className="max-w-3xl mx-auto">
+        <div className="prose-style">
+          {post.content.map((section, idx) => (
+            <div key={idx}>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((p, pIdx) => (
+                <p key={pIdx}>{p}</p>
+              ))}
+            </div>
+          ))}
         </div>
-      )}
 
-      <NewsletterCTA />
+        {post.relatedGuides.length > 0 && (
+          <div className="mt-16 mb-8 pt-10 border-t border-editorial-border">
+            <h3 className="text-[11px] tracking-editorial uppercase text-editorial-text font-body font-medium mb-6">Related Guides</h3>
+            <div className="space-y-3">
+              {post.relatedGuides.map(g => (
+                <Link key={g.slug} href={`/guides/${g.slug}`}
+                  className="flex items-center gap-3 py-3 text-sm font-body text-editorial-muted hover:text-editorial-text transition-colors border-b border-editorial-border">
+                  <span>&rarr;</span>
+                  <span>{g.title}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-12">
+          <NewsletterCTA />
+        </div>
+      </div>
     </article>
   );
 }

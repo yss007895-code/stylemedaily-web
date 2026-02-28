@@ -5,34 +5,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        rose: {
-          50: '#fff1f2', 100: '#ffe4e6', 200: '#fecdd3', 300: '#fda4af',
-          400: '#fb7185', 500: '#f43f5e', 600: '#e11d48', 700: '#be123c',
-          800: '#9f1239', 900: '#881337',
-        },
-        blush: {
-          50: '#fdf2f8', 100: '#fce7f3', 200: '#fbcfe8', 300: '#f9a8d4',
-          400: '#f472b6', 500: '#ec4899', 600: '#db2777', 700: '#be185d',
-        },
-        gold: {
-          50: '#fefce8', 100: '#fef9c3', 200: '#fef08a', 300: '#fde047',
-          400: '#d4af37', 500: '#c9a84c', 600: '#b8960c', 700: '#a16207',
-          800: '#854d0e', 900: '#713f12',
+        editorial: {
+          bg: '#FAFAF8',
+          text: '#1A1A1A',
+          accent: '#C9A96E',
+          muted: '#999999',
+          border: '#E5E5E5',
+          light: '#F5F3EF',
         },
         noir: {
           50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
           400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
           800: '#262626', 900: '#171717', 950: '#0a0a0a',
         },
-        cream: '#fefbf6',
-        champagne: '#f5f0eb',
-        ivory: '#faf8f5',
+        gold: {
+          50: '#fefce8', 100: '#fef9c3', 200: '#fef08a', 300: '#fde047',
+          400: '#C9A96E', 500: '#B8985E', 600: '#A0834A', 700: '#8A6F3C',
+          800: '#6B5530', 900: '#4D3D22',
+        },
       },
       fontFamily: {
-        display: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
-        body: ['Inter', 'Helvetica Neue', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-        accent: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        body: ['"Libre Franklin"', '"Helvetica Neue"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      letterSpacing: {
+        'editorial': '0.2em',
+        'wide-editorial': '0.15em',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
@@ -43,10 +42,6 @@ const config: Config = {
         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
         slideUp: { '0%': { opacity: '0', transform: 'translateY(12px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
         slideInBottom: { '0%': { transform: 'translateY(100%)' }, '100%': { transform: 'translateY(0)' } },
-      },
-      letterSpacing: {
-        'ultra-wide': '0.2em',
-        'editorial': '0.15em',
       },
     },
   },

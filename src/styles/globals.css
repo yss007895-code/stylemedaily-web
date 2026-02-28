@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Libre+Franklin:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @layer base {
   body {
-    @apply bg-white text-noir-700 font-body;
+    @apply bg-editorial-bg text-editorial-text font-body;
   }
   ::selection {
     @apply bg-gold-100 text-gold-800;
@@ -14,106 +14,103 @@
 }
 
 @layer components {
+  /* Vogue editorial: no shadows, no rounded corners, no borders on cards */
   .card {
-    @apply bg-white border border-noir-200 shadow-sm;
+    @apply bg-transparent;
   }
   .card-hover {
-    @apply card hover:border-gold-400 hover:shadow-md transition-all duration-300;
-  }
-  .gradient-text {
-    @apply bg-gradient-to-r from-gold-500 to-gold-700 bg-clip-text text-transparent;
+    @apply card transition-opacity duration-300 hover:opacity-80;
   }
   .btn-primary {
-    @apply bg-noir-900 text-white font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-800 transition-all duration-200;
+    @apply bg-editorial-text text-white font-body font-medium px-10 py-4 tracking-editorial uppercase text-[11px] hover:bg-noir-800 transition-all duration-200;
   }
   .btn-secondary {
-    @apply bg-transparent border border-noir-900 text-noir-900 font-body font-medium px-8 py-3.5 tracking-wider uppercase text-xs hover:bg-noir-900 hover:text-white transition-all duration-200;
+    @apply bg-transparent border border-editorial-text text-editorial-text font-body font-medium px-10 py-4 tracking-editorial uppercase text-[11px] hover:bg-editorial-text hover:text-white transition-all duration-200;
   }
   .badge {
-    @apply inline-flex items-center px-3 py-1 text-[10px] font-medium tracking-wider uppercase;
+    @apply inline-flex items-center px-3 py-1 text-[10px] font-medium tracking-editorial uppercase;
   }
   .badge-new {
-    @apply badge bg-noir-900 text-white;
+    @apply badge bg-editorial-text text-white;
   }
   .badge-hot {
-    @apply badge bg-gold-500 text-white;
+    @apply badge bg-editorial-accent text-white;
   }
   .badge-category {
-    @apply badge bg-noir-50 text-noir-600 border border-noir-200;
+    @apply badge text-editorial-muted border border-editorial-border;
   }
   .section-title {
-    @apply font-display text-3xl sm:text-4xl font-light text-noir-900 tracking-wide;
+    @apply font-display text-3xl sm:text-4xl font-light text-editorial-text tracking-wide;
   }
 
-  /* Product card styles */
+  /* Product card: Vogue minimal — no border, no shadow, no rounding */
   .product-card {
-    @apply bg-white border border-noir-100 overflow-hidden transition-all duration-300;
+    @apply bg-transparent overflow-hidden transition-opacity duration-300;
   }
   .product-card:hover {
-    @apply border-gold-400 shadow-lg;
+    @apply opacity-90;
   }
   .product-card:hover .product-card-action {
     @apply opacity-100;
   }
   .price-current {
-    @apply font-body font-semibold text-noir-900 tracking-wide;
+    @apply font-body font-semibold text-editorial-text;
   }
   .price-original {
-    @apply font-body text-noir-400 line-through text-sm;
+    @apply font-body text-editorial-muted line-through text-sm;
   }
   .urgency-text {
-    @apply text-xs text-gold-600 font-medium tracking-wide uppercase;
+    @apply text-xs text-editorial-accent font-medium tracking-editorial uppercase;
   }
 
-  /* Tab styles */
+  /* Tab styles: editorial underline */
   .tab-active {
-    @apply text-noir-900 border-b-2 border-gold-500;
+    @apply text-editorial-text border-b border-editorial-accent;
   }
   .tab-inactive {
-    @apply text-noir-400 hover:text-noir-600 border-b-2 border-transparent;
+    @apply text-editorial-muted hover:text-editorial-text border-b border-transparent;
   }
 
+  /* Editorial prose */
   .prose-style h2 {
-    @apply font-display text-2xl font-normal text-noir-900 mt-10 mb-4 tracking-wide;
+    @apply font-display text-2xl font-normal text-editorial-text mt-10 mb-4 tracking-wide;
   }
   .prose-style h3 {
     @apply font-display text-xl font-normal text-noir-800 mt-8 mb-3;
   }
   .prose-style p {
-    @apply text-noir-600 leading-[1.8] mb-4;
+    @apply text-noir-600 leading-[1.9] mb-5;
   }
   .prose-style a {
-    @apply text-noir-900 hover:text-gold-600 underline underline-offset-4 decoration-gold-300;
+    @apply text-editorial-text hover:text-editorial-accent underline underline-offset-4 decoration-editorial-border;
   }
   .prose-style blockquote {
-    @apply border-l-2 border-gold-400 bg-noir-50 px-6 py-4 my-6 italic font-display text-lg;
+    @apply border-l-2 border-editorial-accent bg-editorial-light px-8 py-5 my-8 italic font-display text-lg;
   }
   .prose-style table {
     @apply w-full border-collapse mb-6;
   }
   .prose-style th {
-    @apply bg-noir-50 text-noir-700 font-body text-xs font-semibold tracking-wider uppercase px-4 py-3 text-left border-b-2 border-noir-200;
+    @apply bg-editorial-light text-editorial-text font-body text-[11px] font-medium tracking-editorial uppercase px-4 py-3 text-left border-b border-editorial-border;
   }
   .prose-style td {
-    @apply px-4 py-3 text-sm text-noir-600 border-b border-noir-100;
+    @apply px-4 py-3 text-sm text-noir-600 border-b border-editorial-border;
   }
 
   /* Editorial divider */
   .editorial-divider {
-    @apply flex items-center gap-4 my-12;
+    @apply flex items-center gap-4 my-16;
   }
   .editorial-divider::before,
   .editorial-divider::after {
     content: '';
-    @apply flex-1 h-px bg-noir-200;
+    @apply flex-1 h-px bg-editorial-border;
   }
 }
 
-/* Accessibility: Reduce motion for users who prefer it */
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -121,19 +118,26 @@
   }
 }
 
-/* Better focus visibility for keyboard navigation */
+/* Focus */
 *:focus-visible {
-  @apply outline-2 outline-offset-2 outline-gold-500;
+  @apply outline-2 outline-offset-2 outline-editorial-accent;
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Skip to content link for screen readers */
+/* Hide scrollbar for horizontal scroll areas */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .skip-link {
-  @apply absolute -top-10 left-4 bg-noir-900 text-white px-4 py-2 z-[100] text-sm font-medium tracking-wider uppercase;
+  @apply absolute -top-10 left-4 bg-editorial-text text-white px-4 py-2 z-[100] text-sm font-body tracking-editorial uppercase;
   transition: top 0.2s;
 }
 .skip-link:focus {

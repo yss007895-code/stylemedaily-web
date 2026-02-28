@@ -2,21 +2,11 @@ import Link from 'next/link';
 import SafeImage from '@/components/SafeImage';
 import { guides } from '@/lib/guides-data';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants';
-import GuideCard from '@/components/GuideCard';
-import NewsletterCTA from '@/components/NewsletterCTA';
 import TrendingProducts from '@/components/TrendingProducts';
-import ShopByCategory from '@/components/ShopByCategory';
 import AdUnit from '@/components/AdUnit';
 
 export default function HomePage() {
-  const editorPicks = guides.slice(0, 3);
-
-  const pinterestPins = [
-    { title: 'Capsule Wardrobe Guide 2026', image: '/images/guides/pin-capsule-wardrobe-guide-2026.webp', url: '/guides/capsule-wardrobe-working-women-2026' },
-    { title: 'Casual Outfits That Look Expensive', image: '/images/guides/pin-casual-outfits-that-look-expensive.webp', url: '/guides/casual-outfits-look-expensive' },
-    { title: 'First Date Outfits', image: '/images/guides/pin-first-date-outfits.webp', url: '/guides/first-date-outfits-every-vibe' },
-    { title: 'Spring Fashion Trends', image: '/images/guides/pin-spring-fashion-trends.webp', url: '/guides/spring-fashion-trends-2026' },
-  ];
+  const stories = guides.slice(0, 4);
 
   const organizationJsonLd = {
     '@context': 'https://schema.org',
@@ -62,7 +52,7 @@ export default function HomePage() {
         name: 'How do I find the right outfit for my body type?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Take our free Style Quiz to discover your personal style profile, or browse our Body Shape Guide for tailored outfit recommendations based on your unique proportions.',
+          text: 'Browse our Body Shape Guide for tailored outfit recommendations based on your unique proportions, or explore our curated style guides.',
         },
       },
       {
@@ -70,7 +60,7 @@ export default function HomePage() {
         name: 'Are the product recommendations affordable?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! We curate products across all price ranges, from budget-friendly finds under $30 to investment pieces. Each guide includes options for every budget.',
+          text: 'Yes! We feature products across all price ranges, from everyday finds under $30 to investment pieces. Each guide includes options for every budget.',
         },
       },
     ],
@@ -78,104 +68,99 @@ export default function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
       <div>
-        {/* Hero â Clean editorial style */}
-        <section className="pt-16 pb-20">
-          <p className="text-sm text-gray-400 font-mono tracking-wide uppercase mb-4">
-            Your Daily Style Edit
-          </p>
-
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 text-gray-900">
-            Fashion that fits{' '}
-            <span className="font-display italic text-gray-400">your life</span>
-          </h1>
-
-          <p className="text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
-            Curated style guides, honest product reviews, and outfit inspiration
-            for every occasion and every budget.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/shop" className="btn-primary text-center">Shop Editor&apos;s Picks</Link>
-            <Link href="/guides" className="btn-secondary text-center">Browse Style Guides</Link>
+        {/* Hero — Editorial asymmetric split */}
+        <section className="pt-16 pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="lg:pr-8">
+              <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium mb-6">
+                EDITORIAL, FALL 2024
+              </p>
+              <h1 className="font-display text-[3rem] sm:text-[4rem] lg:text-[4.5rem] font-light leading-[1.05] text-editorial-text mb-6">
+                Refining Your{' '}
+                <em className="italic">Daily Style</em>
+              </h1>
+              <p className="text-sm text-editorial-muted font-body leading-relaxed max-w-md mb-10">
+                Curated recommendations for the woman who values substance over spectacle. Discover timeless pieces that define your personal narrative.
+              </p>
+              <Link href="/shop" className="btn-primary inline-block">
+                EXPLORE THE EDIT
+              </Link>
+            </div>
+            <div>
+              {guides[0]?.image && (
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <SafeImage
+                    src={guides[0].image}
+                    alt="Featured editorial"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
-        {/* Ad banner between hero and products */}
-        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
+        <AdUnit slot="8863913673" format="horizontal" className="mb-6" />
 
-        {/* Trending Products */}
+        {/* The Edit — Products */}
         <TrendingProducts />
 
-        {/* Editor's Picks â Top 3 guides */}
-        <section className="mb-20">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="section-title">Editor&apos;s Picks</h2>
-              <p className="text-sm text-gray-400 mt-1">Hand-selected guides by our styling team</p>
-            </div>
-            <Link href="/guides" className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">View all</Link>
+        {/* Editorial divider */}
+        <div className="editorial-divider" aria-hidden="true">
+          <span className="text-[10px] tracking-editorial uppercase text-editorial-muted">Style Me Daily</span>
+        </div>
+
+        {/* Stories — Editorial cards with horizontal scroll */}
+        <section className="mb-24">
+          <div className="mb-10">
+            <h2 className="font-display text-4xl sm:text-5xl font-light italic text-editorial-text">Stories</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {editorPicks.map(g => <GuideCard key={g.slug} guide={g} />)}
-          </div>
-        </section>
-
-        {/* Ad banner between guides and shop */}
-        <AdUnit slot="8863913673" format="horizontal" className="mb-4" />
-
-        {/* Shop by Category */}
-        <ShopByCategory />
-
-        {/* Newsletter */}
-        <section className="mb-20">
-          <NewsletterCTA />
-        </section>
-
-        {/* Pinterest Gallery â 4 pins */}
-        <section className="mb-16">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="section-title">Trending Styles</h2>
-              <p className="text-sm text-gray-400 mt-1">Our most popular style guides this week</p>
-            </div>
-            <a href="https://www.pinterest.com/stylemedaily/" target="_blank" rel="noopener noreferrer"
-              className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">
-              Follow
-            </a>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {pinterestPins.map((pin, i) => (
-              <Link key={i} href={pin.url} className="group relative rounded-xl overflow-hidden aspect-[2/3] block">
-                <SafeImage
-                  src={pin.image}
-                  alt={pin.title}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="font-display font-bold text-white text-sm leading-tight">
-                    {pin.title}
-                  </p>
+          <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+            {stories.map(g => (
+              <Link
+                key={g.slug}
+                href={`/guides/${g.slug}`}
+                className="group flex-shrink-0 w-[340px] lg:w-[380px]"
+              >
+                {g.image && (
+                  <div className="relative h-56 overflow-hidden bg-editorial-light">
+                    <SafeImage
+                      src={g.image}
+                      alt={g.title}
+                      fill
+                      sizes="380px"
+                      className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                    />
+                  </div>
+                )}
+                <div className="pt-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] tracking-editorial uppercase text-editorial-accent font-body font-medium">
+                      {g.tag === 'Guide' ? 'TRENDS' : g.tag.toUpperCase()}
+                    </span>
+                    <span className="text-[10px] text-editorial-muted font-body">
+                      {new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-xl font-normal text-editorial-text group-hover:text-editorial-accent transition-colors leading-snug mb-2 line-clamp-2">
+                    {g.title}
+                  </h3>
+                  <p className="text-sm text-editorial-muted font-body line-clamp-2 leading-relaxed">{g.description}</p>
                 </div>
               </Link>
             ))}
           </div>
         </section>
+
+        <AdUnit slot="8863913673" format="horizontal" className="mb-6" />
       </div>
     </>
   );
