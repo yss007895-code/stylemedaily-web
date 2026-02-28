@@ -11,7 +11,7 @@ interface ShopPageClientProps {
 
 export default function ShopPageClient({ products, categories }: ShopPageClientProps) {
   const [activeCategory, setActiveCategory] = useState('all');
-  const fallbackImage = '/images/guides/editors-choice-fashion-trends-2026.svg';
+  const fallbackImage = '/images/guides/editors-choice-fashion-trends-2026.webp';
 
   const filtered = useMemo(() => {
     return products.filter(p => {

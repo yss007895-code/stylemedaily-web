@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const FALLBACK_IMAGE = '/images/guides/editors-choice-fashion-trends-2026.svg';
+const FALLBACK_IMAGE = '/images/guides/editors-choice-fashion-trends-2026.webp';
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallbackSrc?: string;

@@ -23,7 +23,7 @@ const blogPosts: Record<string, BlogPost> = {
     excerpt: 'The quiet luxury trend isn\'t going anywhere. Here\'s how to achieve that understated, expensive-looking aesthetic without spending a fortune.',
     date: '2026-02-18',
     cat: 'Style',
-    image: '/images/blog/quiet-luxury-guide.svg',
+    image: '/images/blog/quiet-luxury-guide.webp',
     content: [
       { heading: 'What Is Quiet Luxury?', paragraphs: [
         'Quiet luxury is the antithesis of logo-heavy fashion. Think The Row, not Gucci. It\'s about investing in well-made pieces in neutral tones with impeccable fit — clothing that whispers wealth rather than screaming it.',
@@ -54,7 +54,7 @@ const blogPosts: Record<string, BlogPost> = {
     excerpt: 'Vanilla yellow, soft sage, powder blue, warm terracotta, and lavender are this season\'s key colors.',
     date: '2026-02-17',
     cat: 'Trends',
-    image: '/images/blog/spring-color-trends-2026.svg',
+    image: '/images/blog/spring-color-trends-2026.webp',
     content: [
       { heading: 'Vanilla Yellow', paragraphs: [
         'The biggest color of spring 2026 is vanilla yellow — a soft, buttery shade that flatters every skin tone. It showed up on runways from Bottega Veneta to Jacquemus and is already flooding fast fashion.',
@@ -89,7 +89,7 @@ const blogPosts: Record<string, BlogPost> = {
     excerpt: 'Building a capsule wardrobe sounds simple, but most people get it wrong.',
     date: '2026-02-16',
     cat: 'Guide',
-    image: '/images/blog/capsule-wardrobe-mistakes.svg',
+    image: '/images/blog/capsule-wardrobe-mistakes.webp',
     content: [
       { heading: 'Mistake 1: Too Many Neutrals, Not Enough Personality', paragraphs: [
         'The biggest capsule wardrobe mistake is building a closet full of black, white, and gray and wondering why getting dressed feels boring. You need at least 2-3 "accent" pieces — a colored blazer, a printed scarf, a statement shoe.',

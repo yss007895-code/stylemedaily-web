@@ -41,7 +41,7 @@ export const guides: StyleGuide[] = [
     date: '2026-02-24',
     tag: 'office siren',
     emoji: '📠',
-    image: '/images/guides/best-work-bags-under-100.svg',
+    image: '/images/guides/best-work-bags-under-100.webp',
     affiliateProducts: [
       {
         name: 'Calvin Klein Women\'s Classic Pencil Skirt',
@@ -149,7 +149,7 @@ export const guides: StyleGuide[] = [
     date: '2026-02-24',
     tag: 'balletcore',
     emoji: '🩰',
-    image: '/images/guides/editors-choice-fashion-trends-2026.svg',
+    image: '/images/guides/editors-choice-fashion-trends-2026.webp',
     affiliateProducts: [
       {
         name: 'Urban CoCo Women\'s Long Sleeve Wrap Top',
@@ -203,7 +203,7 @@ export const guides: StyleGuide[] = [
     date: '2026-02-24',
     tag: 'CoastalGrandmother',
     emoji: '?릾',
-    image: '/images/guides/clean-girl-aesthetic-2026.svg',
+    image: '/images/guides/clean-girl-aesthetic-2026.webp',
     affiliateProducts: [],
   },
   {
