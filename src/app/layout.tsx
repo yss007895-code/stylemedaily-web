@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     type: 'website', locale: 'en_US', url: SITE_URL, siteName: SITE_NAME,
     title: 'StyleMeDaily – Personal Style Guides for Every Woman',
     description: 'Expert styling guides, curated outfit ideas, and personalized fashion advice.',
+    images: [{ url: '/images/guides/mob-wife-glamour-aesthetic-guide-2026-hero.jpg', width: 1200, height: 630, alt: 'StyleMeDaily' }],
   },
   twitter: { card: 'summary_large_image', site: '@stylemedaily', creator: '@stylemedaily' },
   alternates: { canonical: SITE_URL },
