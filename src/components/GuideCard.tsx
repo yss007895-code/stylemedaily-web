@@ -4,9 +4,9 @@ import type { StyleGuide } from '@/lib/guides-data';
 
 export default function GuideCard({ guide }: { guide: StyleGuide }) {
   return (
-    <Link href={`/guides/${guide.slug}`} className="group block">
+    <Link href={`/guides/${guide.slug}`} className="group block border-t border-black/10 pt-5">
       {guide.image ? (
-        <div className="relative h-52 overflow-hidden bg-editorial-light">
+        <div className="relative h-52 overflow-hidden bg-editorial-light mb-4">
           <SafeImage
             src={guide.image}
             alt={guide.title}
@@ -16,11 +16,11 @@ export default function GuideCard({ guide }: { guide: StyleGuide }) {
           />
         </div>
       ) : null}
-      <div className="pt-4">
+      <div>
         <p className="text-[10px] tracking-editorial uppercase text-editorial-muted font-body mb-2">
           {guide.tag} &middot; {guide.readTime}
         </p>
-        <h3 className="font-display text-xl font-normal text-editorial-text group-hover:text-editorial-accent transition-colors leading-snug mb-2">
+        <h3 className="font-display text-xl font-semibold text-editorial-text group-hover:text-editorial-accent transition-colors leading-snug mb-2">
           {guide.title}
         </h3>
         <p className="text-sm text-editorial-muted font-body line-clamp-2 leading-relaxed">{guide.description}</p>

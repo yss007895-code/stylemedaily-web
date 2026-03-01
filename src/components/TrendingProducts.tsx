@@ -7,10 +7,10 @@ export default function TrendingProducts() {
 
   return (
     <section className="mb-14">
-      <div className="flex items-end justify-between mb-8">
+      <div className="flex items-end justify-between mb-10 border-b border-noir-200 pb-4">
         <div>
-          <h2 className="font-display text-4xl sm:text-5xl font-light italic text-editorial-text">The Edit</h2>
-          <p className="text-sm text-editorial-muted font-body mt-2">Handpicked luxury for the discerning taste.</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-editorial-text uppercase tracking-tight">The Edit</h2>
+          <p className="text-sm text-editorial-muted font-body mt-1">Handpicked luxury for the discerning taste.</p>
         </div>
         <Link
           href="/shop"

@@ -20,15 +20,12 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#FAFAF8]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="flex items-center justify-between py-5">
           {/* Left: Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-editorial-text">
-              <path d="M8 0L10 6L16 8L10 10L8 16L6 10L0 8L6 6L8 0Z" fill="currentColor" />
-            </svg>
-            <span className="font-display text-lg tracking-wide-editorial text-editorial-text uppercase font-light">
+            <span className="font-display text-2xl tracking-tight text-editorial-text font-semibold uppercase">
               Style Me Daily
             </span>
           </Link>
@@ -77,26 +74,26 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-editorial-muted hover:text-editorial-text p-2"
+            className="lg:hidden text-editorial-text hover:text-editorial-muted p-2"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
           >
             {open ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             )}
           </button>
         </div>
       </div>
 
-      {/* Gold separator line */}
-      <div className="h-px bg-editorial-accent" />
+      {/* Bottom border */}
+      <div className="h-px bg-noir-200" />
 
       {/* Mobile menu */}
       {open && (
-        <nav className="lg:hidden bg-[#FAFAF8] border-b border-editorial-border animate-fade-in">
-          <div className="max-w-6xl mx-auto px-6 py-4">
+        <nav className="lg:hidden bg-white border-b border-noir-200 animate-fade-in">
+          <div className="max-w-[1200px] mx-auto px-6 py-4">
             {links.map(l => (
               <Link
                 key={l.href}

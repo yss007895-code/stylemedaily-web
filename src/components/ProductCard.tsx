@@ -9,17 +9,16 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, size = 'md', showFrom = false }: ProductCardProps) {
   const p = product;
-  const aspectClass = size === 'sm' ? 'aspect-[3/4]' : size === 'lg' ? 'aspect-[3/4]' : 'aspect-[3/4]';
 
   return (
     <a
       href={p.url}
       target="_blank"
       rel="noopener noreferrer nofollow sponsored"
-      className="group block text-center"
+      className="group block text-center border-t border-black/10 pt-5"
     >
       {p.image ? (
-        <div className={`relative ${aspectClass} w-full overflow-hidden bg-editorial-light`}>
+        <div className="relative aspect-[3/4] w-full overflow-hidden bg-editorial-light">
           <SafeImage
             src={p.image}
             alt={p.name}
@@ -29,13 +28,13 @@ export default function ProductCard({ product, size = 'md', showFrom = false }: 
           />
         </div>
       ) : (
-        <div className={`${aspectClass} w-full bg-editorial-light flex items-center justify-center`}>
+        <div className="aspect-[3/4] w-full bg-editorial-light flex items-center justify-center">
           <span className="text-editorial-muted text-sm font-body">No image</span>
         </div>
       )}
       <div className="pt-4">
         <p className="text-[10px] text-editorial-muted tracking-editorial uppercase font-body">{p.brand}</p>
-        <h4 className="font-display text-base font-normal text-editorial-text group-hover:text-editorial-accent transition-colors leading-tight mt-1 line-clamp-2">
+        <h4 className="font-display text-base font-semibold text-editorial-text group-hover:text-editorial-accent transition-colors leading-tight mt-1 line-clamp-2">
           {p.name}
         </h4>
         <span className="text-sm font-body text-editorial-text mt-1.5 block">{p.price}</span>

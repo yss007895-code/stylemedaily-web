@@ -9,7 +9,7 @@
     @apply bg-editorial-bg text-editorial-text font-body;
   }
   ::selection {
-    @apply bg-gold-100 text-gold-800;
+    @apply bg-noir-100 text-noir-900;
   }
 }
 
@@ -34,13 +34,13 @@
     @apply badge bg-editorial-text text-white;
   }
   .badge-hot {
-    @apply badge bg-editorial-accent text-white;
+    @apply badge bg-editorial-accent text-white font-medium;
   }
   .badge-category {
     @apply badge text-editorial-muted border border-editorial-border;
   }
   .section-title {
-    @apply font-display text-3xl sm:text-4xl font-light text-editorial-text tracking-wide;
+    @apply font-display text-5xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tighter text-editorial-text text-center my-16;
   }
 
   /* Product card: Vogue minimal — no border, no shadow, no rounding */
@@ -65,7 +65,7 @@
 
   /* Tab styles: editorial underline */
   .tab-active {
-    @apply text-editorial-text border-b border-editorial-accent;
+    @apply text-editorial-text border-b-2 border-editorial-text;
   }
   .tab-inactive {
     @apply text-editorial-muted hover:text-editorial-text border-b border-transparent;
@@ -82,10 +82,10 @@
     @apply text-noir-600 leading-[1.9] mb-5;
   }
   .prose-style a {
-    @apply text-editorial-text hover:text-editorial-accent underline underline-offset-4 decoration-editorial-border;
+    @apply text-editorial-text hover:text-editorial-accent underline underline-offset-4 decoration-noir-300;
   }
   .prose-style blockquote {
-    @apply border-l-2 border-editorial-accent bg-editorial-light px-8 py-5 my-8 italic font-display text-lg;
+    @apply border-l-2 border-editorial-text bg-editorial-light px-8 py-5 my-8 italic font-display text-lg;
   }
   .prose-style table {
     @apply w-full border-collapse mb-6;
@@ -120,7 +120,7 @@
 
 /* Focus */
 *:focus-visible {
-  @apply outline-2 outline-offset-2 outline-editorial-accent;
+  @apply outline-2 outline-offset-2 outline-editorial-text;
 }
 
 html {

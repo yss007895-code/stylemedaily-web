@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="afterInteractive"
         />
         <Header />
-        <main id="main-content" className="max-w-6xl mx-auto px-6 lg:px-8 pb-20">
+        <main id="main-content" className="max-w-[1200px] mx-auto px-6 pb-20">
           {children}
         </main>
         <Footer />

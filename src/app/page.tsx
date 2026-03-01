@@ -73,18 +73,18 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div>
-        {/* Hero — Editorial asymmetric split */}
-        <section className="pt-10 pb-14">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            <div className="lg:pr-8">
+        {/* Hero — The Cut style contained editorial */}
+        <section className="pt-12 pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <div className="lg:pr-8 lg:pt-8">
               <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium mb-6">
                 EDITORIAL, SPRING 2026
               </p>
-              <h1 className="font-display text-[3rem] sm:text-[4rem] lg:text-[4.5rem] font-light leading-[1.05] text-editorial-text mb-6">
+              <h1 className="font-display text-[3rem] sm:text-[4.5rem] lg:text-[5.5rem] font-bold leading-[0.95] text-editorial-text mb-8 tracking-tight">
                 Refining Your{' '}
-                <em className="italic">Daily Style</em>
+                <em className="italic font-light">Daily Style</em>
               </h1>
-              <p className="text-sm text-editorial-muted font-body leading-relaxed max-w-md mb-8">
+              <p className="text-base text-editorial-muted font-body leading-relaxed max-w-md mb-10">
                 Curated recommendations for the woman who values substance over spectacle. Discover timeless pieces that define your personal narrative.
               </p>
               <Link href="/shop" className="btn-primary inline-block">
@@ -113,50 +113,54 @@ export default function HomePage() {
         {/* The Edit — Products */}
         <TrendingProducts />
 
-        {/* Editorial divider */}
-        <div className="editorial-divider !my-10" aria-hidden="true">
-          <span className="text-[10px] tracking-editorial uppercase text-editorial-muted">Style Me Daily</span>
+        {/* Section divider — The Cut style large serif heading */}
+        <div className="my-20 text-center" aria-hidden="true">
+          <div className="h-px bg-noir-200 mb-16" />
+          <h2 className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold uppercase tracking-tighter text-editorial-text">
+            Style
+          </h2>
+          <div className="h-px bg-noir-200 mt-16" />
         </div>
 
-        {/* Stories — Editorial cards with horizontal scroll */}
-        <section className="mb-16">
-          <div className="mb-8">
-            <h2 className="font-display text-4xl sm:text-5xl font-light italic text-editorial-text">Stories</h2>
-          </div>
-          <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+        {/* Stories — The Cut style editorial grid */}
+        <section className="mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {stories.map(g => (
               <Link
                 key={g.slug}
                 href={`/guides/${g.slug}`}
-                className="group flex-shrink-0 w-[340px] lg:w-[380px]"
+                className="group block border-t border-black/10 pt-5"
               >
                 {g.image && (
-                  <div className="relative h-56 overflow-hidden bg-editorial-light">
+                  <div className="relative h-56 overflow-hidden bg-editorial-light mb-4">
                     <SafeImage
                       src={g.image}
                       alt={g.title}
                       fill
-                      sizes="380px"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                     />
                   </div>
                 )}
-                <div className="pt-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[10px] tracking-editorial uppercase text-editorial-accent font-body font-medium">
-                      {g.tag === 'Guide' ? 'TRENDS' : g.tag.toUpperCase()}
-                    </span>
-                    <span className="text-[10px] text-editorial-muted font-body">
-                      {new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-xl font-normal text-editorial-text group-hover:text-editorial-accent transition-colors leading-snug mb-2 line-clamp-2">
-                    {g.title}
-                  </h3>
-                  <p className="text-sm text-editorial-muted font-body line-clamp-2 leading-relaxed">{g.description}</p>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-[10px] tracking-editorial uppercase text-editorial-accent font-body font-semibold">
+                    {g.tag === 'Guide' ? 'TRENDS' : g.tag.toUpperCase()}
+                  </span>
+                  <span className="text-[10px] text-editorial-muted font-body">
+                    {new Date(g.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </span>
                 </div>
+                <h3 className="font-display text-xl font-semibold text-editorial-text group-hover:text-editorial-accent transition-colors leading-snug mb-2 line-clamp-2">
+                  {g.title}
+                </h3>
+                <p className="text-sm text-editorial-muted font-body line-clamp-2 leading-relaxed">{g.description}</p>
               </Link>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/guides" className="btn-secondary inline-block">
+              MORE STORIES
+            </Link>
           </div>
         </section>
 

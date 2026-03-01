@@ -6,12 +6,12 @@ const config: Config = {
     extend: {
       colors: {
         editorial: {
-          bg: '#FAFAF8',
+          bg: '#FFFFFF',
           text: '#1A1A1A',
-          accent: '#C9A96E',
-          muted: '#999999',
+          accent: '#DD1E1E',
+          muted: '#767676',
           border: '#E5E5E5',
-          light: '#F5F3EF',
+          light: '#F2F2F2',
         },
         noir: {
           50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
