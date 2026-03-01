@@ -3,11 +3,11 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="pt-20 pb-20 text-center max-w-lg mx-auto">
-      <p className="font-mono text-6xl font-bold text-gray-200 mb-4">404</p>
-      <h1 className="font-display text-2xl font-bold text-gray-900 mb-3">
+      <p className="font-display text-8xl font-bold text-noir-200 mb-6">404</p>
+      <h1 className="font-display text-2xl font-bold text-editorial-text mb-3">
         Page not found
       </h1>
-      <p className="text-gray-400 mb-8">
+      <p className="text-editorial-muted font-body mb-10">
         The page you&apos;re looking for doesn&apos;t exist or has been moved.
         Let&apos;s get you back on track.
       </p>
@@ -17,17 +17,18 @@ export default function NotFound() {
         <Link href="/shop" className="btn-secondary text-sm">Shop All Items</Link>
       </div>
 
-      <div className="mt-12 border border-gray-100 rounded-xl p-6 bg-white">
-        <h2 className="font-display font-bold text-gray-900 text-sm mb-3">Popular right now</h2>
-        <div className="space-y-2 text-left">
+      <div className="mt-14 border-t border-noir-200 pt-8">
+        <h2 className="text-[11px] tracking-editorial uppercase font-body font-semibold text-editorial-text mb-5">Popular right now</h2>
+        <div className="space-y-0 text-left">
           {[
-            { title: 'Capsule Wardrobe Guide', href: '/guides/capsule-wardrobe-working-women-2026' },
-            { title: 'Spring Fashion Trends 2026', href: '/guides/spring-fashion-trends-2026' },
-            { title: 'Best Jeans for Every Body Type', href: '/guides/best-jeans-every-body-type' },
-            { title: 'Amazon Fashion Finds Under $30', href: '/guides/amazon-fashion-finds-under-30' },
+            { title: 'Quiet Luxury Essentials', href: '/guides/quiet-luxury-essentials-investment-pieces-2026' },
+            { title: 'Office Siren Corporate Wear', href: '/guides/office-siren-corporate-wear-guide-2026' },
+            { title: 'How to Style Wide Leg Jeans', href: '/guides/how-to-style-wide-leg-jeans-like-a-pro-2026' },
+            { title: 'Mob Wife Glamour Aesthetic', href: '/guides/mob-wife-glamour-aesthetic-guide-2026' },
           ].map((link) => (
-            <Link key={link.href} href={link.href} className="block text-sm text-gray-500 hover:text-gray-900 transition-colors py-1">
-              {link.title}
+            <Link key={link.href} href={link.href} className="flex items-center gap-3 py-3 text-sm font-body text-editorial-muted hover:text-editorial-text transition-colors border-b border-noir-200">
+              <span className="text-editorial-accent">&rarr;</span>
+              <span>{link.title}</span>
             </Link>
           ))}
         </div>

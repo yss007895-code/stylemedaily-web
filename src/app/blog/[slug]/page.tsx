@@ -175,7 +175,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body font-medium mb-6">
           {post.cat} &gt; {post.volume}
         </p>
-        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-editorial-text leading-tight mb-6">
+        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-editorial-text leading-tight mb-6">
           {fullTitle}
         </h1>
         <p className="text-[11px] tracking-editorial uppercase text-editorial-muted font-body">
