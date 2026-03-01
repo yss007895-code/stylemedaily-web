@@ -2,7 +2,7 @@
 import { useState, useMemo } from 'react';
 import type { AffiliateProduct } from '@/lib/guides-data';
 
-type ProductWithSource = AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category?: string };
+type ProductWithSource = AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category?: string; shopTags?: string[] };
 
 interface ShopPageClientProps {
   products: ProductWithSource[];
@@ -22,6 +22,7 @@ export default function ShopPageClient({ products, categories }: ShopPageClientP
   const filtered = useMemo(() => {
     return products.filter(p => {
       if (activeCategory === 'all') return true;
+      if (p.shopTags && p.shopTags.includes(activeCategory)) return true;
       return p.category === activeCategory;
     });
   }, [products, activeCategory]);

@@ -423,17 +423,24 @@ export function getGuidesByCategory(category: string) {
   return guides.filter(g => g.category === category);
 }
 
+/** Keywords that indicate a seasonal (spring/summer) product */
+const seasonalKeywords = /dress|skirt|sandal|linen|floral|summer|spring|slip|tank|crop|shorts|tote|cami|sun|light\s?weight|ballet\s?flat|bodysuit|midi/i;
+
 /** Extract all products from all guides, deduplicated by name+brand */
-export function getAllProducts(): (AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category: string })[] {
+export function getAllProducts(): (AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category: string; shopTags: string[] })[] {
   const seen = new Set<string>();
-  const products: (AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category: string })[] = [];
+  const products: (AffiliateProduct & { fromGuide: string; fromGuideSlug: string; category: string; shopTags: string[] })[] = [];
   for (const guide of guides) {
     if (!guide.affiliateProducts) continue;
     for (const p of guide.affiliateProducts) {
       const key = `${p.name}|${p.brand}`;
       if (seen.has(key)) continue;
       seen.add(key);
-      products.push({ ...p, fromGuide: guide.title, fromGuideSlug: guide.slug, category: guide.category });
+      const shopTags: string[] = [guide.category];
+      const priceNum = parseFloat(p.price.replace(/[^0-9.]/g, ''));
+      if (!isNaN(priceNum) && priceNum < 35) shopTags.push('budget');
+      if (seasonalKeywords.test(p.name)) shopTags.push('seasonal');
+      products.push({ ...p, fromGuide: guide.title, fromGuideSlug: guide.slug, category: guide.category, shopTags });
     }
   }
   return products;
