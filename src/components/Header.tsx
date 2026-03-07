@@ -48,7 +48,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right: Search, Cart, Login */}
+          {/* Right: Search icon */}
           <div className="hidden lg:flex items-center gap-5">
             <button aria-label="Search" className="text-editorial-muted hover:text-editorial-text transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -56,19 +56,6 @@ export default function Header() {
                 <path d="m21 21-4.3-4.3" />
               </svg>
             </button>
-            <button aria-label="Cart" className="text-editorial-muted hover:text-editorial-text transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 01-8 0" />
-              </svg>
-            </button>
-            <Link
-              href="/about"
-              className="text-[11px] tracking-editorial uppercase font-body font-medium text-editorial-muted hover:text-editorial-text transition-colors"
-            >
-              LOG IN
-            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -109,13 +96,6 @@ export default function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/about"
-              onClick={() => setOpen(false)}
-              className="block py-3 text-[11px] tracking-editorial uppercase font-body text-editorial-muted hover:text-editorial-text"
-            >
-              LOG IN
-            </Link>
           </div>
         </nav>
       )}
