@@ -27,6 +27,24 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - run: npm run build
 
+      - name: Inject static redirects (post-build)
+        run: |
+          mkdir -p out/guides/office-siren-style-guide
+          cat > out/guides/office-siren-style-guide/index.html << 'REDIRECT'
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <meta http-equiv="refresh" content="0;url=/guides/the-ultimate-office-siren-style-guide-how-to-get-the-viral-tiktok-look/">
+          <link rel="canonical" href="https://stylemedaily.org/guides/the-ultimate-office-siren-style-guide-how-to-get-the-viral-tiktok-look/">
+          <title>Redirecting...</title>
+          </head>
+          <body>
+          <script>window.location.replace('/guides/the-ultimate-office-siren-style-guide-how-to-get-the-viral-tiktok-look/')</script>
+          <p>Redirecting to <a href="/guides/the-ultimate-office-siren-style-guide-how-to-get-the-viral-tiktok-look/">Office Siren Style Guide</a>...</p>
+          </body>
+          </html>
+          REDIRECT
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
