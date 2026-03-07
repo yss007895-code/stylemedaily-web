@@ -32,7 +32,6 @@ export default function Footer() {
               Follow
             </h4>
             <ul className="space-y-2.5">
-              <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">Instagram</a></li>
               <li><a href="https://www.pinterest.com/stylemedaily/" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">Pinterest</a></li>
               <li><a href="https://twitter.com/stylemedaily" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">Twitter</a></li>
             </ul>

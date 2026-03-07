@@ -10,7 +10,7 @@ export default function Header() {
     { href: '/shop', label: 'SHOP' },
     { href: '/style-guides', label: 'STYLE GUIDES' },
     { href: '/blog', label: 'BLOG' },
-    { href: '/compare/zara-vs-hm', label: 'COMPARE' },
+    { href: '/compare', label: 'COMPARE' },
     { href: '/style-quiz', label: 'STYLE QUIZ' },
   ];
 

@@ -236,8 +236,6 @@ def generate_guide_svg(title, category='casual', width=600, height=400):
   <!-- Category badge -->
   <rect x="60" y="290" width="{len(category)*10 + 20}" height="28" rx="14" fill="{dark}" opacity="0.12"/>
   <text x="70" y="309" font-family="Arial, sans-serif" font-size="12" fill="{dark}" opacity="0.7" font-weight="600" text-transform="uppercase">{category.upper()}</text>
-  <!-- StyleMeDaily watermark -->
-  <text x="540" y="380" font-family="Georgia, serif" font-size="10" fill="{dark}" opacity="0.2" text-anchor="end">StyleMeDaily</text>
 </svg>'''
     return svg
 

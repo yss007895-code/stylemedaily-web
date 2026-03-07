@@ -13,18 +13,37 @@ export default function NewsletterPopup() {
   useEffect(() => {
     if (localStorage.getItem(POPUP_KEY)) return;
 
-    timer.current = setTimeout(() => setVisible(true), SHOW_DELAY_MS);
+    const show = () => {
+      if (!localStorage.getItem(POPUP_KEY)) setVisible(true);
+    };
 
+    // Trigger 1: 30-second timer
+    timer.current = setTimeout(show, SHOW_DELAY_MS);
+
+    // Trigger 2: Scroll past 50% of page
+    const handleScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      if (scrolled / total >= 0.5) {
+        if (timer.current) clearTimeout(timer.current);
+        show();
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Trigger 3: Exit intent (mouse leave top)
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY < 5 && !localStorage.getItem(POPUP_KEY)) {
         if (timer.current) clearTimeout(timer.current);
-        setVisible(true);
+        show();
       }
     };
     document.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       if (timer.current) clearTimeout(timer.current);
+      window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
