@@ -134,9 +134,9 @@ const styleProfiles: Record<string, StyleResult> = {
     style: 'Classic Chic',
     desc: 'You gravitate toward timeless pieces with a modern twist. Your wardrobe is built on quality basics that never go out of style, elevated with thoughtful accessories.',
     guides: [
-      { title: 'Capsule Wardrobe Guide for Working Women', slug: 'capsule-wardrobe-working-women-2026' },
-      { title: 'Professional Outfits for Women', slug: 'professional-outfits-women-2026' },
-      { title: 'Best Affordable Blazers Under $100', slug: 'best-affordable-blazers-under-100' },
+      { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
+      { title: 'Office Siren Corporate Wear Guide', slug: 'office-siren-corporate-wear-guide-2026' },
+      { title: 'Coastal Grandmother Style Guide', slug: 'the-coastal-grandmother-aesthetic-your-ultimate-style-guide' },
     ],
     products: [
       { name: 'Tailored Blazer', price: '$49', url: 'https://amzn.to/4rVjOFg' },
@@ -149,9 +149,9 @@ const styleProfiles: Record<string, StyleResult> = {
     style: 'Trend Explorer',
     desc: 'You love staying ahead of the curve and experimenting with new looks. Your wardrobe is a mix of statement pieces and trend-forward essentials.',
     guides: [
-      { title: 'Spring Fashion Trends 2026', slug: 'spring-fashion-trends-2026' },
-      { title: '10 Must-Have Fashion Items for Spring 2026', slug: 'spring-2026-must-have-items' },
-      { title: 'Spring 2026 Accessories Trends', slug: 'trending-spring-accessories-2026' },
+      { title: 'Y2K Fashion Revival Guide', slug: 'y2k-fashion-revival-ultimate-guide-2026' },
+      { title: 'Balletcore Style Guide', slug: 'balletcore-style-guide-how-to-dress-like-a-ballerina-off-duty-2026' },
+      { title: 'Gorpcore Women\'s Style Guide', slug: 'gorpcore-womens-style-guide-2026' },
     ],
     products: [
       { name: 'Leather Jacket', price: '$59', url: 'https://amzn.to/4az8Vlh' },
@@ -164,9 +164,9 @@ const styleProfiles: Record<string, StyleResult> = {
     style: 'Effortless Casual',
     desc: 'Comfort is queen but you never sacrifice style. You master the art of looking put-together in the most relaxed pieces.',
     guides: [
-      { title: '15 Casual Outfits That Look Expensive', slug: 'casual-outfits-look-expensive' },
-      { title: 'Best Jeans for Every Body Type', slug: 'best-jeans-every-body-type' },
-      { title: 'Best White Sneakers for Women', slug: 'best-white-sneakers-women-2026' },
+      { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
+      { title: 'How to Style Wide Leg Jeans', slug: 'how-to-style-wide-leg-jeans-like-a-pro-2026' },
+      { title: 'Eclectic Grandpa Chic Style Guide', slug: 'eclectic-grandpa-chic-style-guide-2026' },
     ],
     products: [
       { name: 'Straight Leg Jeans', price: '$39', url: 'https://amzn.to/4rfVnSQ' },
@@ -179,9 +179,9 @@ const styleProfiles: Record<string, StyleResult> = {
     style: 'Modern Minimalist',
     desc: 'Less is more for you. Clean lines, neutral tones, and a capsule approach define your wardrobe. Every piece earns its place.',
     guides: [
-      { title: 'How to Build a Minimalist Wardrobe', slug: 'how-to-build-minimalist-wardrobe' },
-      { title: 'Amazon Fashion Finds Under $30', slug: 'amazon-fashion-finds-under-30' },
-      { title: '12 Affordable Fashion Brands', slug: 'affordable-fashion-brands-guide' },
+      { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
+      { title: 'Coastal Grandmother Style Guide', slug: 'the-coastal-grandmother-aesthetic-your-ultimate-style-guide' },
+      { title: 'How to Rock Jumpsuits for Any Occasion', slug: 'how-to-rock-jumpsuits-for-any-occasion-2026' },
     ],
     products: [
       { name: 'Ribbed Bodysuit', price: '$18', url: 'https://amzn.to/4tH7kT9' },

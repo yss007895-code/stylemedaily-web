@@ -49,9 +49,9 @@ const blogPosts: Record<string, BlogPost> = {
       ] },
     ],
     relatedGuides: [
-      { title: 'Casual Outfits That Look Expensive', slug: 'casual-outfits-look-expensive' },
-      { title: 'How to Build a Minimalist Wardrobe', slug: 'how-to-build-minimalist-wardrobe' },
-      { title: 'Capsule Wardrobe Guide', slug: 'capsule-wardrobe-working-women-2026' },
+      { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
+      { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
+      { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
     ],
   },
   'spring-color-trends': {
@@ -87,9 +87,9 @@ const blogPosts: Record<string, BlogPost> = {
       ] },
     ],
     relatedGuides: [
-      { title: 'Spring Fashion Trends 2026', slug: 'spring-fashion-trends-2026' },
-      { title: '10 Must-Have Fashion Items for Spring', slug: 'spring-2026-must-have-items' },
-      { title: 'Spring 2026 Accessories Trends', slug: 'trending-spring-accessories-2026' },
+      { title: 'Y2K Fashion Revival Guide', slug: 'y2k-fashion-revival-ultimate-guide-2026' },
+      { title: 'Balletcore Style Guide', slug: 'balletcore-style-guide-how-to-dress-like-a-ballerina-off-duty-2026' },
+      { title: 'Gorpcore Women\'s Style Guide', slug: 'gorpcore-womens-style-guide-2026' },
     ],
   },
   'capsule-wardrobe-mistakes': {
@@ -125,9 +125,9 @@ const blogPosts: Record<string, BlogPost> = {
       ] },
     ],
     relatedGuides: [
-      { title: 'Capsule Wardrobe Guide for Working Women', slug: 'capsule-wardrobe-working-women-2026' },
-      { title: 'How to Build a Minimalist Wardrobe', slug: 'how-to-build-minimalist-wardrobe' },
-      { title: '12 Affordable Fashion Brands', slug: 'affordable-fashion-brands-guide' },
+      { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
+      { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
+      { title: 'How to Rock Jumpsuits for Any Occasion', slug: 'how-to-rock-jumpsuits-for-any-occasion-2026' },
     ],
   },
   'nordstrom-vs-asos': {
@@ -156,7 +156,7 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
-      { title: '12 Affordable Fashion Brands', slug: 'affordable-fashion-brands-guide' },
+      { title: 'How to Rock Jumpsuits for Any Occasion', slug: 'how-to-rock-jumpsuits-for-any-occasion-2026' },
     ],
   },
   'jeans-buying-guide': {
@@ -185,8 +185,8 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'How to Style Wide Leg Jeans', slug: 'how-to-style-wide-leg-jeans-like-a-pro-2026' },
-      { title: 'Casual Outfits That Look Expensive', slug: 'casual-outfits-look-expensive' },
-      { title: 'Capsule Wardrobe Guide', slug: 'capsule-wardrobe-working-women-2026' },
+      { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
+      { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
     ],
   },
   'body-shape-dressing': {
@@ -215,7 +215,7 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'How to Rock Jumpsuits for Any Occasion', slug: 'how-to-rock-jumpsuits-for-any-occasion-2026' },
-      { title: 'How to Build a Minimalist Wardrobe', slug: 'how-to-build-minimalist-wardrobe' },
+      { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
     ],
   },
   'amazon-fashion-haul': {
@@ -244,8 +244,8 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
-      { title: '12 Affordable Fashion Brands', slug: 'affordable-fashion-brands-guide' },
-      { title: 'Casual Outfits That Look Expensive', slug: 'casual-outfits-look-expensive' },
+      { title: 'How to Rock Jumpsuits for Any Occasion', slug: 'how-to-rock-jumpsuits-for-any-occasion-2026' },
+      { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
     ],
   },
   'spring-workwear': {
@@ -274,8 +274,8 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Office Siren Corporate Wear Guide', slug: 'office-siren-corporate-wear-guide-2026' },
-      { title: 'Capsule Wardrobe Guide', slug: 'capsule-wardrobe-working-women-2026' },
-      { title: 'Casual Outfits That Look Expensive', slug: 'casual-outfits-look-expensive' },
+      { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
+      { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
     ],
   },
   'interview-outfits': {
@@ -333,8 +333,8 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Old Money Summer Aesthetic Guide', slug: 'old-money-summer-aesthetic-guide-2026' },
-      { title: 'Spring Fashion Trends 2026', slug: 'spring-fashion-trends-2026' },
-      { title: '10 Must-Have Fashion Items for Spring', slug: 'spring-2026-must-have-items' },
+      { title: 'Y2K Fashion Revival Guide', slug: 'y2k-fashion-revival-ultimate-guide-2026' },
+      { title: 'Balletcore Style Guide', slug: 'balletcore-style-guide-how-to-dress-like-a-ballerina-off-duty-2026' },
     ],
   },
   'sunglasses-face-shape': {
@@ -363,7 +363,7 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Coquette Aesthetic Guide', slug: 'coquette-aesthetic-2026-ultimate-guide' },
-      { title: 'Spring 2026 Accessories Trends', slug: 'trending-spring-accessories-2026' },
+      { title: 'Gorpcore Women\'s Style Guide', slug: 'gorpcore-womens-style-guide-2026' },
     ],
   },
   'stitch-fix-review': {
@@ -392,7 +392,7 @@ const blogPosts: Record<string, BlogPost> = {
     ],
     relatedGuides: [
       { title: 'Gorpcore Women\'s Style Guide', slug: 'gorpcore-womens-style-guide-2026' },
-      { title: 'How to Build a Minimalist Wardrobe', slug: 'how-to-build-minimalist-wardrobe' },
+      { title: 'Quiet Luxury Essentials', slug: 'quiet-luxury-essentials-investment-pieces-2026' },
       { title: 'Clean Girl Aesthetic Guide', slug: 'how-to-master-the-clean-girl-aesthetic-your-ultimate-guide-2026' },
     ],
   },
