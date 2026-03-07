@@ -3,6 +3,7 @@ import SafeImage from '@/components/SafeImage';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/constants';
 import NewsletterCTA from '@/components/NewsletterCTA';
+import { newBlogPosts } from '@/lib/blog-posts-new';
 import type { Metadata } from 'next';
 
 interface BlogPost {
@@ -19,7 +20,7 @@ interface BlogPost {
   relatedGuides: { title: string; slug: string }[];
 }
 
-const blogPosts: Record<string, BlogPost> = {
+const originalBlogPosts: Record<string, BlogPost> = {
   'quiet-luxury-guide': {
     slug: 'quiet-luxury-guide',
     title: 'The Silhouette of',
@@ -398,6 +399,7 @@ const blogPosts: Record<string, BlogPost> = {
   },
 };
 
+const blogPosts: Record<string, BlogPost> = { ...originalBlogPosts, ...newBlogPosts };
 const allSlugs = Object.keys(blogPosts);
 
 export function generateStaticParams() {
