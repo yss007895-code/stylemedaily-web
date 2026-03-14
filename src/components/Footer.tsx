@@ -49,6 +49,16 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Our Network */}
+        <div className="mb-8">
+          <h4 className="text-[11px] tracking-editorial uppercase font-body font-semibold text-editorial-text mb-4">Our Network</h4>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="https://securechoiceguide.com" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">SecureChoiceGuide</a>
+            <a href="https://smarttoolpicks.net" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">SmartToolPicks</a>
+            <a href="https://trendloopusa.net" target="_blank" rel="noopener noreferrer" className="text-[12px] text-editorial-muted hover:text-editorial-text transition-colors font-body">TrendLoop USA</a>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-noir-200 pt-6">
           <p className="text-[11px] text-editorial-muted leading-relaxed mb-4 max-w-2xl">
